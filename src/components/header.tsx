@@ -68,7 +68,7 @@ export default function Header() {
                 </div>
             </section>
             <section className="w-[100%] px-[300px] py-[20px] border-y-[1px] flex items-center justify-between">
-                <Logo />
+                <Logo src="/light-logo.svg" />
                 <div>
                     <div className="w-[540px] flex items-center justify-center gap-x-0 relative">
                         <SearchIcon size={20} strokeWidth={1.5} className="absolute left-[10px]" />

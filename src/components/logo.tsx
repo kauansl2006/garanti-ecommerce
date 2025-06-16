@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 
-export default function Logo() {
+export default function Logo({ src } : { src: string}) {
     return (
         <Image 
-            src="/light-logo.svg"
+            src={src}
             width={200}
             height={70}
             alt="Logo da Garanti"
