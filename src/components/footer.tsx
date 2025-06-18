@@ -94,10 +94,10 @@ const popularTags = [
 
 export default function Footer() {
     return (
-        <footer className="w-[100%] flex flex-col items-center justify-center px-[300px] bg-neutral-900">
-            <section className="w-[100%] flex items-start justify-between gap-x-[25px] py-[60px]">
-                <div className="w-[336px] flex flex-col items-start justify-start gap-y-[20px]">
-                    <Logo src="/dark-logo.svg" />
+        <footer className="w-[100%] flex flex-col items-center justify-center px-[12px] xl:px-[15.625%] bg-neutral-900">
+            <section className="w-[100%] flex flex-wrap items-start justify-between gap-[25px] py-[60px]">
+                <div className="w-[336px] flex flex-col xl:items-start xl:justify-start gap-y-[20px]">
+                    <Logo src="/dark-logo.svg" width={150} height={50} className="md:w-[180px] md:h-[70px]"/>
 
                     <p className="text-b-sm leading-b-sm font-medium text-neutral-500">
                         Garanti é o template ideal para lojas brasileiras que buscam performance, design moderno e experiência de compra otimizada desde o primeiro clique.
@@ -110,19 +110,19 @@ export default function Footer() {
                     </div>
                 </div>
                 {footerLinks.map((footerLink) => (
-                    <div key={footerLink.id} className="flex flex-col items-start justify-start gap-y-[20px]">
+                    <div key={footerLink.id} className="lg:max-w-[160px] flex flex-col items-start justify-start gap-y-[20px]">
                         <h5 className="text-l-02 leading-l-02 font-medium text-white">{footerLink.title}</h5>
 
                         <ul className="flex flex-col items-start justify-start text-b-sm leading-b-sm font-medium text-neutral-500">
                             {footerLink.links.map((link) => (
-                                <li key={link.id} className="py-[6px]">
+                                <li key={link.id} className="py-[6px] text-nowrap">
                                     <Link href={link.href}>{link.title}</Link>
                                 </li>
                             ))}
                         </ul>
                     </div>
                 ))}
-                <div className="w-[262px] flex flex-col items-start justify-start gap-y-[20px]">
+                <div className="2xl:max-w-[256px] flex flex-col items-start justify-start gap-y-[20px]">
                     <h5 className="text-l-02 leading-l-02 font-medium text-white">TAGS POPULARES</h5>
 
                     <div className="flex flex-wrap items-start justify-start gap-[8px] text-b-sm leading-b-sm font-medium text-white">
@@ -134,7 +134,7 @@ export default function Footer() {
                     </div>
                 </div>
             </section>
-            <section className="w-[100%] flex items-center justify-between py-[24px] border-t-[1px] border-t-neutral-500">
+            <section className="w-[100%] flex text-center items-center justify-between py-[24px] border-t-[1px] border-t-neutral-500">
                 <p className="text-b-sm leading-b-sm font-medium text-neutral-500">
                     Garanti eCommerce © 2025. Todos os direitos reservados
                 </p>
@@ -144,6 +144,7 @@ export default function Footer() {
                     width={280}
                     height={35}
                     alt="Métodos de Pagamento aceitos"
+                    className="hidden md:block"
                 />
             </section>
         </footer>
