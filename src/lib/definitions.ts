@@ -28,5 +28,19 @@ export type Feature = {
     description: string;
 }
 
+export type Product = {
+    id: number;
+    title: string;
+    description?: string | null;
+    thumbnail: string;
+    price: number;
+    discount?: number | null;
+    availableQuantity: number;
+    score?: number | null;
+    isAvailable: boolean;
+    isActive: boolean;
+    isHot: boolean;
+}
+
 
 
