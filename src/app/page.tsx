@@ -1,3 +1,9 @@
+import Features from "@/components/features";
+
 export default function Home() {
-    return <p>HomePage Works!</p>;
+    return (
+        <main className="w-screen flex flex-col items-center justify-center">
+            <Features />
+        </main>
+    );
 }
