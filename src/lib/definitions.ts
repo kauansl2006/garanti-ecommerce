@@ -1,5 +1,12 @@
 import { JSX } from "react";
 
+export type NavLinks = {
+    id: number;
+    href: string;
+    icon: JSX.Element;
+    title: string;
+};
+
 export type Widget = {
     id: number;
     caption?: string  | undefined;
