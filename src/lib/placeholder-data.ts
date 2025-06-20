@@ -6,12 +6,13 @@ const widgets: Widget[] = [
         caption: "- O MELHOR LUGAR PARA JOGAR",
         title: "Consoles Xbox",
         price: 3892,
-        description: "Economize até 50% em jogos selecionados para Xbox. Ganhe 3 meses de PC Game Pass por US$ 2.",
+        description:
+            "Economize até 50% em jogos selecionados para Xbox. Ganhe 3 meses de PC Game Pass por US$ 2.",
         imagePath: "/xbox.png",
         imagePosition: "right",
         href: "#",
         size: "lg",
-        backgroundColor: "light"
+        backgroundColor: "light",
     },
     {
         id: 2,
@@ -22,7 +23,7 @@ const widgets: Widget[] = [
         discount: "20% OFF",
         href: "#",
         size: "md",
-        backgroundColor: "dark"
+        backgroundColor: "dark",
     },
     {
         id: 3,
@@ -31,17 +32,18 @@ const widgets: Widget[] = [
         imagePosition: "left",
         href: "#",
         size: "md",
-        backgroundColor: "light"
-    }
+        backgroundColor: "light",
+    },
 ];
 
 const bestDeals: Product[] = [
     {
         id: 1,
         title: "PlayStation®5 Slim Edição Digital com 2 Jogos ",
-        description: "Experimente o carregamento extremamente rápido de um SSD de ultravelocidade, imersão mais profunda com ajuda da resposta tátil, gatilhos adaptáveis e áudio 3D, além dos dois jogos PlayStation® incríveis.",
+        description:
+            "Experimente o carregamento extremamente rápido de um SSD de ultravelocidade, imersão mais profunda com ajuda da resposta tátil, gatilhos adaptáveis e áudio 3D, além dos dois jogos PlayStation® incríveis.",
         thumbnail: "/best-deals-1.png",
-        price: 2707.90,
+        price: 2707.9,
         discount: 20,
         availableQuantity: 10,
         score: 52.677,
@@ -54,7 +56,7 @@ const bestDeals: Product[] = [
         title: "Fones de ouvido esportivos Bose - Fones de ouvido sem fio",
         description: null,
         thumbnail: "/best-deals-2.png",
-        price: 367.90,
+        price: 367.9,
         discount: null,
         availableQuantity: 0,
         score: null,
@@ -67,7 +69,7 @@ const bestDeals: Product[] = [
         title: "Simple Mobile 4G LTE Prepaid Smartphone",
         description: null,
         thumbnail: "/best-deals-3.png",
-        price: 1899.90,
+        price: 1899.9,
         discount: null,
         availableQuantity: 10,
         score: null,
@@ -80,7 +82,7 @@ const bestDeals: Product[] = [
         title: "4K UHD LED Smart TV with Chromecast Built-in",
         description: null,
         thumbnail: "/best-deals-4.png",
-        price: 3987.90,
+        price: 3987.9,
         discount: 19,
         availableQuantity: 10,
         score: null,
@@ -93,7 +95,7 @@ const bestDeals: Product[] = [
         title: "Dell Optiplex 7000x7480 All-in-One Computer Monitor",
         description: null,
         thumbnail: "/best-deals-5.png",
-        price: 1987.90,
+        price: 1987.9,
         discount: null,
         availableQuantity: 10,
         score: null,
@@ -106,7 +108,7 @@ const bestDeals: Product[] = [
         title: "Máquina de lavar portátil, capacidade de 11 libras, modelo 18NMFIAM",
         description: null,
         thumbnail: "/best-deals-6.png",
-        price: 587.90,
+        price: 587.9,
         discount: null,
         availableQuantity: 10,
         score: null,
@@ -119,7 +121,7 @@ const bestDeals: Product[] = [
         title: "Portable Wshing Machine, 11lbs capacity Model 18NMFIAM",
         description: null,
         thumbnail: "/best-deals-7.png",
-        price: 1987.90,
+        price: 1987.9,
         discount: null,
         availableQuantity: 10,
         score: null,
@@ -132,7 +134,7 @@ const bestDeals: Product[] = [
         title: "2-Barrel Carburetor Carb 2100 Engine Increase Horsepower",
         description: null,
         thumbnail: "/best-deals-8.png",
-        price: 1987.90,
+        price: 1987.9,
         discount: null,
         availableQuantity: 10,
         score: null,
@@ -145,7 +147,7 @@ const bestDeals: Product[] = [
         title: "JBL FLIP 4 - Waterproof Portable Bluetooth Speaker - Black",
         description: null,
         thumbnail: "/best-deals-9.png",
-        price: 534.90,
+        price: 534.9,
         discount: 32,
         availableQuantity: 10,
         score: null,
@@ -153,6 +155,6 @@ const bestDeals: Product[] = [
         isActive: true,
         isHot: false,
     },
-]
+];
 
-export { widgets, bestDeals }
+export { widgets, bestDeals };

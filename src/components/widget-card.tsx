@@ -9,17 +9,17 @@ import { Widget } from "@/lib/definitions";
 
 import { Badge } from "@/components/ui/badge";
 
-export default function WidgetCard({
-    widget
-}: {
-    widget: Widget
-}) {
+export default function WidgetCard({ widget }: { widget: Widget }) {
     return (
-        <div className={`w-full h-full flex ${widget.imagePosition === "left" ? "flex-row-reverse" : "flex-row"} items-center justify-between ${widget.backgroundColor === "light" ? "bg-[#d4d4d4]" : "bg-[#1f1f1f]"} rounded-[6px] p-[6.42%] gap-x-[36px] relative`}>
-
+        <div
+            className={`w-full h-full flex ${widget.imagePosition === "left" ? "flex-row-reverse" : "flex-row"} items-center justify-between ${widget.backgroundColor === "light" ? "bg-[#d4d4d4]" : "bg-[#1f1f1f]"} rounded-[6px] p-[6.42%] gap-x-[36px] relative`}
+        >
             <div className="absolute top-[6.42%] right-[3.42%] flex flex-col items-start justify-start gap-y-[12px] z-10">
                 {widget.discount && (
-                    <Badge variant="default" className="px-[10px] py-[5px] rounded-[4px] text-b-t leading-b-t font-semibold bg-yellow-300 text-nowrap text-neutral-900">
+                    <Badge
+                        variant="default"
+                        className="px-[10px] py-[5px] rounded-[4px] text-b-t leading-b-t font-semibold bg-yellow-300 text-nowrap text-neutral-900"
+                    >
                         {widget.discount}
                     </Badge>
                 )}
@@ -36,19 +36,25 @@ export default function WidgetCard({
             <div className="flex flex-col items-start justify-start gap-y-[24px]">
                 <div className="w-full flex-col items-start justify-start gap-y-[16px]">
                     {widget.caption && (
-                        <div className={`text-b-sm leading-b-sm font-semibold ${widget.backgroundColor === "light" ? "text-black" : "text-white"}`}>
+                        <div
+                            className={`text-b-sm leading-b-sm font-semibold ${widget.backgroundColor === "light" ? "text-black" : "text-white"}`}
+                        >
                             {widget.caption}
                         </div>
                     )}
 
                     {widget.size === "lg" && (
-                        <h1 className={`text-d-03 leading-d-03 font-semibold ${widget.backgroundColor === "light" ? "text-black" : "text-white"}`}>
+                        <h1
+                            className={`text-d-03 leading-d-03 font-semibold ${widget.backgroundColor === "light" ? "text-black" : "text-white"}`}
+                        >
                             {widget.title}
                         </h1>
                     )}
 
                     {widget.size === "md" && (
-                        <h1 className={`text-h-03 leading-h-03 font-semibold ${widget.backgroundColor === "light" ? "text-black" : "text-white"}`}>
+                        <h1
+                            className={`text-h-03 leading-h-03 font-semibold ${widget.backgroundColor === "light" ? "text-black" : "text-white"}`}
+                        >
                             {widget.title}
                         </h1>
                     )}
@@ -61,14 +67,20 @@ export default function WidgetCard({
                 </div>
 
                 {widget.size === "lg" && (
-                    <Link href={widget.href} className="bg-secondary text-white cursor-pointer rounded-[4px] w-[191px] h-[56px] flex items-center justify-center gap-x-[12px] px-[32px] text-h-05 leading-h-05 text-nowrap font-bold">
+                    <Link
+                        href={widget.href}
+                        className="bg-secondary text-white cursor-pointer rounded-[4px] w-[191px] h-[56px] flex items-center justify-center gap-x-[12px] px-[32px] text-h-05 leading-h-05 text-nowrap font-bold"
+                    >
                         VER AGORA
                         <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
                     </Link>
                 )}
 
                 {widget.size === "md" && (
-                    <Link href={widget.href} className="bg-secondary text-white cursor-pointer rounded-[4px] w-[171px] h-[46px] flex items-center justify-center gap-x-[12px] px-[22px] text-h-05 leading-h-05 text-nowrap font-bold">
+                    <Link
+                        href={widget.href}
+                        className="bg-secondary text-white cursor-pointer rounded-[4px] w-[171px] h-[46px] flex items-center justify-center gap-x-[12px] px-[22px] text-h-05 leading-h-05 text-nowrap font-bold"
+                    >
                         VER AGORA
                         <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
                     </Link>
@@ -89,5 +101,5 @@ export default function WidgetCard({
                 />
             </div>
         </div>
-    )
+    );
 }

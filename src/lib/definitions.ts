@@ -9,24 +9,24 @@ export type NavLinks = {
 
 export type Widget = {
     id: number;
-    caption?: string  | undefined;
+    caption?: string | undefined;
     title: string;
     price?: number;
-    description?: string  | undefined;
-    discount?: string | undefined; 
+    description?: string | undefined;
+    discount?: string | undefined;
     imagePath: string;
     imagePosition: "left" | "right";
     href: string;
     size: "md" | "lg";
     backgroundColor: "light" | "dark";
-}
+};
 
 export type Feature = {
     id: number;
     icon: JSX.Element;
     title: string;
     description: string;
-}
+};
 
 export type Product = {
     id: number;
@@ -40,7 +40,4 @@ export type Product = {
     isAvailable: boolean;
     isActive: boolean;
     isHot: boolean;
-}
-
-
-
+};

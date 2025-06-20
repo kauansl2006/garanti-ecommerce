@@ -1,11 +1,6 @@
 import { Feature } from "@/lib/definitions";
 
-export default function FeatureCard({ 
-    feature 
-} : { 
-    feature: Feature 
-}
-) {
+export default function FeatureCard({ feature }: { feature: Feature }) {
     return (
         <div className="w-full flex items-start justify-start p-[16px] gap-x-[16px]">
             {feature.icon}
@@ -18,5 +13,5 @@ export default function FeatureCard({
                 </p>
             </div>
         </div>
-    )
+    );
 }
