@@ -80,42 +80,61 @@ const popularTags = [
     },
     {
         id: 11,
-        title: "Tablet"
+        title: "Tablet",
     },
     {
         id: 12,
-        title: "Microwave"
+        title: "Microwave",
     },
     {
         id: 13,
-        title: "Samsung"
-    }
-]
+        title: "Samsung",
+    },
+];
 
 export default function Footer() {
     return (
         <footer className="w-[100%] flex flex-col items-center justify-center px-[12px] xl:px-[15.625%] bg-neutral-900">
             <section className="w-[100%] flex flex-wrap items-start justify-between gap-[25px] py-[60px]">
                 <div className="w-[336px] flex flex-col xl:items-start xl:justify-start gap-y-[20px]">
-                    <Logo src="/dark-logo.svg" width={150} height={50} className="md:w-[180px] md:h-[70px]"/>
+                    <Logo
+                        src="/dark-logo.svg"
+                        width={150}
+                        height={50}
+                        className="md:w-[180px] md:h-[70px]"
+                    />
 
                     <p className="text-b-sm leading-b-sm font-medium text-neutral-500">
-                        Garanti é o template ideal para lojas brasileiras que buscam performance, design moderno e experiência de compra otimizada desde o primeiro clique.
+                        Garanti é o template ideal para lojas brasileiras que
+                        buscam performance, design moderno e experiência de
+                        compra otimizada desde o primeiro clique.
                     </p>
 
                     <div className="flex items-center justify-start gap-x-[16px] text-b-sm leading-b-sm font-medium text-neutral-500">
-                        <p className="text-b-sm leading-b-sm font-medium text-white border-b-primary border-b-2 py-[6px]">(219) 555-0114</p>
+                        <p className="text-b-sm leading-b-sm font-medium text-white border-b-primary border-b-2 py-[6px]">
+                            (219) 555-0114
+                        </p>
                         ou
-                        <p className="text-b-sm leading-b-sm font-medium text-white border-b-primary border-b-2 py-[6px]">Proxy@gmail.com</p>
+                        <p className="text-b-sm leading-b-sm font-medium text-white border-b-primary border-b-2 py-[6px]">
+                            Proxy@gmail.com
+                        </p>
                     </div>
                 </div>
                 {footerLinks.map((footerLink) => (
-                    <div key={footerLink.id} className="lg:max-w-[160px] flex flex-col items-start justify-start gap-y-[20px]">
-                        <h5 className="text-l-02 leading-l-02 font-medium text-white">{footerLink.title}</h5>
+                    <div
+                        key={footerLink.id}
+                        className="lg:max-w-[160px] flex flex-col items-start justify-start gap-y-[20px]"
+                    >
+                        <h5 className="text-l-02 leading-l-02 font-medium text-white">
+                            {footerLink.title}
+                        </h5>
 
                         <ul className="flex flex-col items-start justify-start text-b-sm leading-b-sm font-medium text-neutral-500">
                             {footerLink.links.map((link) => (
-                                <li key={link.id} className="py-[6px] text-nowrap">
+                                <li
+                                    key={link.id}
+                                    className="py-[6px] text-nowrap"
+                                >
                                     <Link href={link.href}>{link.title}</Link>
                                 </li>
                             ))}
@@ -123,11 +142,16 @@ export default function Footer() {
                     </div>
                 ))}
                 <div className="2xl:max-w-[256px] flex flex-col items-start justify-start gap-y-[20px]">
-                    <h5 className="text-l-02 leading-l-02 font-medium text-white">TAGS POPULARES</h5>
+                    <h5 className="text-l-02 leading-l-02 font-medium text-white">
+                        TAGS POPULARES
+                    </h5>
 
                     <div className="flex flex-wrap items-start justify-start gap-[8px] text-b-sm leading-b-sm font-medium text-white">
                         {popularTags.map((tag) => (
-                            <span key={tag.id} className="px-12px py-6px rounded-2px border-[1.5px] px-[12px] py-[6px] border-neutral-500 text-center">
+                            <span
+                                key={tag.id}
+                                className="px-12px py-6px rounded-2px border-[1.5px] px-[12px] py-[6px] border-neutral-500 text-center"
+                            >
                                 {tag.title}
                             </span>
                         ))}
@@ -148,5 +172,5 @@ export default function Footer() {
                 />
             </section>
         </footer>
-    )
+    );
 }
