@@ -4,6 +4,7 @@ import Features from "@/components/features";
 import FeaturedProducts from "@/components/featured-products";
 import FeaturedCategories from "@/components/featured-categories";
 import WidgetCard from "@/components/widget-card";
+import CategoryProducts from "@/components/category-products";
 
 import { widgets } from "@/lib/placeholder-data";
 
@@ -22,6 +23,7 @@ export default function Home() {
             <section className="w-full h-[424px] flex items-start justify-between gap-x-[24px] px-[15.625%]">
                 <WidgetCard widget={widgets[0]} padding="md" />
             </section>
+            <CategoryProducts />
         </main>
     );
 }
