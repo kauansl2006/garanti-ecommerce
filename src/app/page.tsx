@@ -1,6 +1,7 @@
 import BestDeals from "@/components/best-deals";
 import Categories from "@/components/categories";
 import Features from "@/components/features";
+import FeaturedProducts from "@/components/featured-products";
 
 export default function Home() {
     return (
@@ -8,6 +9,7 @@ export default function Home() {
             <Features />
             <BestDeals />
             <Categories />
+            <FeaturedProducts />
         </main>
     );
 }
