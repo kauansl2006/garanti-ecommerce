@@ -44,15 +44,15 @@ export default function Features() {
             <div className="w-full flex flex-col items-center justify-center py-[24px]">
                 <div className="w-full h-[520px] flex items-center justify-between gap-x-[24px]">
                     <div className="max-w-[872px] w-full h-full flex">
-                        <WidgetCard widget={widgets[0]} />
+                        <WidgetCard widget={widgets[0]} padding="lg" />
                     </div>
 
                     <div className="max-w-[424px] w-full h-full flex flex-col items-center justify-center gap-y-[24px]">
                         <div className="max-h-[248px] h-full">
-                            <WidgetCard widget={widgets[1]} />
+                            <WidgetCard widget={widgets[1]} padding="lg" />
                         </div>
                         <div className="max-h-[248px] h-full">
-                            <WidgetCard widget={widgets[2]} />
+                            <WidgetCard widget={widgets[2]} padding="lg" />
                         </div>
                     </div>
                 </div>

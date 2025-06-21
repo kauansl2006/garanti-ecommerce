@@ -41,3 +41,10 @@ export type Product = {
     isActive: boolean;
     isHot: boolean;
 };
+
+export type Category = {
+    id: number;
+    title: string;
+    imagePath: string;
+    href: string;
+}
