@@ -8,23 +8,13 @@ import { featuredProducts } from "@/lib/placeholder-data";
 import Banner from "@/components/banner";
 import ProductCard from "@/components/product-card";
 
-export default function FeaturedProducts() {
+export default function FeaturedCategories() {
     return (
         <section className="w-full flex items-start justify-between gap-x-[24px] px-[15.625%] py-[72px]">
-            <div className="max-w-[312px] w-full h-full">
-                <Banner 
-                    src="/banners/banner-1.png" 
-                    width={312}
-                    height={761}
-                    alt="Banner 1"
-                    backgroundColor="#d4d4d4"
-                />
-            </div>
-
             <div className="w-full flex flex-col items-center justify-center gap-y-[24px]">
                 <div className="w-full flex items-center justify-between">
                     <h3 className="text-h-03 leading-h-03 font-semibold text-nowrap">
-                        Produtos em Destaque
+                        Computadores e Laptops
                     </h3>
 
                     <div className="flex items-center justify-between gap-x-[16px]">
@@ -71,6 +61,23 @@ export default function FeaturedProducts() {
                         </div>
                     ))}
                 </div>
+            </div>
+
+            <div className="max-w-[312px] flex flex-col items-center justify-center gap-y-[24px] w-full h-full bg-blue-6">
+                <Banner 
+                    src="/banners/banner-2.png" 
+                    width={312}
+                    height={428}
+                    alt="Banner 2"
+                    backgroundColor="#d4d4d4"
+                />
+                <Banner 
+                    src="/banners/banner-3.png" 
+                    width={312}
+                    height={264}
+                    alt="Banner 3"
+                    backgroundColor="#d4d4d4"
+                />
             </div>
         </section>
     )
