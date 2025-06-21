@@ -9,11 +9,17 @@ import { Widget } from "@/lib/definitions";
 
 import { Badge } from "@/components/ui/badge";
 
-export default function WidgetCard({ widget }: { widget: Widget }) {
+export default function WidgetCard({ 
+    widget, 
+    headingSize, 
+    padding 
+}: { 
+    widget: Widget, 
+    headingSize?: string,
+    padding?: "lg" | "md"
+}) {
     return (
-        <div
-            className={`w-full h-full flex ${widget.imagePosition === "left" ? "flex-row-reverse" : "flex-row"} items-center justify-between ${widget.backgroundColor === "light" ? "bg-[#d4d4d4]" : "bg-[#1f1f1f]"} rounded-[6px] p-[6.42%] gap-x-[36px] relative`}
-        >
+        <div className={`w-full h-full flex ${widget.imagePosition === "left" ? "flex-row-reverse" : "flex-row"} items-center justify-between ${widget.backgroundColor === "light" ? "bg-[#d4d4d4]" : "bg-[#1f1f1f]"} rounded-[6px] ${padding === "lg" ? "p-[6.42%]" : "p-[3.42%]"} gap-x-[36px] relative`}>
             <div className="absolute top-[6.42%] right-[3.42%] flex flex-col items-start justify-start gap-y-[12px] z-10">
                 {widget.discount && (
                     <Badge
@@ -45,7 +51,7 @@ export default function WidgetCard({ widget }: { widget: Widget }) {
 
                     {widget.size === "lg" && (
                         <h1
-                            className={`text-d-03 leading-d-03 font-semibold ${widget.backgroundColor === "light" ? "text-black" : "text-white"}`}
+                            className={`${headingSize ? `text-${headingSize} leading-${headingSize}`: "text-d-03 leading-d-03"} font-semibold ${widget.backgroundColor === "light" ? "text-black" : "text-white"}`}
                         >
                             {widget.title}
                         </h1>
