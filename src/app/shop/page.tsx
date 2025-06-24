@@ -18,7 +18,7 @@ import {
   } from "@/components/ui/pagination"
 
 import Breadcrumb from "@/components/breadcrumb";
-import FilterBar from "@/components/filterbar";
+import { VerticalFilterBar, HorizontalFilterBar } from "@/components/filterbar";
 import ProductCard from "@/components/product-card";
 import Searchbar from "@/components/searchbar";
 
@@ -29,8 +29,10 @@ export default function Page() {
     return (
         <>
             <Breadcrumb />
-            <section className="w-full h-full flex items-start justify-start gap-x-[24px] pt-[40px] pb-[72px] px-[5.625%] xl:px-[15.625%]">
-                <FilterBar />
+            <section className="w-full h-full flex items-start justify-center  gap-x-[24px] pt-[74px] md:pt-[40px] pb-[72px] px-[5.625%] xl:px-[15.625%]">
+                <div className="hidden xl:block">
+                    <VerticalFilterBar />
+                </div>
 
                 <div className="max-w-[984px] w-full flex flex-col items-center justify-between gap-y-[18px]">
                     <div className="max-w-[984px] w-full flex flex-col items-center justify-between gap-y-[18px] bg-white border-[1px] border-neutral-300 rounded-[4px] p-[20px]">
@@ -59,7 +61,7 @@ export default function Page() {
                         </div>
 
                         <div className="w-full flex items-center justify-between px-[24px] py-[12px] rounded-[4px] bg-neutral-200">
-                            <div className="flex items-center justify-center gap-[16px] overflow-x-hidden">
+                            <div className="hidden sm:flex items-center justify-center gap-[16px] overflow-x-hidden">
                                 <p className="text-b-sm leading-b-sm font-normal text-neutral-600 text-nowrap">
                                     Filtros Ativos:
                                 </p>
@@ -81,7 +83,11 @@ export default function Page() {
                         </div>
                     </div>
 
-                    <div className="w-full grid grid-cols-[repeat(4,1fr)] items-center justify-center gap-[8px]">
+                    <div className="block xl:hidden">
+                        <HorizontalFilterBar />
+                    </div>
+
+                    <div className="w-full grid grid-cols-[repeat(,1fr)] sm:grid-cols-[repeat(2,1fr)] md:grid-cols-[repeat(3,1fr)] lg:grid-cols-[repeat(4,1fr)] xl:grid-cols-[repeat(3,1fr)] 2xl:grid-cols-[repeat(4,1fr)] items-center justify-center gap-[8px]">
                         {bestDeals.map((product) => (
                             <div key={product.id} className="md:max-w-[248px] w-full h-full" >
                                 <ProductCard product={product} size="md" />
