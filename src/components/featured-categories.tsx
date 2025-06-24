@@ -10,15 +10,15 @@ import ProductCard from "@/components/product-card";
 
 export default function FeaturedCategories() {
     return (
-        <section className="w-full flex items-start justify-between gap-x-[24px] px-[15.625%] py-[72px]">
+        <section className="w-full flex items-start justify-between gap-[24px] px-[5.625%] xl:px-[15.625%] py-[42px] xl:py-[72px]">
             <div className="w-full flex flex-col items-center justify-center gap-y-[24px]">
-                <div className="w-full flex items-center justify-between">
+                <div className="w-full flex-col xl:flex-row flex items-center justify-between">
                     <h3 className="text-h-03 leading-h-03 font-semibold text-nowrap">
                         Computadores e Laptops
                     </h3>
 
                     <div className="flex items-center justify-between gap-x-[16px]">
-                        <div className="flex items-center justify-center">
+                        <div className="hidden md:flex items-center justify-center">
                             <Link
                                 href="#"
                                 className="text-nowrap text-b-sm leading-b-sm font-semibold flex items-center justify-start gap-x-[8px] p-[8px] border-b-[2px] border-primary"
@@ -48,11 +48,11 @@ export default function FeaturedCategories() {
                     </div>
                 </div>
 
-                <div className="w-full grid grid-cols-[repeat(4,auto)] items-center justify-center">
+                <div className="w-full grid grid-cols-[repeat(1,auto)] sm:grid-cols-[repeat(2,auto)] md:grid-cols-[repeat(3,auto)] lg:grid-cols-[repeat(4,auto)] items-center justify-center">
                     {featuredProducts.map((product) => (
                         <div
                             key={product.id}
-                            className="max-w-[248px] w-full h-full"
+                            className="md:max-w-[248px] w-full h-full"
                         >
                             <ProductCard
                                 product={product}
@@ -63,7 +63,7 @@ export default function FeaturedCategories() {
                 </div>
             </div>
 
-            <div className="max-w-[312px] flex flex-col items-center justify-center gap-y-[24px] w-full h-full bg-blue-6">
+            <div className="hidden 2xl:flex flex-col items-center justify-center gap-y-[24px] max-w-[312px] w-full h-full bg-blue-6">
                 <Banner 
                     src="/banners/banner-2.png" 
                     width={312}
