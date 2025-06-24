@@ -5,69 +5,20 @@ import Link from "next/link";
 
 import {
     ChevronDownIcon,
-    CircleAlertIcon,
-    HeadsetIcon,
     HeartIcon,
-    MapPinIcon,
     MenuIcon,
-    RefreshCcwIcon,
-    SearchIcon,
     ShoppingBagIcon,
-    ShoppingBasketIcon,
     UserCircle2Icon,
 } from "lucide-react";
 
 import { useState } from "react";
 
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 import Logo from "@/components/logo";
-
-import { NavLinks, SidebarLink } from "@/lib/definitions";
-
-const navLinks: NavLinks[] = [
-    {
-        id: 1,
-        href: "#",
-        icon: (
-            <ShoppingBasketIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-        ),
-        title: "Comprar",
-    },
-    {
-        id: 2,
-        href: "#",
-        icon: (
-            <MapPinIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-        ),
-        title: "Rastrear Pedido",
-    },
-    {
-        id: 3,
-        href: "#",
-        icon: (
-            <RefreshCcwIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-        ),
-        title: "Comparar",
-    },
-    {
-        id: 4,
-        href: "#",
-        icon: (
-            <HeadsetIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-        ),
-        title: "Suporte",
-    },
-    {
-        id: 5,
-        href: "#",
-        icon: (
-            <CircleAlertIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-        ),
-        title: "Ajuda",
-    },
-];
+import Sidebar from "@/components/sidebar";
+import NavLinks from "@/components/nav-links";
+import Searchbar from "@/components/searchbar";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -127,21 +78,7 @@ export default function Header() {
                     className="md:w-[180px] md:h-[70px]"
                 />
 
-                <div className="hidden md:flex lg:flex max-w-[440px] xl:max-w-[540px] w-[100%] items-center justify-center relative">
-                    <SearchIcon className="size-[18px] stroke-[1.5] text-neutral-900 absolute left-[10px]" />
-                    <Input
-                        type="text"
-                        placeholder="Procure por produtos aqui..."
-                        className="rounded-l-[4px] rounded-r-none pl-[40px] h-[38px] xl:h-[42px]"
-                    />
-                    <Button
-                        variant="default"
-                        size="default"
-                        className="cursor-pointer rounded-l-none rounded-r-[4px] h-[38px] xl:h-[42px]"
-                    >
-                        Pesquisar
-                    </Button>
-                </div>
+                <Searchbar />
 
                 <div className="hidden md:flex lg:hidden xl:flex items-center justify-center gap-[8px]">
                     <Link
@@ -184,20 +121,7 @@ export default function Header() {
                             <ChevronDownIcon className="size-[18px] stroke-[1.5] text-neutral-500" />
                         </Link>
                     </li>
-                    {navLinks.map((link) => (
-                        <li
-                            className="w-[100%] p-[8px] rounded-[4px] hover:bg-neutral-800"
-                            key={link.id}
-                        >
-                            <Link
-                                className="w-[100%] flex text-nowrap items-center justify-center gap-x-[8px] text-b-sm leading-b-sm font-medium text-neutral-300"
-                                href={link.href}
-                            >
-                                {link.icon}
-                                {link.title}
-                            </Link>
-                        </li>
-                    ))}
+                    <NavLinks />
                 </ul>
                 <div className="hidden lg:flex xl:hidden 2xl:hidden items-center justify-center gap-[18px]">
                     <Link
@@ -225,112 +149,3 @@ export default function Header() {
     );
 }
 
-const sidebarLinks: SidebarLink[] = [
-    {
-        id: 1,
-        title: "Acesso Rápido",
-        links: [
-            {
-                id: 1,
-                href: "#",
-                icon: (
-                    <ShoppingBasketIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Comprar",
-            },
-            {
-                id: 2,
-                href: "#",
-                icon: (
-                    <HeartIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Favoritos",
-            },
-            {
-                id: 3,
-                href: "#",
-                icon: (
-                    <ShoppingBagIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Meus Produtos",
-            },
-            {
-                id: 4,
-                href: "#",
-                icon: (
-                    <UserCircle2Icon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Minha Conta",
-            },
-        ],
-    },
-    {
-        id: 2,
-        title: "Central de Ajuda",
-        links: [
-            {
-                id: 5,
-                href: "#",
-                icon: (
-                    <MapPinIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Rastrear Pedido",
-            },
-            {
-                id: 6,
-                href: "#",
-                icon: (
-                    <RefreshCcwIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Comparar",
-            },
-            {
-                id: 7,
-                href: "#",
-                icon: (
-                    <HeadsetIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Suporte",
-            },
-            {
-                id: 8,
-                href: "#",
-                icon: (
-                    <CircleAlertIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Ajuda",
-            },
-        ],
-    }
-];
-
-function Sidebar() {
-    return (
-        <section className="w-[290px] h-[100vh] p-[20px] md:hidden flex flex-col items-start justify-start gap-y-[24px] bg-neutral-100 absolute top-[60px] right-[0px] z-100 border-l-[1px] border-neutral-300">
-            {sidebarLinks.map((sidebarLink) => (
-                <div key={sidebarLink.id} className="w-[100%] flex flex-col items-start justify-start gap-y-[12px]">
-                <h5 className="text-b-sm leading-b-sm font-semibold">
-                    Acesso Rápido
-                </h5>
-
-                <ul className="w-[100%] flex flex-col items-start justify-start">
-                    {sidebarLink.links.map((link) => (
-                        <li
-                            className="w-[100%] p-[8px] rounded-[4px] hover:bg-neutral-200"
-                            key={link.id}
-                        >
-                            <Link
-                                className="w-[100%] flex items-start justify-start gap-x-[18px] text-b-md leading-b-md font-normal"
-                                href={link.href}
-                            >
-                                {link.icon}
-                                {link.title}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            ))}
-        </section>
-    );
-}
