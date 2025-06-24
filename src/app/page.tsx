@@ -5,6 +5,7 @@ import Features from "@/components/features";
 import FeaturedProducts from "@/components/featured-products";
 import FeaturedCategories from "@/components/featured-categories";
 import CategoryProducts from "@/components/category-products";
+import Banners from "@/components/banners";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <BestDeals />
             <Categories />
             <FeaturedProducts />
+            <Banners />
             <FeaturedCategories />
             <CategoryProducts />
         </main>
