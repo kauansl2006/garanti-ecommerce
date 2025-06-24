@@ -37,7 +37,7 @@ const features: Feature[] = [
 export default function Features() {
     return (
         <section className="w-full flex flex-col items-center justify-center px-[5.625%] xl:px-[15.625%]">
-            <div className="w-full grid 2xl:grid-cols-[repeat(4,auto)] sm:grid-cols-[repeat(2,auto)]  grid-cols-[repeat(1,auto)] gap-x-[28px] p-[16px] bg-white border-[1px] border-neutral-300 rounded-[6px]">
+            <div className="w-full grid 2xl:grid-cols-[repeat(4,1fr)] sm:grid-cols-[repeat(2,1fr)]  grid-cols-[repeat(1,1fr)] gap-x-[28px] p-[16px] bg-white border-[1px] border-neutral-300 rounded-[6px]">
                 {features.map((feature) => (
                     <FeatureCard key={feature.id} feature={feature} />
                 ))}

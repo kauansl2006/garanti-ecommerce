@@ -40,7 +40,7 @@ export default function BestDeals() {
                 </Link>
             </div>
 
-            <div className="w-full grid grid-cols-[repeat(1,auto)] sm:grid-cols-[repeat(2,auto)] md:grid-cols-[repeat(3,auto)] lg:grid-cols-[repeat(4,auto)] 2xl:grid-cols-[repeat(5,auto)] items-center justify-center">
+            <div className="w-full grid grid-cols-[repeat(1,1fr)] sm:grid-cols-[repeat(2,1fr)] md:grid-cols-[repeat(3,1fr)] lg:grid-cols-[repeat(4,1fr)] 2xl:grid-cols-[repeat(5,1fr)] items-center justify-center">
                 {topProduct && (
                     <div key={topProduct.id} className="md:hidden xl:block row-span-2 xl:max-w-[328px] w-full h-full" >
                         <ProductCard product={topProduct} size="lg" />
