@@ -1,63 +1,4 @@
-import { Widget, Product, Category } from "./definitions";
-
-const widgets: Widget[] = [
-    {
-        id: 1,
-        caption: "- O MELHOR LUGAR PARA JOGAR",
-        title: "Consoles Xbox",
-        price: 3892,
-        description:
-            "Economize até 50% em jogos selecionados para Xbox. Ganhe 3 meses de PC Game Pass por US$ 2.",
-        imagePath: "/xbox.png",
-        imagePosition: "right",
-        href: "#",
-        size: "lg",
-        backgroundColor: "light",
-    },
-    {
-        id: 2,
-        caption: "- VENDAS DE VERÃO",
-        title: "Novo Google Pixel 6 Pro",
-        imagePath: "/google-pixel-6-pro.png",
-        imagePosition: "right",
-        discount: "20% OFF",
-        href: "#",
-        size: "md",
-        backgroundColor: "dark",
-    },
-    {
-        id: 3,
-        title: "Xiaomi FlipBuds Pro",
-        imagePath: "/xiaomi-flip-buds-pro.png",
-        imagePosition: "left",
-        href: "#",
-        size: "md",
-        backgroundColor: "light",
-    },
-    {
-        id: 4,
-        title: "Novo Apple Homepod Mini",
-        description:
-            "Repleto de inovação, o HomePod mini entrega algo inesperado.",
-        imagePath: "/apple-homepod-mini.png",
-        imagePosition: "right",
-        href: "#",
-        size: "lg",
-        backgroundColor: "light",
-    },
-    {
-        id: 5,
-        title: "Xiaomi Mi 11 Ultra 12 GB + 256 GB",
-        price: 1904,
-        description:
-            "Dados fornecidos por laboratórios internos. Medição da indústria.",
-        imagePath: "/xiomi-mi-11.png",
-        imagePosition: "right",
-        href: "#",
-        size: "lg",
-        backgroundColor: "dark",
-    }
-];
+import { Product, Category } from "./definitions";
 
 const bestDeals: Product[] = [
     {
@@ -82,7 +23,7 @@ const bestDeals: Product[] = [
         price: 367.9,
         discount: null,
         availableQuantity: 0,
-        score: null,
+        score: 22.677,
         isAvailable: false,
         isActive: true,
         isHot: false,
@@ -536,7 +477,6 @@ const categoryProducts = [
 ]
 
 export { 
-    widgets, 
     bestDeals, 
     categories, 
     featuredProducts, 

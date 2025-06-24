@@ -7,19 +7,11 @@ export type NavLinks = {
     title: string;
 };
 
-export type Widget = {
-    id: number;
-    caption?: string | undefined;
-    title: string;
-    price?: number;
-    description?: string | undefined;
-    discount?: string | undefined;
-    imagePath: string;
-    imagePosition: "left" | "right";
-    href: string;
-    size: "md" | "lg";
-    backgroundColor: "light" | "dark";
-};
+export type SidebarLink = { 
+    id: number; 
+    title: string; 
+    links: NavLinks[] 
+}
 
 export type Feature = {
     id: number;

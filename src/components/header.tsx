@@ -23,9 +23,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 import Logo from "@/components/logo";
-import Sidebar from "@/components/sidebar";
 
-import { NavLinks } from "@/lib/definitions";
+import { NavLinks, SidebarLink } from "@/lib/definitions";
 
 const navLinks: NavLinks[] = [
     {
@@ -70,7 +69,7 @@ const navLinks: NavLinks[] = [
     },
 ];
 
-export default function HeaderDesktop() {
+export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     function handleOpen() {
@@ -78,7 +77,7 @@ export default function HeaderDesktop() {
     }
 
     return (
-        <header className="w-[100%] flex flex-col items-center justify-center bg-white relative">
+        <header className="w-[100%] flex flex-col items-center justify-center bg-white fixed z-100 md:relative">
             <section className="hidden w-[100%] px-[12px] xl:px-[15.625%] py-[12px] lg:flex items-center justify-between border-b-[1px] border-neutral-300">
                 <div className="text-b-sm leading-b-sm font-normal">
                     Bem-vindo à loja online da Garanti.
@@ -221,7 +220,117 @@ export default function HeaderDesktop() {
                     </Link>
                 </div>
             </section>
-            {isOpen && <Sidebar navLinks={navLinks} />}
+            {isOpen && <Sidebar />}
         </header>
+    );
+}
+
+const sidebarLinks: SidebarLink[] = [
+    {
+        id: 1,
+        title: "Acesso Rápido",
+        links: [
+            {
+                id: 1,
+                href: "#",
+                icon: (
+                    <ShoppingBasketIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
+                ),
+                title: "Comprar",
+            },
+            {
+                id: 2,
+                href: "#",
+                icon: (
+                    <HeartIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
+                ),
+                title: "Favoritos",
+            },
+            {
+                id: 3,
+                href: "#",
+                icon: (
+                    <ShoppingBagIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
+                ),
+                title: "Meus Produtos",
+            },
+            {
+                id: 4,
+                href: "#",
+                icon: (
+                    <UserCircle2Icon className="size-[24px] stroke-[1.5] text-neutral-500" />
+                ),
+                title: "Minha Conta",
+            },
+        ],
+    },
+    {
+        id: 2,
+        title: "Central de Ajuda",
+        links: [
+            {
+                id: 5,
+                href: "#",
+                icon: (
+                    <MapPinIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
+                ),
+                title: "Rastrear Pedido",
+            },
+            {
+                id: 6,
+                href: "#",
+                icon: (
+                    <RefreshCcwIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
+                ),
+                title: "Comparar",
+            },
+            {
+                id: 7,
+                href: "#",
+                icon: (
+                    <HeadsetIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
+                ),
+                title: "Suporte",
+            },
+            {
+                id: 8,
+                href: "#",
+                icon: (
+                    <CircleAlertIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
+                ),
+                title: "Ajuda",
+            },
+        ],
+    }
+];
+
+function Sidebar() {
+    return (
+        <section className="w-[290px] h-[100vh] p-[20px] md:hidden flex flex-col items-start justify-start gap-y-[24px] bg-neutral-100 absolute top-[60px] right-[0px] z-100 border-l-[1px] border-neutral-300">
+            {sidebarLinks.map((sidebarLink) => (
+                <div key={sidebarLink.id} className="w-[100%] flex flex-col items-start justify-start gap-y-[12px]">
+                <h5 className="text-b-sm leading-b-sm font-semibold">
+                    Acesso Rápido
+                </h5>
+
+                <ul className="w-[100%] flex flex-col items-start justify-start">
+                    {sidebarLink.links.map((link) => (
+                        <li
+                            className="w-[100%] p-[8px] rounded-[4px] hover:bg-neutral-200"
+                            key={link.id}
+                        >
+                            <Link
+                                className="w-[100%] flex items-start justify-start gap-x-[18px] text-b-md leading-b-md font-normal"
+                                href={link.href}
+                            >
+                                {link.icon}
+                                {link.title}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            ))}
+        </section>
     );
 }
