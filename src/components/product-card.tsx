@@ -3,11 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { EyeIcon, HeartIcon, ShoppingBagIcon } from "lucide-react";
+import { EyeIcon, HeartIcon, ShoppingBagIcon, StarIcon } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Rating from "@/components/rating";
 
 import { Product } from "@/lib/definitions";
 
@@ -88,12 +87,7 @@ export default function ProductCard({
 
             <div className="w-full flex flex-col items-start justify-start gap-y-[8px]">
                 {product.score && (
-                    <div className="flex start items-start justify-start gap-x-[6px]">
-                        <Rating score={product.score} />
-                        <span className="text-b-sm leading-b-sm font-normal text-neutral-500">
-                            {`(${product.score})`}
-                        </span>
-                    </div>
+                    <Rating score={product.score} />
                 )}
 
                 <Link
@@ -123,7 +117,7 @@ export default function ProductCard({
                             <Button
                                 variant="secondary"
                                 size="default"
-                                className="cursor-pointer h-[48px] rounded-[4px] flex item-center justify-center gap-x-[8px] p-[12px]"
+                                className="cursor-pointer h-[48px] rounded-[4px] flex items-center justify-center gap-x-[8px] p-[12px]"
                             >
                                 <ShoppingBagIcon className="size-[28px] stroke-[1.5] text-white" />
                                 ADICIONAR A BAG
@@ -143,3 +137,142 @@ export default function ProductCard({
     );
 }
 
+
+function Rating({ score }: { score: number }) {
+    if (score > 0 && score <= 10) {
+        return (
+            <div className="flex start items-start justify-start gap-x-[6px]">
+                <div className="w-full flex items-start justify-start gap-x-[2px]">
+                    <StarIcon className="size-[20px]" fill="#EBC80C" />
+                    <StarIcon className="size-[20px]" fill="#737373" />
+                    <StarIcon className="size-[20px]" fill="#737373" />
+                    <StarIcon className="size-[20px]" fill="#737373" />
+                    <StarIcon className="size-[20px]" fill="#737373" />
+                </div>
+                <span className="text-b-sm leading-b-sm font-normal text-neutral-500">
+                    {`(${score})`}
+                </span>
+            </div>
+        );
+    } else if (score > 10 && score <= 20) {
+        return (
+            <div className="flex start items-start justify-start gap-x-[6px]">
+                <div className="w-full flex items-start justify-start gap-x-[2px]">
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#EBC80C"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#EBC80C"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#737373"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#737373"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#737373"
+                    />
+                </div>
+                <span className="text-b-sm leading-b-sm font-normal text-neutral-500">
+                    {`(${score})`}
+                </span>
+            </div>
+        );
+    } else if (score > 20 && score <= 30) {
+        return (
+            <div className="flex start items-start justify-start gap-x-[6px]">
+                <div className="w-full flex items-start justify-start gap-x-[2px]">
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#EBC80C"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#EBC80C"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#EBC80C"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#737373"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#737373"
+                    />
+                </div>
+                <span className="text-b-sm leading-b-sm font-normal text-neutral-500">
+                    {`(${score})`}
+                </span>
+            </div>
+        );
+    } else if (score > 30 && score <= 40) {
+        return (
+            <div className="flex start items-start justify-start gap-x-[6px]">
+                <div className="w-full flex items-start justify-start gap-x-[2px]">
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#EBC80C"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#EBC80C"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#EBC80C"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#EBC80C"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#737373"
+                    />
+                </div>
+                <span className="text-b-sm leading-b-sm font-normal text-neutral-500">
+                    {`(${score})`}
+                </span>
+            </div>
+        );
+    } else if (score > 40) {
+        return (
+            <div className="flex start items-start justify-start gap-x-[6px]">
+                <div className="w-full flex items-start justify-start gap-x-[2px]">
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#EBC80C"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#EBC80C"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#EBC80C"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#EBC80C"
+                    />
+                    <StarIcon
+                        className="size-[20px] stroke-[0px]"
+                        fill="#EBC80C"
+                    />
+                </div>
+                <span className="text-b-sm leading-b-sm font-normal text-neutral-500">
+                    {`(${score})`}
+                </span>
+            </div>
+        );
+    }
+}
