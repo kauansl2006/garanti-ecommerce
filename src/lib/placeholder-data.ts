@@ -476,9 +476,92 @@ const categoryProducts = [
     },
 ]
 
+const priceMarks = [
+    { id: 1, title: "Todos os preços" },
+    { id: 2, title: "Menor que R$ 100" },
+    { id: 3, title: "R$ 100 - R$ 500" },
+    { id: 4, title: "R$ 500 - R$ 1.000" },
+    { id: 5, title: "R$ 1.000 - R$ 3.000" },
+    { id: 6, title: "R$ 3.000 - R$ 6.000" },
+    { id: 7, title: "Acima de R$ 6.000" },
+];  
+
+const popularBrands = [
+    { id: 1, title: "Apple" },
+    { id: 2, title: "Microsoft" },
+    { id: 3, title: "Dell" },
+    { id: 4, title: "Symphony" },
+    { id: 5, title: "Sony" },
+    { id: 6, title: "LG" },
+    { id: 7, title: "One Plus" },
+    { id: 8, title: "Google" },
+    { id: 9, title: "Samsung" },
+    { id: 10, title: "HP" },
+    { id: 11, title: "Xiaomi" },
+    { id: 12, title: "Panasonic" }
+];
+
+const popularTags = [
+    {
+        id: 1,
+        title: "Games",
+    },
+    {
+        id: 2,
+        title: "iphone",
+    },
+    {
+        id: 3,
+        title: "TV",
+    },
+    {
+        id: 4,
+        title: "Laptops",
+    },
+    {
+        id: 5,
+        title: "Macbook",
+    },
+    {
+        id: 6,
+        title: "SSD",
+    },
+    {
+        id: 7,
+        title: "Graphic Card",
+    },
+    {
+        id: 8,
+        title: "Power bank",
+    },
+    {
+        id: 9,
+        title: "Smart TV",
+    },
+    {
+        id: 10,
+        title: "Speaker",
+    },
+    {
+        id: 11,
+        title: "Tablet",
+    },
+    {
+        id: 12,
+        title: "Microwave",
+    },
+    {
+        id: 13,
+        title: "Samsung",
+    },
+];
+
 export { 
     bestDeals, 
     categories, 
     featuredProducts, 
-    categoryProducts 
+    categoryProducts,
+    priceMarks,
+    popularBrands,
+    popularTags
 };

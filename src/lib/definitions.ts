@@ -1,18 +1,5 @@
 import { JSX } from "react";
 
-export type NavLinks = {
-    id: number;
-    href: string;
-    icon: JSX.Element;
-    title: string;
-};
-
-export type SidebarLink = { 
-    id: number; 
-    title: string; 
-    links: NavLinks[] 
-}
-
 export type Feature = {
     id: number;
     icon: JSX.Element;
