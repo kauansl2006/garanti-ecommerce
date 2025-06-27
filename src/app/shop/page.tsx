@@ -22,13 +22,30 @@ import { VerticalFilterBar, HorizontalFilterBar } from "@/components/filterbar";
 import ProductCard from "@/components/product-card";
 import Searchbar from "@/components/searchbar";
 
-import { bestDeals } from "@/lib/placeholder-data";
-import { ArrowLeftIcon, ArrowRightIcon, ChevronDownIcon, XIcon } from "lucide-react";
+import { products } from "@/lib/placeholder-data/products";
+import { 
+    ArrowLeftIcon, 
+    ArrowRightIcon, 
+    ChevronDownIcon, 
+    HomeIcon, 
+    XIcon 
+} from "lucide-react";
 
 export default function Page() {
     return (
-        <>
-            <Breadcrumb />
+        <main className="w-screen flex flex-col items-center justify-center">
+            <Breadcrumb breadcrumbs={[
+                { 
+                    icon: HomeIcon,
+                    label: "Home",
+                    href: "/"
+                },
+                { 
+                    label: "Comprar",
+                    href: "/shop",
+                    active: true
+                }
+            ]}/>
             <section className="w-full h-full flex items-start justify-center  gap-x-[24px] pt-[74px] md:pt-[40px] pb-[72px] px-[5.625%] xl:px-[15.625%]">
                 <div className="hidden xl:block">
                     <VerticalFilterBar />
@@ -88,7 +105,7 @@ export default function Page() {
                     </div>
 
                     <div className="w-full grid grid-cols-[repeat(,1fr)] sm:grid-cols-[repeat(2,1fr)] md:grid-cols-[repeat(3,1fr)] lg:grid-cols-[repeat(4,1fr)] xl:grid-cols-[repeat(3,1fr)] 2xl:grid-cols-[repeat(4,1fr)] items-center justify-center gap-[8px]">
-                        {bestDeals.map((product) => (
+                        {products.map((product) => (
                             <div key={product.id} className="md:max-w-[248px] w-full h-full" >
                                 <ProductCard product={product} size="md" />
                             </div>
@@ -124,6 +141,6 @@ export default function Page() {
                     </Pagination>
                 </div>
             </section>
-        </>
+        </main>
     )
 }
