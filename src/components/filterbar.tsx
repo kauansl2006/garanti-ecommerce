@@ -1,20 +1,14 @@
-import {
-    RadioGroup,
-    RadioGroupItem,
-} from "@/components/ui/radio-group"
-
-import {
-    categories,
-    priceMarks,
-    popularBrands,
-    popularTags
-} from "@/lib/placeholder-data";
-
-import { Slider } from "@/components/ui/slider"
-import { Label } from "@/components/ui/label"
+import { RadioGroup, RadioGroupItem,} from "@/components/ui/radio-group";
+import { Slider } from "@/components/ui/slider";
+import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
+
+import { categories } from "@/lib/placeholder-data/categories";
+import { priceMarks } from "@/lib/placeholder-data/priceMarks";
+import { popularTags } from "@/lib/placeholder-data/popularTags";
+import { popularBrands } from "@/lib/placeholder-data/popularBrands";
 
 export function VerticalFilterBar() {
     return (

@@ -4,11 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { ArrowRightIcon } from "lucide-react";
-import { featuredProducts } from "@/lib/placeholder-data";
 
-import { Badge } from "@/components/ui/badge";
-import Banner from "@/components/banner";
 import ProductCard from "@/components/product-card";
+import { Badge } from "@/components/ui/badge";
+import { products } from "@/lib/placeholder-data/products";
 
 export default function FeaturedCategories() {
     return (
@@ -51,7 +50,7 @@ export default function FeaturedCategories() {
                 </div>
 
                 <div className="w-full grid grid-cols-[repeat(1,1fr)] sm:grid-cols-[repeat(2,1fr)] md:grid-cols-[repeat(3,1fr)] lg:grid-cols-[repeat(4,1fr)] items-center justify-center">
-                    {featuredProducts.map((product) => (
+                    {products.slice(0, 8).map((product) => (
                         <div
                             key={product.id}
                             className="md:max-w-[248px] w-full h-full"
