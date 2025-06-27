@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 
 import { ProductCard } from "@/components";
 
-import { products } from "@/lib/placeholder-data/products";
+import { products } from "@/lib/placeholder-data";
 
 export default function FeaturedCategories() {
     return (

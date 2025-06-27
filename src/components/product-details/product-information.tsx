@@ -1,5 +1,5 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { tabs } from "@/lib/placeholder-data/tabs";
+import { tabs } from "@/lib/placeholder-data";
 
 export default function ProductInformation() {
     return (

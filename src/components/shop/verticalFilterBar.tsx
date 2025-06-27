@@ -5,10 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
 
-import { categories } from "@/lib/placeholder-data/categories";
-import { priceMarks } from "@/lib/placeholder-data/priceMarks";
-import { popularTags } from "@/lib/placeholder-data/popularTags";
-import { popularBrands } from "@/lib/placeholder-data/popularBrands";
+import { 
+    categories, 
+    priceMarks,
+    popularTags,
+    popularBrands
+} from "@/lib/placeholder-data";
 
 export default function VerticalFilterBar() {
     return (

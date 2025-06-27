@@ -3,8 +3,7 @@ import CustomerFeedback from "@/components/product-details/customer-feedback";
 
 import { Progress } from "@/components/ui/progress"
 import { Separator } from "@/components/ui/separator";
-import { ratings } from "@/lib/placeholder-data/rating";
-import { customers } from "@/lib/placeholder-data/customers";
+import { ratings, customers } from "@/lib/placeholder-data";
 
 export default function ProductReviews() {
     return (

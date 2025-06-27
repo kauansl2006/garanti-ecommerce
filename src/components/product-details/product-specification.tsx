@@ -1,4 +1,4 @@
-import { specifications } from "@/lib/placeholder-data/specifications";
+import { specifications } from "@/lib/placeholder-data";
 import { Separator } from "@/components/ui/separator";
 
 export default function ProductSpecification() {

@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/carousel";
 
 import { Category } from "@/lib/definitions";
-import { categories } from "@/lib/placeholder-data/categories";
+import { categories } from "@/lib/placeholder-data";
 
 export default function Categories() {
     return (

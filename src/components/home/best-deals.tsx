@@ -6,7 +6,7 @@ import { ArrowRightIcon } from "lucide-react";
 
 import { ProductCard } from "@/components";
 
-import { products } from "@/lib/placeholder-data/products";
+import { products } from "@/lib/placeholder-data";
 
 export default function BestDeals() {
     const maxScore = Math.max(...products.map((product) => product.score ?? 0));

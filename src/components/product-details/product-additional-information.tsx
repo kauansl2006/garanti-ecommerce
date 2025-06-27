@@ -1,5 +1,4 @@
-import { overview } from "@/lib/placeholder-data/overview";
-import { productDetails } from "@/lib/placeholder-data/productDetails";
+import { overview, productDetails } from "@/lib/placeholder-data";
 
 export default function ProductAdditionalInformation() {
     return (

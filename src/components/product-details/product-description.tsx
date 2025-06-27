@@ -1,7 +1,6 @@
 
 
-import { features } from "@/lib/placeholder-data/features";
-import { shippingInformation } from "@/lib/placeholder-data/shippingInformation";
+import { features, shippingInformation } from "@/lib/placeholder-data";
 import { Separator } from "@/components/ui/separator";
 
 export default function ProductDescription() {

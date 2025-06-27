@@ -9,7 +9,7 @@ import {
     ProductInformation
 } from "@/components";
 
-import { products } from "@/lib/placeholder-data/products";
+import { products } from "@/lib/placeholder-data";
 
 
 export default async function Page({
