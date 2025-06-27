@@ -3,21 +3,21 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { EyeIcon, HeartIcon, ShoppingBagIcon, StarIcon } from "lucide-react";
+import { EyeIcon, HeartIcon, ShoppingBagIcon } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 import { Product } from "@/lib/definitions";
-import Rating from "@/components/rating";
+import { Rating } from "@/components";
 
-export default function ProductCard({
+export const ProductCard = ({
     product,
     size,
 }: {
     product: Product;
     size: "lg" | "md";
-}) {
+}) => {
     return (
         <div className="w-full h-full flex flex-col items-center justify-center gap-y-[8px] rounded-[4px] bg-white border-[1px] border-neutral-300 p-[12px] relative">
             <div className="absolute top-[12px] left-[12px] flex flex-col items-start justify-start gap-y-[8px] z-10">

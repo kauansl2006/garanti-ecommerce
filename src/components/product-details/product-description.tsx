@@ -1,9 +1,7 @@
-
-
 import { features, shippingInformation } from "@/lib/placeholder-data";
 import { Separator } from "@/components/ui/separator";
 
-export default function ProductDescription() {
+export const ProductDescription = () => {
     return (
         <section className="w-full grid grid-cols-[repeat(4,auto)] gap-[24px]">
             <div className="flex flex-col gap-[12px]">

@@ -7,7 +7,7 @@ import { ArrowRightIcon } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 
-export default function Widgets() {
+export const Widgets = () => {
     return (
         <section className="w-full h-full flex items-center justify-between gap-x-[24px] mt-[60px] md:mt-[0px] py-[24px] px-[5.625%] xl:px-[15.625%]">
             <Widget />
@@ -16,7 +16,7 @@ export default function Widgets() {
     )
 }
 
-function Widget() {
+const Widget = () => {
     return (
         <div className="2xl:w-[872px] 2xl:h-[520px] w-full h-full flex flex-col-reverse md:flex-row items-center justify-center gap-[36px] bg-neutral-300 rounded-[4px] p-[20px] md:p-[50px]">
 
@@ -63,7 +63,7 @@ function Widget() {
     )
 }
 
-function SmallWidgets() {
+const SmallWidgets = () => {
     return (
         <div className="2xl:max-w-[424px] w-full h-full hidden 2xl:flex flex-col items-center justify-center gap-y-[24px]">
             <div className="max-w-[424px] max-h-[248px] w-full h-full flex items-center justify-between  bg-neutral-900 rounded-[4px] p-[35px]">

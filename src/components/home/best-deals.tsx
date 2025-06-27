@@ -8,7 +8,7 @@ import { ProductCard } from "@/components";
 
 import { products } from "@/lib/placeholder-data";
 
-export default function BestDeals() {
+export const BestDeals = () => {
     const maxScore = Math.max(...products.map((product) => product.score ?? 0));
     const topProduct = products.find((product) => product.score === maxScore);
     const otherProducts = products.filter((product) => product.id !== topProduct?.id);

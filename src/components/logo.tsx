@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export default function Logo({
+export const Logo = ({
     src,
     width,
     height,
@@ -12,7 +12,7 @@ export default function Logo({
     width: number;
     height: number;
     className?: string | undefined;
-}) {
+}) => {
     return (
         <Image
             src={src}

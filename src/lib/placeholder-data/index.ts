@@ -11,4 +11,3 @@ export * from "@/lib/placeholder-data/products";
 export * from "@/lib/placeholder-data/rating";
 export * from "@/lib/placeholder-data/shippingInformation";
 export * from "@/lib/placeholder-data/specifications";
-export * from "@/lib/placeholder-data/tabs";

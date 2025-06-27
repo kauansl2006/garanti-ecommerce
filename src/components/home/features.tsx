@@ -34,7 +34,7 @@ const features: Feature[] = [
     },
 ];
 
-export default function Features() {
+export const Features = () => {
     return (
         <section className="w-full flex flex-col items-center justify-center px-[5.625%] xl:px-[15.625%]">
             <div className="w-full grid 2xl:grid-cols-[repeat(4,1fr)] sm:grid-cols-[repeat(2,1fr)]  grid-cols-[repeat(1,1fr)] gap-x-[28px] p-[16px] bg-white border-[1px] border-neutral-300 rounded-[6px]">
@@ -46,7 +46,7 @@ export default function Features() {
     );
 }
 
-export function FeatureCard({ feature }: { feature: Feature }) {
+export const FeatureCard = ({ feature }: { feature: Feature }) => {
     return (
         <div className="2xl:max-w-[280px] 2xl:w-full flex items-start justify-start p-[16px] gap-x-[16px]">
             {feature.icon}

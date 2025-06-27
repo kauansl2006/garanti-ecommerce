@@ -22,12 +22,10 @@ import {
     Sidebar
 } from "@/components";
 
-export default function Header() {
+export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    function handleOpen() {
-        return setIsOpen((prev) => !prev);
-    }
+    const handleOpen = () => setIsOpen((prev) => !prev);
 
     return (
         <header className="w-[100%] flex flex-col items-center justify-center bg-white fixed z-100 md:relative">
@@ -104,7 +102,7 @@ export default function Header() {
                 </div>
 
                 <Button
-                    onClick={() => handleOpen()}
+                    onClick={handleOpen}
                     variant="ghost"
                     size="icon"
                     className="cursor-pointer block md:hidden"

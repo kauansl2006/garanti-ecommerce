@@ -1,7 +1,20 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { tabs } from "@/lib/placeholder-data";
 
-export default function ProductInformation() {
+import { 
+    ProductAdditionalInformation,
+    ProductDescription,
+    ProductReviews,
+    ProductSpecification 
+}  from "@/components";
+
+export const tabs = [
+    { label: "DESCRIÇÃO", value: "description", content: ProductDescription },
+    { label: "INFORMAÇÕES ADICIONAIS", value: "additional-information", content: ProductAdditionalInformation },
+    { label: "ESPECIFICAÇÃO", value: "specification", content: ProductSpecification },
+    { label: "REVIEWS", value: "reviews", content: ProductReviews },
+];
+
+export const ProductInformation = () => {
     return (
         <section className="w-full flex flex-col items-start justify-between px-[5.625%] xl:px-[15.625%]">
             <div className="w-full flex flex-col items-center pb-[40px] border-[1px] bg-white border-neutral-300 rounded-[4px]">

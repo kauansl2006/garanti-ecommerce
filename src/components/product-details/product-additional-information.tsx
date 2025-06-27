@@ -1,6 +1,6 @@
 import { overview, productDetails } from "@/lib/placeholder-data";
 
-export default function ProductAdditionalInformation() {
+export const ProductAdditionalInformation = () => {
     return (
         <section className="w-full grid grid-cols-[repeat(2,1fr)] gap-[24px]">
             <div className="w-full flex flex-col gap-[12px] border-r-[1px] border-r-neutral-300">

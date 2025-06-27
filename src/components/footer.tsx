@@ -1,8 +1,9 @@
 "use client";
 
-import Logo from "@/components/logo";
 import Image from "next/image";
 import Link from "next/link";
+
+import { Logo } from "@/components";
 
 const footerLinks = [
     {
@@ -92,7 +93,7 @@ const popularTags = [
     },
 ];
 
-export default function Footer() {
+export const Footer = () => {
     return (
         <footer className="w-[100%] flex flex-col items-center justify-center px-[12px] xl:px-[15.625%] bg-neutral-900">
             <section className="w-[100%] flex flex-wrap items-start justify-between gap-[25px] py-[60px]">

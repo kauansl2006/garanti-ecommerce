@@ -14,7 +14,7 @@ import {
 import { Category } from "@/lib/definitions";
 import { categories } from "@/lib/placeholder-data";
 
-export default function Categories() {
+export const Categories = () => {
     return (
         <section className="w-full flex flex-col items-center justify-center gap-y-[24px] md:gap-y-[40px] px-[5.625%] md:px-[10.625%] xl:px-[15.625%]">
             <h1 className="text-center text-nowrap md:text-wrap text-h-03 leading-h-03 xl:text-h-01 xl:leading-h-01 font-semibold">
@@ -35,7 +35,7 @@ export default function Categories() {
     )
 }
 
-function CategoryCard({ category }: { category: Category }) {
+const CategoryCard = ({ category }: { category: Category }) => {
     return (
         <div className="w-full h-full flex flex-col items-center justify-center gap-y-[16px] px-[12px] py-[24px] rounded-[4px] border-[1px] border-neutral-300 bg-white">
             <div className="max-w-[148px] max-h-[148px]">

@@ -1,11 +1,10 @@
-import Rating from "@/components/rating";
-import CustomerFeedback from "@/components/product-details/customer-feedback";
-
 import { Progress } from "@/components/ui/progress"
 import { Separator } from "@/components/ui/separator";
-import { ratings, customers } from "@/lib/placeholder-data";
 
-export default function ProductReviews() {
+import { ratings, customers } from "@/lib/placeholder-data";
+import { Rating, CustomerFeedback} from "@/components";
+
+export const ProductReviews = () => {
     return (
         <section className="flex flex-col gap-[40px]">
             <div className="flex gap-[32px]">

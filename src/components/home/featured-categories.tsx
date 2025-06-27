@@ -11,7 +11,7 @@ import { ProductCard } from "@/components";
 
 import { products } from "@/lib/placeholder-data";
 
-export default function FeaturedCategories() {
+export const FeaturedCategories = () => {
     return (
         <section className="w-full flex items-start justify-between gap-[24px] px-[5.625%] xl:px-[15.625%] py-[42px] xl:py-[72px]">
             <div className="w-full flex flex-col items-center justify-center gap-y-[24px]">

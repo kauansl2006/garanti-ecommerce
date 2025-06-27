@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import {
     CircleAlertIcon,
@@ -9,7 +10,7 @@ import {
     RefreshCcwIcon,
     ShoppingBasketIcon,
 } from "lucide-react";
-import { usePathname } from "next/navigation";
+
 import clsx from "clsx";
 
 const navLinks = [
@@ -56,7 +57,7 @@ const navLinks = [
 ];
 
 
-export default function NavLinks() {
+export const NavLinks = () => {
     const pathname = usePathname();
 
     return (
