@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 import { Product } from "@/lib/definitions";
+import Rating from "@/components/rating";
 
 export default function ProductCard({
     product,
@@ -87,11 +88,16 @@ export default function ProductCard({
 
             <div className="w-full flex flex-col items-start justify-start gap-y-[8px]">
                 {product.score && (
-                    <Rating score={product.score} />
+                    <div className="flex start items-start justify-start gap-x-[6px]">
+                        <Rating score={product.score} />
+                        <span className="text-b-sm leading-b-sm font-normal text-neutral-500">
+                        {`(${product.score})`}
+                        </span>
+                    </div>
                 )}
 
                 <Link
-                    href="#"
+                    href={`/product-details/${product.id}`}
                     className="hover:underline text-b-sm leading-b-sm font-normal"
                 >
                     {product.title}
@@ -138,141 +144,4 @@ export default function ProductCard({
 }
 
 
-function Rating({ score }: { score: number }) {
-    if (score > 0 && score <= 10) {
-        return (
-            <div className="flex start items-start justify-start gap-x-[6px]">
-                <div className="w-full flex items-start justify-start gap-x-[2px]">
-                    <StarIcon className="size-[20px]" fill="#EBC80C" />
-                    <StarIcon className="size-[20px]" fill="#737373" />
-                    <StarIcon className="size-[20px]" fill="#737373" />
-                    <StarIcon className="size-[20px]" fill="#737373" />
-                    <StarIcon className="size-[20px]" fill="#737373" />
-                </div>
-                <span className="text-b-sm leading-b-sm font-normal text-neutral-500">
-                    {`(${score})`}
-                </span>
-            </div>
-        );
-    } else if (score > 10 && score <= 20) {
-        return (
-            <div className="flex start items-start justify-start gap-x-[6px]">
-                <div className="w-full flex items-start justify-start gap-x-[2px]">
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#EBC80C"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#EBC80C"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#737373"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#737373"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#737373"
-                    />
-                </div>
-                <span className="text-b-sm leading-b-sm font-normal text-neutral-500">
-                    {`(${score})`}
-                </span>
-            </div>
-        );
-    } else if (score > 20 && score <= 30) {
-        return (
-            <div className="flex start items-start justify-start gap-x-[6px]">
-                <div className="w-full flex items-start justify-start gap-x-[2px]">
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#EBC80C"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#EBC80C"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#EBC80C"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#737373"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#737373"
-                    />
-                </div>
-                <span className="text-b-sm leading-b-sm font-normal text-neutral-500">
-                    {`(${score})`}
-                </span>
-            </div>
-        );
-    } else if (score > 30 && score <= 40) {
-        return (
-            <div className="flex start items-start justify-start gap-x-[6px]">
-                <div className="w-full flex items-start justify-start gap-x-[2px]">
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#EBC80C"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#EBC80C"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#EBC80C"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#EBC80C"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#737373"
-                    />
-                </div>
-                <span className="text-b-sm leading-b-sm font-normal text-neutral-500">
-                    {`(${score})`}
-                </span>
-            </div>
-        );
-    } else if (score > 40) {
-        return (
-            <div className="flex start items-start justify-start gap-x-[6px]">
-                <div className="w-full flex items-start justify-start gap-x-[2px]">
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#EBC80C"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#EBC80C"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#EBC80C"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#EBC80C"
-                    />
-                    <StarIcon
-                        className="size-[20px] stroke-[0px]"
-                        fill="#EBC80C"
-                    />
-                </div>
-                <span className="text-b-sm leading-b-sm font-normal text-neutral-500">
-                    {`(${score})`}
-                </span>
-            </div>
-        );
-    }
-}
+
