@@ -2,27 +2,6 @@
 
 import Link from "next/link"; 
 
-import { Badge } from "@/components/ui/badge";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
-  import {
-    Pagination,
-    PaginationContent,
-    PaginationEllipsis,
-    PaginationItem,
-    PaginationLink,
-  } from "@/components/ui/pagination"
-
-import Breadcrumb from "@/components/breadcrumb";
-import { VerticalFilterBar, HorizontalFilterBar } from "@/components/filterbar";
-import ProductCard from "@/components/product-card";
-import Searchbar from "@/components/searchbar";
-
-import { products } from "@/lib/placeholder-data/products";
 import { 
     ArrowLeftIcon, 
     ArrowRightIcon, 
@@ -30,6 +9,33 @@ import {
     HomeIcon, 
     XIcon 
 } from "lucide-react";
+
+import { Badge } from "@/components/ui/badge";
+
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+import {
+    Pagination,
+    PaginationContent,
+    PaginationEllipsis,
+    PaginationItem,
+    PaginationLink,
+} from "@/components/ui/pagination";
+
+import {
+    VerticalFilterBar,
+    HorizontalFilterBar,
+    Breadcrumb,
+    ProductCard,
+    Searchbar
+} from "@/components";
+
+import { products } from "@/lib/placeholder-data/products";
 
 export default function Page() {
     return (
