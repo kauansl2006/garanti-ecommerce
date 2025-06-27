@@ -10,16 +10,20 @@ export type Feature = {
 export type Product = {
     id: number;
     title: string;
-    description?: string | null;
+    description?: string;
     thumbnail: string;
+    photos: {
+        src: string;
+        alt: string;
+    }[];
     price: number;
-    discount?: number | null;
+    discount?: number;
     availableQuantity: number;
-    score?: number | null;
+    score?: number;
     isAvailable: boolean;
     isActive: boolean;
     isHot: boolean;
-};
+}
 
 export type Category = {
     id: number;
