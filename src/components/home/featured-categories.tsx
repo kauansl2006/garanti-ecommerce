@@ -5,8 +5,10 @@ import Image from "next/image";
 
 import { ArrowRightIcon } from "lucide-react";
 
-import ProductCard from "@/components/product-card";
 import { Badge } from "@/components/ui/badge";
+
+import { ProductCard } from "@/components";
+
 import { products } from "@/lib/placeholder-data/products";
 
 export default function FeaturedCategories() {

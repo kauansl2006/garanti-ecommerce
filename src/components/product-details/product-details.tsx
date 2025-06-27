@@ -29,7 +29,7 @@ import {
     RefreshCcwIcon,
     ShoppingCartIcon
 } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 export default function ProductDetails({
     product,

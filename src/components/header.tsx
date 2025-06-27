@@ -15,10 +15,12 @@ import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 
-import Logo from "@/components/logo";
-import Sidebar from "@/components/sidebar";
-import NavLinks from "@/components/nav-links";
-import Searchbar from "@/components/searchbar";
+import { 
+    Logo,
+    Searchbar,
+    NavLinks,
+    Sidebar
+} from "@/components";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);

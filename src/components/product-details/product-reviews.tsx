@@ -1,5 +1,5 @@
 import Rating from "@/components/rating";
-import CustomerFeedback from "@/components/customer-feedback";
+import CustomerFeedback from "@/components/product-details/customer-feedback";
 
 import { Progress } from "@/components/ui/progress"
 import { Separator } from "@/components/ui/separator";

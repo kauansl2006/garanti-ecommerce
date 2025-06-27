@@ -1,9 +1,11 @@
 "use client";
 
-import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Badge } from "./ui/badge";
+
+import { ArrowRightIcon } from "lucide-react";
+
+import { Badge } from "@/components/ui/badge";
 
 export default function Widgets() {
     return (

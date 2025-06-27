@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Rating from "./rating";
+import Rating from "../rating";
 
 export default function CustomerFeedback({ customer }: { customer: any}) {
     return (
