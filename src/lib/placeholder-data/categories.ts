@@ -1,4 +1,6 @@
-export const categories = [
+import { Category } from "@/lib/definitions";
+
+export const categories: Category[] = [
     {
         id: 1,
         title: "Computadores e Laptops",

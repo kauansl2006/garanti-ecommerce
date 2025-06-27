@@ -1,7 +1,6 @@
 export * from "@/lib/placeholder-data/categories";
 export * from "@/lib/placeholder-data/categoryProducts";
 export * from "@/lib/placeholder-data/customers";
-export * from "@/lib/placeholder-data/features";
 export * from "@/lib/placeholder-data/overview";
 export * from "@/lib/placeholder-data/popularBrands";
 export * from "@/lib/placeholder-data/popularTags";
@@ -9,5 +8,4 @@ export * from "@/lib/placeholder-data/priceMarks";
 export * from "@/lib/placeholder-data/productDetails";
 export * from "@/lib/placeholder-data/products";
 export * from "@/lib/placeholder-data/rating";
-export * from "@/lib/placeholder-data/shippingInformation";
 export * from "@/lib/placeholder-data/specifications";

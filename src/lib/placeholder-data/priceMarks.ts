@@ -1,4 +1,6 @@
-export const priceMarks = [
+import { PriceMarks } from "@/lib/definitions";
+
+export const priceMarks: PriceMarks[] = [
     { id: 1, title: "Todos os preços" },
     { id: 2, title: "Menor que R$ 100" },
     { id: 3, title: "R$ 100 - R$ 500" },
