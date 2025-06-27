@@ -11,8 +11,8 @@ import {
     CarouselPrevious
 } from "@/components/ui/carousel";
 
-import { categories } from "@/lib/placeholder-data";
 import { Category } from "@/lib/definitions";
+import { categories } from "@/lib/placeholder-data/categories";
 
 export default function Categories() {
     return (

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { categoryProducts } from "@/lib/placeholder-data";
+import { categoryProducts } from "@/lib/placeholder-data/categoryProducts";
 
 export default function CategoryProducts() {
     return (

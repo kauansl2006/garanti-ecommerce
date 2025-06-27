@@ -1,18 +1,5 @@
 import { JSX } from "react";
 
-export type NavLinks = {
-    id: number;
-    href: string;
-    icon: JSX.Element;
-    title: string;
-};
-
-export type SidebarLink = { 
-    id: number; 
-    title: string; 
-    links: NavLinks[] 
-}
-
 export type Feature = {
     id: number;
     icon: JSX.Element;
@@ -23,16 +10,20 @@ export type Feature = {
 export type Product = {
     id: number;
     title: string;
-    description?: string | null;
+    description?: string;
     thumbnail: string;
+    photos: {
+        src: string;
+        alt: string;
+    }[];
     price: number;
-    discount?: number | null;
+    discount?: number;
     availableQuantity: number;
-    score?: number | null;
+    score?: number;
     isAvailable: boolean;
     isActive: boolean;
     isHot: boolean;
-};
+}
 
 export type Category = {
     id: number;

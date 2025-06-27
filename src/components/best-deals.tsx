@@ -5,12 +5,12 @@ import Link from "next/link";
 import { ArrowRightIcon } from "lucide-react";
 
 import ProductCard from "@/components/product-card";
-import { bestDeals } from "@/lib/placeholder-data";
+import { products } from "@/lib/placeholder-data/products";
 
 export default function BestDeals() {
-    const maxScore = Math.max(...bestDeals.map((product) => product.score ?? 0));
-    const topProduct = bestDeals.find((product) => product.score === maxScore);
-    const otherProducts = bestDeals.filter((product) => product.id !== topProduct?.id);
+    const maxScore = Math.max(...products.map((product) => product.score ?? 0));
+    const topProduct = products.find((product) => product.score === maxScore);
+    const otherProducts = products.filter((product) => product.id !== topProduct?.id);
 
     return (
         <section className="w-full flex flex-col items-center justify-center gap-y-[24px] px-[5.625%] xl:px-[15.625%] py-[72px]">
