@@ -13,7 +13,7 @@ export type Product = {
     title: string;
     description?: string;
     thumbnail: string;
-    photos: {
+    photos?: {
         src: string;
         alt: string;
     }[];
