@@ -6,11 +6,9 @@ import {
     CreditCardIcon
  } from "lucide-react";
 
-import { Feature, ShippingInformation } from "@/lib/definitions";
-
 import { Separator } from "@/components/ui/separator";
 
-export const features: Feature[] = [
+export const features: any[] = [
     { label: "Garantia gratuita de 1 ano", icon: MedalIcon },
     { label: "Frete grátis e entrega rápida", icon: TruckIcon },
     { label: "Garantia de 100% de devolução do dinheiro", icon: HandshakeIcon },
@@ -18,7 +16,7 @@ export const features: Feature[] = [
     { label: "Método de pagamento seguro", icon: CreditCardIcon },
 ];
 
-export const shippingInformation: ShippingInformation[] = [
+export const shippingInformation: any[] = [
     { type: "Correio:", value: "2 a 4 dias, frete grátis" },
     { type: "Envio Local:", value: "até uma semana, R$ 19,00" },
     { type: "Envio Terrestre UPS:", value: "4 a 6 dias, R$ 29,00" },

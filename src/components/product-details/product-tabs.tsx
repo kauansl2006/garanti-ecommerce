@@ -5,7 +5,7 @@ import {
     ProductDescription,
     ProductReviews,
     ProductSpecification 
-}  from "@/components";
+}  from "@/components/product-details";
 
 export const tabs = [
     { label: "DESCRIÇÃO", value: "description", content: ProductDescription },
@@ -14,7 +14,7 @@ export const tabs = [
     { label: "REVIEWS", value: "reviews", content: ProductReviews },
 ];
 
-export const ProductInformation = () => {
+export const ProductTabs = () => {
     return (
         <section className="w-full flex flex-col items-start justify-between px-[5.625%] xl:px-[15.625%]">
             <div className="w-full flex flex-col items-center pb-[40px] border-[1px] bg-white border-neutral-300 rounded-[4px]">

@@ -2,7 +2,8 @@ import { Progress } from "@/components/ui/progress"
 import { Separator } from "@/components/ui/separator";
 
 import { ratings, customers } from "@/lib/placeholder-data";
-import { Rating, CustomerFeedback} from "@/components";
+import { FeedbackCard } from "@/components/product-details";
+import { Rating} from "@/components/products";
 
 export const ProductReviews = () => {
     return (
@@ -47,7 +48,7 @@ export const ProductReviews = () => {
 
                 {customers.map((customer, index) => (
                     <div className="flex flex-col gap-[20px]" key={index}>
-                        <CustomerFeedback customer={customer}/>
+                        <FeedbackCard customer={customer}/>
                         <Separator orientation="horizontal" />
                     </div>
                 ))}

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { ArrowRightIcon } from "lucide-react";
 
-import { ProductCard } from "@/components";
+import { ProductCard } from "@/components/products";
 
 import { products } from "@/lib/placeholder-data";
 

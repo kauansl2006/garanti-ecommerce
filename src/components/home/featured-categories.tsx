@@ -7,7 +7,7 @@ import { ArrowRightIcon } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 
-import { ProductCard } from "@/components";
+import { ProductCard } from "@/components/products";
 
 import { products } from "@/lib/placeholder-data";
 
