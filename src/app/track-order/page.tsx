@@ -1,0 +1,62 @@
+import { Breadcrumb } from "@/components";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { ArrowRightIcon, CircleAlertIcon, HomeIcon } from "lucide-react";
+
+export default function Page() {
+    return (
+        <main className="w-screen flex flex-col">
+            <Breadcrumb breadcrumbs={[
+                { 
+                    icon: HomeIcon,
+                    label: "Home",
+                    href: "/"
+                },
+                { 
+                    label: "Rastrear Pedido",
+                    href: "/track-order",
+                    active: true
+                }
+            ]}/>
+            <section className="w-full flex flex-col gap-[32px] px-[15.625%] pt-[48px] pb-[124px]">
+                <div className="w-[760px] flex flex-col gap-[24px]">
+                    <div className="flex flex-col gap-[16px]">
+                        <h1 className="text-h-01 leading-h-01 font-semibold">
+                            Rastrear Pedido
+                        </h1>
+
+                        <p className="text-b-md leading-b-md font-normal text-neutral-600">
+                            Para rastrear seu pedido, insira o ID do seu pedido no campo de entrada abaixo e pressione o botão “Rastrear pedido”. Ele foi fornecido a você no seu recibo e no e-mail de confirmação que você deveria ter recebido.
+                        </p>
+                    </div>
+
+                    <div className="flex gap-[24px]">
+                        <div className="flex flex-col gap-[16px]">
+                            <Label htmlFor="order">ID do Pedido</Label>
+                            <Input className="w-[424px] h-[44px] rounded-[4px] border-[1px] border-neutral-300" type="text" id="order" placeholder="ID do Pedido..." />
+                        </div>
+                        <div className="flex flex-col gap-[16px]">
+                            <Label htmlFor="email">E-mail de cobrança</Label>
+                            <Input className="w-[424px] h-[44px] rounded-[4px] border-[1px] border-neutral-300" type="text" id="email" placeholder="Endereço de email..." />
+                        </div>
+                    </div>
+
+                    <p className="text-nowrap flex gap-[6px] items-center text-neutral-600">
+                        <CircleAlertIcon className="size-[24px] stroke-[1.5px]" />
+                        ID do pedido que enviamos para seu endereço de e-mail.
+                    </p>
+                </div>
+
+                <Button 
+                    variant="secondary" 
+                    size="default" 
+                    className="cursor-pointer h-[56px] w-[217px] text-[16px]/[56px] font-bold rounded-[4px]"
+                >
+                    RASTREAR
+                    <ArrowRightIcon className="size-[24px] stroke-[2px] text-white" />
+                </Button>
+            </section>
+        </main>
+    )
+}
