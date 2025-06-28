@@ -15,17 +15,17 @@ import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 
-import Logo from "@/components/logo";
-import Sidebar from "@/components/sidebar";
-import NavLinks from "@/components/nav-links";
-import Searchbar from "@/components/searchbar";
+import { 
+    Logo,
+    Searchbar,
+    NavLinks,
+    Sidebar
+} from "@/components";
 
-export default function Header() {
+export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    function handleOpen() {
-        return setIsOpen((prev) => !prev);
-    }
+    const handleOpen = () => setIsOpen((prev) => !prev);
 
     return (
         <header className="w-[100%] flex flex-col items-center justify-center bg-white fixed z-100 md:relative">
@@ -102,7 +102,7 @@ export default function Header() {
                 </div>
 
                 <Button
-                    onClick={() => handleOpen()}
+                    onClick={handleOpen}
                     variant="ghost"
                     size="icon"
                     className="cursor-pointer block md:hidden"

@@ -1,4 +1,6 @@
-export const ratings = [
+import { Rating } from "@/lib/definitions";
+
+export const ratings: Rating[] = [
     { score: 63, reviewers: "(94,532)" },
     { score: 34, reviewers: "(6,717)" },
     { score: 22, reviewers: "(714)" },

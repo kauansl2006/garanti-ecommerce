@@ -1,4 +1,6 @@
-export const overview = [
+import { Overview } from "@/lib/definitions";
+
+export const overview: Overview[] = [
     { label: "Nome do modelo:", value: "MacBook Pro" },
     { label: "Marca:", value: "Apple" },
     { label: "Caso de uso:", value: "Personal Gaming, Negócios" },

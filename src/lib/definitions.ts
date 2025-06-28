@@ -1,18 +1,19 @@
-import { JSX } from "react";
+import { LucideProps } from "lucide-react";
+import { ForwardRefExoticComponent, RefAttributes } from "react";
 
-export type Feature = {
+export type Category = {
     id: number;
-    icon: JSX.Element;
     title: string;
-    description: string;
-};
+    imagePath: string;
+    href: string;
+}
 
 export type Product = {
     id: number;
     title: string;
     description?: string;
     thumbnail: string;
-    photos: {
+    photos?: {
         src: string;
         alt: string;
     }[];
@@ -25,9 +26,65 @@ export type Product = {
     isHot: boolean;
 }
 
-export type Category = {
+export type CategoryProducts = {
     id: number;
     title: string;
-    imagePath: string;
-    href: string;
+    products: Product[]
+}
+
+export type Customer = {
+    photo: string;
+    name: string;
+}
+
+export type Feature = {
+    label: string;
+    icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>;
+}
+
+export type Overview = {
+    label: string;
+    value: string;
+}
+
+export type PopularBrand = {
+    id: number;
+    title: string;
+}
+
+export type PopularTag = {
+    id: number;
+    title: string;
+}
+
+export type PriceMarks = {
+    id: number;
+    title: string;
+}
+
+export type ProductDetail = {
+    label: string;
+    value?: string;
+    values?: {
+        label?: string;
+        value: string;
+    }[];
+}
+
+export type Rating = {
+    score: number;
+    reviewers: string;
+}
+
+export type ShippingInformation = {
+    type: string;
+    value: string;
+}
+
+export type Specification = {
+    label: string;
+    values: {
+        label: string;
+        value: string;
+    }[];
 }

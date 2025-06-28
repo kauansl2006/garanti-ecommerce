@@ -5,11 +5,13 @@ import Image from "next/image";
 
 import { ArrowRightIcon } from "lucide-react";
 
-import ProductCard from "@/components/product-card";
 import { Badge } from "@/components/ui/badge";
-import { products } from "@/lib/placeholder-data/products";
 
-export default function FeaturedProducts() {
+import { ProductCard } from "@/components/products";
+
+import { products } from "@/lib/placeholder-data";
+
+export const FeaturedProducts = () => {
     return (
         <section className="w-full flex items-start justify-between gap-[24px] px-[5.625%] xl:px-[15.625%] py-[42px] xl:py-[72px]">
             <div className="hidden 2xl:block max-w-[312px] w-full h-full">
@@ -68,7 +70,7 @@ export default function FeaturedProducts() {
     )
 }
 
-function FeaturedBanner() {
+const FeaturedBanner = () => {
     return (
         <div className="w-full h-full flex flex-col items-center justify-center rounded-[4px] bg-[#F3DE6D]">
             <div className="w-full h-full flex flex-col items-center justify-center gap-[16px] px-[20px] py-[30px]">

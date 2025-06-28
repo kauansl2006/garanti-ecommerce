@@ -3,7 +3,7 @@ import { SearchIcon } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-export default function Searchbar() {
+export const Searchbar = () => {
     return (
         <div className="hidden md:flex lg:flex max-w-[440px] xl:max-w-[540px] w-[100%] items-center justify-center relative">
             <SearchIcon className="size-[18px] stroke-[1.5] text-neutral-900 absolute left-[10px]" />

@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Rating from "./rating";
 
-export default function CustomerFeedback({ customer }: { customer: any}) {
+import { Rating } from "@/components/products";
+
+export const FeedbackCard = ({ customer }: { customer: any}) => {
     return (
         <div className="w-[720px] flex flex-col gap-[12px]">
             <div className="flex gap-[12px]">

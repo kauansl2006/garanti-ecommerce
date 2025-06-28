@@ -1,12 +1,11 @@
-import Rating from "@/components/rating";
-import CustomerFeedback from "@/components/customer-feedback";
-
 import { Progress } from "@/components/ui/progress"
 import { Separator } from "@/components/ui/separator";
-import { ratings } from "@/lib/placeholder-data/rating";
-import { customers } from "@/lib/placeholder-data/customers";
 
-export default function ProductReviews() {
+import { ratings, customers } from "@/lib/placeholder-data";
+import { FeedbackCard } from "@/components/product-details";
+import { Rating} from "@/components/products";
+
+export const ProductReviews = () => {
     return (
         <section className="flex flex-col gap-[40px]">
             <div className="flex gap-[32px]">
@@ -49,7 +48,7 @@ export default function ProductReviews() {
 
                 {customers.map((customer, index) => (
                     <div className="flex flex-col gap-[20px]" key={index}>
-                        <CustomerFeedback customer={customer}/>
+                        <FeedbackCard customer={customer}/>
                         <Separator orientation="horizontal" />
                     </div>
                 ))}

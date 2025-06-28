@@ -1,4 +1,6 @@
-export const customers = [
+import { Customer } from "@/lib/definitions";
+
+export const customers: Customer[] = [
     {
         photo: "/users/user-1.png",
         name: "Dianne Russell"

@@ -5,9 +5,9 @@ import {
     HeadsetIcon,
 } from "lucide-react";
 
-import { Feature } from "@/lib/definitions";
+import { FeatureCard } from "@/components/home";
 
-const features: Feature[] = [
+const features: any[] = [
     {
         id: 1,
         icon: <PackageIcon className="size-[40px] stroke-[1px]" />,
@@ -34,7 +34,7 @@ const features: Feature[] = [
     },
 ];
 
-export default function Features() {
+export const Features = () => {
     return (
         <section className="w-full flex flex-col items-center justify-center px-[5.625%] xl:px-[15.625%]">
             <div className="w-full grid 2xl:grid-cols-[repeat(4,1fr)] sm:grid-cols-[repeat(2,1fr)]  grid-cols-[repeat(1,1fr)] gap-x-[28px] p-[16px] bg-white border-[1px] border-neutral-300 rounded-[6px]">
@@ -43,21 +43,5 @@ export default function Features() {
                 ))}
             </div>
         </section>
-    );
-}
-
-export function FeatureCard({ feature }: { feature: Feature }) {
-    return (
-        <div className="2xl:max-w-[280px] 2xl:w-full flex items-start justify-start p-[16px] gap-x-[16px]">
-            {feature.icon}
-            <div className="w-full flex flex-col items-start justify-start gap-y-[4px]">
-                <span className="text-l-03 leading-l-03 font-medium text-neutral-900">
-                    {feature.title}
-                </span>
-                <p className="text-b-ty leading-b-ty lg:text-b-sm lg:leading-b-sm font-normal text-neutral-600">
-                    {feature.description}
-                </p>
-            </div>
-        </div>
     );
 }

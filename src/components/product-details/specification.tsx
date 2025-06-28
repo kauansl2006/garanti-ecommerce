@@ -1,7 +1,8 @@
-import { specifications } from "@/lib/placeholder-data/specifications";
 import { Separator } from "@/components/ui/separator";
 
-export default function ProductSpecification() {
+import { specifications } from "@/lib/placeholder-data";
+
+export const ProductSpecification = () => {
     return (
         <section className="w-full grid grid-cols-[repeat(2,1fr)] gap-[24px]">
             {specifications.map((specification, index) => (

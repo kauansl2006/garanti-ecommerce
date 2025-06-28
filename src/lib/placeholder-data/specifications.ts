@@ -1,4 +1,6 @@
-export const specifications = [
+import { Specification } from "@/lib/definitions";
+
+export const specifications: Specification[] = [
     {
       label: "GERAL",
       values: [

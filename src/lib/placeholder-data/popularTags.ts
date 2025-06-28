@@ -1,4 +1,6 @@
-export const popularTags = [
+import { PopularTag } from "@/lib/definitions";
+
+export const popularTags: PopularTag[] = [
     {
         id: 1,
         title: "Games",

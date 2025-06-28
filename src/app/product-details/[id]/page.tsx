@@ -1,11 +1,10 @@
-import Breadcrumb from "@/components/breadcrumb";
-import CategoryProducts from "@/components/category-products";
-import ProductDetails from "@/components/product-details";
-import ProductInformation from "@/components/product-information";
-import { products } from "@/lib/placeholder-data/products";
-import { HomeIcon } from "lucide-react";
 import { notFound } from "next/navigation";
-;
+
+import { HomeIcon } from "lucide-react";
+
+import { Breadcrumb, CategoryProducts } from "@/components";
+import { ProductDetails, ProductTabs } from "@/components/product-details"
+import { products } from "@/lib/placeholder-data";
 
 export default async function Page({
     params,
@@ -39,7 +38,7 @@ export default async function Page({
                 }
             ]}/>
             <ProductDetails product={product} />
-            <ProductInformation />
+            <ProductTabs />
             <CategoryProducts />
         </main>
     )

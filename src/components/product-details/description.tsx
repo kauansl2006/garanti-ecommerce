@@ -1,10 +1,28 @@
+import { 
+    MedalIcon,
+    TruckIcon,
+    HandshakeIcon,
+    HeadphonesIcon,
+    CreditCardIcon
+ } from "lucide-react";
 
-
-import { features } from "@/lib/placeholder-data/features";
-import { shippingInformation } from "@/lib/placeholder-data/shippingInformation";
 import { Separator } from "@/components/ui/separator";
 
-export default function ProductDescription() {
+export const features: any[] = [
+    { label: "Garantia gratuita de 1 ano", icon: MedalIcon },
+    { label: "Frete grátis e entrega rápida", icon: TruckIcon },
+    { label: "Garantia de 100% de devolução do dinheiro", icon: HandshakeIcon },
+    { label: "Suporte ao cliente 24 horas por dia, 7 dias por semana", icon: HeadphonesIcon },
+    { label: "Método de pagamento seguro", icon: CreditCardIcon },
+];
+
+export const shippingInformation: any[] = [
+    { type: "Correio:", value: "2 a 4 dias, frete grátis" },
+    { type: "Envio Local:", value: "até uma semana, R$ 19,00" },
+    { type: "Envio Terrestre UPS:", value: "4 a 6 dias, R$ 29,00" },
+];
+
+export const ProductDescription = () => {
     return (
         <section className="w-full grid grid-cols-[repeat(4,auto)] gap-[24px]">
             <div className="flex flex-col gap-[12px]">

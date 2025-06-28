@@ -92,7 +92,7 @@ const sidebarLinks = [
     }
 ];
 
-export default function Sidebar() {
+export const Sidebar = () => {
     return (
         <section className="w-[290px] h-[100vh] p-[20px] md:hidden flex flex-col items-start justify-start gap-y-[24px] bg-neutral-100 absolute top-[60px] right-[0px] z-100 border-l-[1px] border-neutral-300">
             {sidebarLinks.map((sidebarLink) => (

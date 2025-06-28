@@ -1,11 +1,13 @@
-import BestDeals from "@/components/best-deals";
-import Categories from "@/components/categories";
-import Widgets from "@/components/widgets";
-import Features from "@/components/features";
-import FeaturedProducts from "@/components/featured-products";
-import FeaturedCategories from "@/components/featured-categories";
-import CategoryProducts from "@/components/category-products";
-import Banners from "@/components/banners";
+import {
+    BestDeals,
+    Categories,
+    Widgets,
+    Features,
+    FeaturedProducts,
+    FeaturedCategories,
+    Banners
+} from "@/components/home";
+import { CategoryProducts } from "@/components"
 
 export default function Home() {
     return (

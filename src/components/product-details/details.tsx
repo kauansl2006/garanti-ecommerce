@@ -3,24 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Product } from "@/lib/definitions";
-import { 
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious 
-} from "@/components/ui/carousel";
-import Rating from "@/components/rating";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { 
-    DropdownMenu, 
-    DropdownMenuContent, 
-    DropdownMenuItem, 
-    DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu";
-import { Label } from "@/components/ui/label";
 import { 
     ChevronDownIcon,
     HeartIcon,
@@ -29,13 +11,28 @@ import {
     RefreshCcwIcon,
     ShoppingCartIcon
 } from "lucide-react";
-import { Button } from "./ui/button";
 
-export default function ProductDetails({
-    product,
-}: {
-    product: Product
-}) {
+import { 
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious 
+} from "@/components/ui/carousel";
+import { 
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+
+import { Rating } from "@/components/products";
+
+export const ProductDetails = ({ product }: { product: any }) => {
     return (
         <section className="w-full flex flex-row items-start gap-[56px] pt-[32px] pb-[72px] px-[15.625%]">
             <div className="max-w-[616px] w-full flex flex-col items-start gap-[24px]">
@@ -57,7 +54,7 @@ export default function ProductDetails({
 
                 <Carousel className="w-full">
                     <CarouselContent>
-                        {product.photos.map((photo, index) => (
+                        {product.photos.map((photo: any, index: any) => (
                             <CarouselItem className="basis-1/6" key={index}>
                                 <div className="size-[96px] bg-neutral-100 border-[1px] border-neutral-300 rounded-[4px] relative">
                                     <Image  

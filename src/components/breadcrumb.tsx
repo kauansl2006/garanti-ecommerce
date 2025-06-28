@@ -1,6 +1,7 @@
-import clsx from "clsx";
-import { ChevronRightIcon, LucideProps } from "lucide-react";
 import Link from "next/link";
+import clsx from "clsx";
+
+import { ChevronRightIcon, LucideProps } from "lucide-react";
 
 interface Breadcrumbs {
     icon?: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>,
@@ -9,11 +10,11 @@ interface Breadcrumbs {
     active?: boolean
 }
 
-export default function Breadcrumbs({
+export const Breadcrumb = ({
     breadcrumbs
 }: {
     breadcrumbs: Breadcrumbs[]
-}) {
+}) => {
     return (
         <section className="w-full h-[72px] bg-neutral-200 px-[5.625%] xl:px-[15.625%] hidden md:flex items-center justify-start">
             <div className="flex items-center justify-center gap-x-[8px]">

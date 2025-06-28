@@ -4,9 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { ArrowRightIcon } from "lucide-react";
+
 import { Badge } from "@/components/ui/badge";
 
-export default function Banners() {
+export const Banners = () => {
     return (
         <section className="w-full 2xl:h-[336px] px-[5.625%] xl:px-[15.625%] flex flex-col 2xl:flex-row gap-[24px]">
            

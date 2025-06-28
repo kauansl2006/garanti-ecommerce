@@ -4,10 +4,11 @@ import Link from "next/link";
 
 import { ArrowRightIcon } from "lucide-react";
 
-import ProductCard from "@/components/product-card";
-import { products } from "@/lib/placeholder-data/products";
+import { ProductCard } from "@/components/products";
 
-export default function BestDeals() {
+import { products } from "@/lib/placeholder-data";
+
+export const BestDeals = () => {
     const maxScore = Math.max(...products.map((product) => product.score ?? 0));
     const topProduct = products.find((product) => product.score === maxScore);
     const otherProducts = products.filter((product) => product.id !== topProduct?.id);

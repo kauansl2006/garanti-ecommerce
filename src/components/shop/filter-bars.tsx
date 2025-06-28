@@ -5,12 +5,14 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
 
-import { categories } from "@/lib/placeholder-data/categories";
-import { priceMarks } from "@/lib/placeholder-data/priceMarks";
-import { popularTags } from "@/lib/placeholder-data/popularTags";
-import { popularBrands } from "@/lib/placeholder-data/popularBrands";
+import { 
+    categories, 
+    priceMarks,
+    popularTags,
+    popularBrands
+} from "@/lib/placeholder-data";
 
-export function VerticalFilterBar() {
+export const VerticalFilterBar = () => {
     return (
         <div className="w-[312px] h-full flex flex-col items-start justify-start gap-[24px] bg-white border-[1px] border-neutral-300 p-[20px] rounded-[4px]">
             <div className="flex flex-col items-start justify-start gap-[16px]">
@@ -105,7 +107,7 @@ export function VerticalFilterBar() {
     )
 }
 
-export function HorizontalFilterBar() {
+export const HorizontalFilterBar = () => {
     return (
         <div className="w-full h-full grid grid-cols-[repeat(1,1fr)] sm:grid-cols-[repeat(2,1fr)] lg:grid-cols-[repeat(4,1fr)] items-start justify-start gap-[24px] bg-white border-[1px] border-neutral-300 p-[20px] rounded-[4px]">
             <div className="flex flex-col items-start justify-start gap-[16px]">

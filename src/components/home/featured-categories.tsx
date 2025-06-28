@@ -5,11 +5,13 @@ import Image from "next/image";
 
 import { ArrowRightIcon } from "lucide-react";
 
-import ProductCard from "@/components/product-card";
 import { Badge } from "@/components/ui/badge";
-import { products } from "@/lib/placeholder-data/products";
 
-export default function FeaturedCategories() {
+import { ProductCard } from "@/components/products";
+
+import { products } from "@/lib/placeholder-data";
+
+export const FeaturedCategories = () => {
     return (
         <section className="w-full flex items-start justify-between gap-[24px] px-[5.625%] xl:px-[15.625%] py-[42px] xl:py-[72px]">
             <div className="w-full flex flex-col items-center justify-center gap-y-[24px]">

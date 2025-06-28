@@ -1,6 +1,12 @@
 import { StarIcon } from "lucide-react";
 
-export default function Rating({ score, size }: { score: number, size?: string }) {
+export const Rating = ({ 
+    score, 
+    size 
+}: { 
+    score: number, 
+    size?: string 
+}) => {
     if (score > 0 && score <= 10) {
         return (
             <div className="flex items-center gap-x-[2px]">

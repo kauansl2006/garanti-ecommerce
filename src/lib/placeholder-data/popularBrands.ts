@@ -1,4 +1,6 @@
-export const popularBrands = [
+import { PopularBrand } from "@/lib/definitions";
+
+export const popularBrands: PopularBrand[] = [
     { id: 1, title: "Apple" },
     { id: 2, title: "Microsoft" },
     { id: 3, title: "Dell" },
