@@ -27,7 +27,7 @@ export const SmallProductCard = ({
             </div>
             <div className="w-full flex flex-col items-start justify-start gap-y-[8px]">
                 <Link
-                    href="#"
+                    href={`/product-details/${product.id}`}
                     className="hover:underline text-b-sm leading-b-sm font-normal line-clamp-2 text-ellipsis overflow-hidden w-[196px]"
                 >
                     {product.title}
