@@ -2,15 +2,9 @@ import { notFound } from "next/navigation";
 
 import { HomeIcon } from "lucide-react";
 
-import {
-    Breadcrumb,
-    CategoryProducts,
-    ProductDetails,
-    ProductInformation
-} from "@/components";
-
+import { Breadcrumb, CategoryProducts } from "@/components";
+import { ProductDetails, ProductTabs } from "@/components/product-details"
 import { products } from "@/lib/placeholder-data";
-
 
 export default async function Page({
     params,
@@ -44,7 +38,7 @@ export default async function Page({
                 }
             ]}/>
             <ProductDetails product={product} />
-            <ProductInformation />
+            <ProductTabs />
             <CategoryProducts />
         </main>
     )

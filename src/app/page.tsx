@@ -5,9 +5,9 @@ import {
     Features,
     FeaturedProducts,
     FeaturedCategories,
-    CategoryProducts,
     Banners
-} from "@/components";
+} from "@/components/home";
+import { CategoryProducts } from "@/components"
 
 export default function Home() {
     return (
