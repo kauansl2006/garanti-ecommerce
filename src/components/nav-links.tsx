@@ -40,7 +40,7 @@ const navLinks = [
     },
     {
         id: 4,
-        href: "#",
+        href: "/suport",
         icon: (
             <HeadsetIcon className="size-[24px] stroke-[1.5]" />
         ),
