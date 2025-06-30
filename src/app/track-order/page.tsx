@@ -1,5 +1,8 @@
+"use client";
+
+import Link from "next/link";
+
 import { Breadcrumb } from "@/components";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowRightIcon, CircleAlertIcon, HomeIcon } from "lucide-react";
@@ -48,14 +51,13 @@ export default function Page() {
                     </p>
                 </div>
 
-                <Button 
-                    variant="secondary" 
-                    size="default" 
-                    className="cursor-pointer h-[56px] w-[217px] text-[16px]/[56px] font-bold rounded-[4px]"
+                <Link 
+                    href={`/track-order-details/96459761`}
+                    className="w-[217px] h-[56px] bg-secondary text-white text-[16px]/[56px] font-bold flex items-center justify-center gap-[12px] px-[32px] rounded-[4px]"
                 >
                     RASTREAR
                     <ArrowRightIcon className="size-[24px] stroke-[2px] text-white" />
-                </Button>
+                </Link>
             </section>
         </main>
     )
