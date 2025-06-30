@@ -32,7 +32,7 @@ const navLinks = [
     },
     {
         id: 3,
-        href: "#",
+        href: "/compare",
         icon: (
             <RefreshCcwIcon className="size-[24px] stroke-[1.5]" />
         ),
