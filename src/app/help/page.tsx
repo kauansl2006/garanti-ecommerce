@@ -58,18 +58,20 @@ export default function Page() {
                     active: true
                 }
             ]} />
-<section className="px-[300px] py-[72px] w-full flex gap-[24px] justify-between">
-    <div className="flex flex-col gap-[40px]">
-        <h1 className="text-h-01 leading-h-01 font-semibold">Perguntas frequentes</h1>
+<section className="w-full px-[5.625%] xl:px-[15.625%] pt-[102px] pb-[72px] md:py-[72px] flex flex-col xl:flex-row gap-[24px] items-center xl:items-start justify-center xl:justify-between">
+    <div className="max-w-[760px] w-full flex flex-col gap-[20px] md:gap-[40px]">
+        <h1 className="text-h-03 leading-h-03 md:text-h-01 md:leading-h-01 font-semibold text-center md:text-start">
+            Perguntas frequentes
+        </h1>
 
-        <div className="flex flex-col gap-[20px]">
+        <div className=" flex flex-col gap-[20px]">
             {questions.map((question, index) => {
                 const isOpen = activeIndex === index;
                 return (
                     <div key={index}>
-                        <div className="w-[760px] h-[64px] bg-white border-[1px] border-neutral-300 rounded-t-[4px] px-[24px] py-[20] flex items-center justify-center">
+                        <div className="h-[64px] bg-white border-[1px] border-neutral-300 rounded-t-[4px] px-[24px] py-[20] flex items-center justify-center">
                             <div className="w-full flex items-center justify-between">
-                                <p className="text-b-lg leading-b-lg font-medium">
+                                <p className="text-b-md leading-b-md md:text-b-lg md:leading-b-lg font-medium">
                                     {question.question}
                                 </p>
     
@@ -87,7 +89,7 @@ export default function Page() {
                             </div>
                         </div>
                         {isOpen && (
-                            <div className="w-[760px] h-[64px]  bg-neutral-100 border-[1px] border-neutral-300 rounded-b-[4px] px-[24px] py-[20] flex items-center justify-center">
+                            <div className="bg-neutral-100 border-[1px] border-neutral-300 rounded-b-[4px] px-[24px] py-[20px] flex items-center justify-center">
                                 <p className="text-b-sm leading-b-sm font-medium text-neutral-700">
                                     {question.answer}
                                 </p>
@@ -99,7 +101,7 @@ export default function Page() {
         </div>
     </div>
 
-    <div className="h-[480px] bg-white border-[1px] border-neutral-300 rounded-[4px] flex flex-col gap-[24px] p-[32px]">
+    <div className="w-full md:size-[480px] bg-white border-[1px] border-neutral-300 rounded-[4px] flex flex-col gap-[24px] p-[32px]">
         <div className="flex flex-col gap-[12px]">
             <p className="text-b-lg leading-b-lg font-bold">
                 Não encontrou sua resposta, peça suporte.

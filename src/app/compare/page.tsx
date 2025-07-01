@@ -123,7 +123,7 @@ export default function Page() {
                 }
             ]} />
 
-            <section className="flex items-center justify-center px-[300px] py-[72px]">
+            <section className="flex items-center justify-center px-[5.625%] xl:px-[15.625%] pt-[102px] pb-[72px] md:py-[72px]">
                 <div className="w-[1320px] overflow-x-scroll bg-white border-[1px] border-neutral-300 rounded-[4px]">
 
 <table>

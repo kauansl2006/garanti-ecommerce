@@ -6,11 +6,11 @@ import { ArrowRightIcon } from "lucide-react";
 
 export default function NotFound() {
     return (
-        <main className="w-screen flex items-center justify-center">
-            <section className="w-full flex items-center justify-center px-[300px] py-[72px]">
+        <main className="w-screen h-screen md:h-auto flex items-center justify-center">
+            <section className="w-full flex items-center justify-center px-[5.625%] xl:px-[15.625%] py-[72px]">
                 <div className="flex flex-col items-center justify-center gap-[24px]">
-                    <div className="w-[550px] flex flex-col items-center justify-center gap-[16px]">
-                        <h1 className="text-h-01 leading-h-01 font-semibold">
+                    <div className="w-full md:w-[550px] flex flex-col items-center justify-center gap-[16px]">
+                        <h1 className="text-h-02 leading-h-02 md:text-h-01 md:leading-h-01 font-semibold text-center">
                             404 - Não Encontrado
                         </h1>
                         <p className="text-b-sm leading-b-sm text-neutral-700 font-medium text-center">
