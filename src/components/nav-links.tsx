@@ -48,7 +48,7 @@ const navLinks = [
     },
     {
         id: 5,
-        href: "#",
+        href: "/help",
         icon: (
             <CircleAlertIcon className="size-[24px] stroke-[1.5]" />
         ),
