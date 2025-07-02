@@ -43,7 +43,7 @@ export const FeaturedCategories = () => {
                         </div>
                         <Link
                             href="#"
-                            className="text-nowrap text-b-sm leading-b-sm font-semibold flex items-center justify-start gap-x-[8px] text-blue-500"
+                            className="text-nowrap text-b-sm leading-b-sm font-semibold flex items-center justify-start gap-x-[8px] text-primary"
                         >
                             Visualizar todos os produtos
                             <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
@@ -98,7 +98,7 @@ export const FeaturedCategories = () => {
                         </div>
                     </div>
 
-                    <Link href="#" className="w-full h-[48px] flex items-center justify-center gap-x-[12px] px-[32px] rounded-[4px] bg-secondary text-white text-[15px]/[56px] font-bold text-nowrap" >
+                    <Link href="#" className="w-full h-[48px] flex items-center justify-center gap-x-[12px] px-[32px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap" >
                         VER AGORA
                         <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
                     </Link>

@@ -17,7 +17,7 @@ export const Banners = () => {
                         <div className="flex flex-col items-start gap-y-[8px]">
                             <Badge
                                 variant="default"
-                                className="text-b-sm leading-b-sm font-semibold text-white bg-[#2DA5F3] px-[12px] h-[32px] rounded-none"
+                                className="text-b-sm leading-b-sm font-semibold text-white bg-neutral-900 px-[12px] h-[32px] rounded-none"
                             >
                                 INTRODUCING
                             </Badge>
@@ -33,7 +33,7 @@ export const Banners = () => {
                         </p>
                     </div>
 
-                    <Link href="#" className="h-[48px] flex items-center justify-center gap-x-[8px] px-[24px] rounded-[4px] bg-secondary text-white text-[15px]/[56px] font-bold text-nowrap" >
+                    <Link href="#" className="h-[48px] flex items-center justify-center gap-x-[8px] px-[24px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap" >
                         VER AGORA
                         <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
                     </Link>
@@ -54,7 +54,7 @@ export const Banners = () => {
                         <div className="flex flex-col items-start gap-y-[8px]">
                             <Badge
                                 variant="default"
-                                className="text-b-sm leading-b-sm font-semibold text-neutral-900 bg-warning px-[12px] h-[32px] rounded-none"
+                                className="text-b-sm leading-b-sm font-semibold text-white bg-secondary px-[12px] h-[32px] rounded-none"
                             >
                                 INTRODUCING NEW
                             </Badge>
@@ -69,7 +69,7 @@ export const Banners = () => {
                         </p>
                     </div>
 
-                    <Link href="#" className="h-[48px] flex items-center justify-center gap-x-[8px] px-[24px] rounded-[4px] bg-secondary text-white text-[15px]/[56px] font-bold text-nowrap" >
+                    <Link href="#" className="h-[48px] flex items-center justify-center gap-x-[8px] px-[24px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap" >
                         VER AGORA
                         <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
                     </Link>

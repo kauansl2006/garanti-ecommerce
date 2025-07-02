@@ -8,6 +8,7 @@ import {
     HeartIcon,
     MenuIcon,
     ShoppingBagIcon,
+    ShoppingCartIcon,
     UserCircle2Icon,
 } from "lucide-react";
 
@@ -83,15 +84,15 @@ export const Header = () => {
                 <div className="hidden md:flex lg:hidden xl:flex items-center justify-center gap-[8px]">
                     <Link
                         className="p-[8px] rounded-[4px] hover:bg-neutral-200 xl:hover:bg-white xl:p-[4px] xl:rounded-[0px]"
-                        href="#"
+                        href="/wishlist"
                     >
                         <HeartIcon className="size-[28px] xl:size-[32px] stroke-[1.5] text-neutral-900" />
                     </Link>
                     <Link
                         className="p-[8px] rounded-[4px] hover:bg-neutral-200 xl:hover:bg-white xl:p-[4px] xl:rounded-[0px]"
-                        href="#"
+                        href="/shopping-cart"
                     >
-                        <ShoppingBagIcon className="size-[28px] xl:size-[32px] stroke-[1.5] text-neutral-900" />
+                        <ShoppingCartIcon className="size-[28px] xl:size-[32px] stroke-[1.5] text-neutral-900" />
                     </Link>
                     <Link
                         className="p-[8px] rounded-[4px] hover:bg-neutral-200 xl:hover:bg-white xl:p-[4px] xl:rounded-[0px]"
@@ -126,15 +127,15 @@ export const Header = () => {
                 <div className="hidden lg:flex xl:hidden 2xl:hidden items-center justify-center gap-[18px]">
                     <Link
                         className="p-[8px] rounded-[4px] hover:bg-neutral-800"
-                        href="#"
+                        href="/wishlist"
                     >
                         <HeartIcon className="size-[28px] stroke-[1.5] text-white" />
                     </Link>
                     <Link
                         className="p-[8px] rounded-[4px] hover:bg-neutral-800"
-                        href="#"
+                        href="/shopping-cart"
                     >
-                        <ShoppingBagIcon className="size-[28px] stroke-[1.5] text-white" />
+                        <ShoppingCartIcon className="size-[28px] stroke-[1.5] text-white" />
                     </Link>
                     <Link
                         className="p-[8px] rounded-[4px] hover:bg-neutral-800"

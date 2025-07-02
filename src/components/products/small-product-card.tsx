@@ -32,7 +32,7 @@ export const SmallProductCard = ({
                 >
                     {product.title}
                 </Link>
-                <h3 className="text-b-sm leading-b-sm font-normal text-blue-500">
+                <h3 className="text-b-sm leading-b-sm font-normal text-primary">
                     R$ {product.price.toFixed(2)}
                 </h3>
             </div>

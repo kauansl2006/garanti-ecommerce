@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { EyeIcon, HeartIcon, ShoppingBagIcon } from "lucide-react";
+import { EyeIcon, HeartIcon, ShoppingBagIcon, ShoppingCartIcon } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -24,7 +24,7 @@ export const ProductCard = ({
                 {product.discount && (
                     <Badge
                         variant="default"
-                        className="px-[10px] py-[5px] rounded-[4px] text-b-xs leading-b-xs font-semibold bg-yellow-300 text-neutral-900"
+                        className="px-[10px] py-[5px] rounded-[4px] text-b-xs leading-b-xs font-semibold bg-[#EFD33D] text-foreground"
                     >
                         {product.discount}% OFF
                     </Badge>
@@ -64,21 +64,21 @@ export const ProductCard = ({
                         <Button
                             variant="ghost"
                             size="icon"
-                            className="cursor-pointer w-[48px] h-[48px] rounded-full bg-white hover:bg-secondary hover:text-white p-[12px]"
+                            className="cursor-pointer w-[48px] h-[48px] rounded-full bg-white hover:bg-primary hover:text-white p-[12px]"
                         >
                             <HeartIcon className="size-[28px] stroke-[1.5px]" />
                         </Button>
                         <Button
                             variant="ghost"
                             size="icon"
-                            className="cursor-pointer w-[48px] h-[48px] rounded-full bg-white hover:bg-secondary hover:text-white p-[12px]"
+                            className="cursor-pointer w-[48px] h-[48px] rounded-full bg-white hover:bg-primary hover:text-white p-[12px]"
                         >
                             <ShoppingBagIcon className="size-[28px] stroke-[1.5px]" />
                         </Button>
                         <Button
                             variant="ghost"
                             size="icon"
-                            className="cursor-pointer w-[48px] h-[48px] rounded-full bg-white hover:bg-secondary hover:text-white p-[12px]"
+                            className="cursor-pointer w-[48px] h-[48px] rounded-full bg-white hover:bg-primary hover:text-white p-[12px]"
                         >
                             <EyeIcon className="size-[28px] stroke-[1.5px]" />
                         </Button>
@@ -102,7 +102,7 @@ export const ProductCard = ({
                 >
                     {product.title}
                 </Link>
-                <h3 className="text-b-xl leading-b-xl font-normal text-blue-500">
+                <h3 className="text-b-xl leading-b-xl font-normal text-primary">
                     R$ {product.price.toFixed(2)}
                 </h3>
 
@@ -120,13 +120,11 @@ export const ProductCard = ({
                             >
                                 <HeartIcon className="size-[28px] stroke-[1.5]" />
                             </Button>
-                            <Button
-                                variant="secondary"
-                                size="default"
-                                className="cursor-pointer h-[48px] rounded-[4px] flex items-center justify-center gap-x-[8px] p-[12px]"
+                            <Button                                         
+                                className="cursor-pointer flex gap-[8px] w-[190px] h-[48px] px-[24px] text-white text-[14px]/[48px] font-bold rounded-[4px]"
                             >
-                                <ShoppingBagIcon className="size-[28px] stroke-[1.5] text-white" />
-                                ADICIONAR A BAG
+                                ADQUIRIR
+                                <ShoppingCartIcon className="size-[20px] stroke-[1.5px] text-white" />
                             </Button>
                             <Button
                                 variant="ghost"

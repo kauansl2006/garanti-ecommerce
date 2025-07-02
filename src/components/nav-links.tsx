@@ -24,7 +24,7 @@ const navLinks = [
     },
     {
         id: 2,
-        href: "#",
+        href: "/track-order",
         icon: (
             <MapPinIcon className="size-[24px] stroke-[1.5]" />
         ),
@@ -32,7 +32,7 @@ const navLinks = [
     },
     {
         id: 3,
-        href: "#",
+        href: "/compare",
         icon: (
             <RefreshCcwIcon className="size-[24px] stroke-[1.5]" />
         ),
@@ -40,7 +40,7 @@ const navLinks = [
     },
     {
         id: 4,
-        href: "#",
+        href: "/suport",
         icon: (
             <HeadsetIcon className="size-[24px] stroke-[1.5]" />
         ),
@@ -48,7 +48,7 @@ const navLinks = [
     },
     {
         id: 5,
-        href: "#",
+        href: "/help",
         icon: (
             <CircleAlertIcon className="size-[24px] stroke-[1.5]" />
         ),
