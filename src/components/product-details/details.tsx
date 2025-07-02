@@ -75,12 +75,12 @@ export const ProductDetails = ({ product }: { product: any }) => {
                         ))}
                     </CarouselContent>
                     <CarouselPrevious 
-                        variant="secondary" 
-                        className="cursor-pointer size-[48px] hover:bg-secondary hidden md:inline-flex" 
+                        variant="default" 
+                        className="cursor-pointer size-[48px] hover:bg-primary hidden md:inline-flex" 
                     />
                     <CarouselNext 
-                        variant="secondary" 
-                        className="cursor-pointer size-[48px] hover:bg-secondary hidden md:inline-flex" 
+                        variant="default" 
+                        className="cursor-pointer size-[48px] hover:bg-primary hidden md:inline-flex" 
                     />
                 </Carousel>
             </div>
@@ -114,7 +114,7 @@ export const ProductDetails = ({ product }: { product: any }) => {
 
                 <div className="flex items-center gap-[12px]">
                     <div className="flex items-center justify-start gap-[4px]">
-                        <p className="text-h-03 leading-h-03 text-blue-500">
+                        <p className="text-h-03 leading-h-03 text-primary">
                             R$ {product.price.toFixed(2)}
                         </p>
 
@@ -122,9 +122,9 @@ export const ProductDetails = ({ product }: { product: any }) => {
                             R$ {product.price.toFixed(2)}
                         </p>
 
-                        <Badge 
-                            variant="default" 
-                            className="bg-[#EFD33D] text-neutral-900 px-[10px] py-[5px] rounded-[4px]"
+                        <Badge
+                            variant="default"
+                            className="px-[10px] py-[5px] rounded-[4px] text-b-xs leading-b-xs font-semibold bg-[#EFD33D] text-foreground"
                         >
                             {product.discount}% OFF
                         </Badge>
@@ -177,7 +177,7 @@ export const ProductDetails = ({ product }: { product: any }) => {
                         </Button>
                     </div>
                     <Button 
-                        variant="secondary" 
+                        variant="default" 
                         size="default" 
                         className="cursor-pointer h-[56px] w-[310px] text-[16px]/[56px] font-bold rounded-[4px]"
                     >
@@ -187,7 +187,7 @@ export const ProductDetails = ({ product }: { product: any }) => {
                     <Button 
                         variant="outline" 
                         size="default" 
-                        className="cursor-pointer h-[56px] hover:bg-secondary hover:text-white border-[2px] border-secondary text-secondary text-[16px]/[56px] font-bold rounded-[4px]"
+                        className="cursor-pointer h-[56px] hover:bg-primary hover:text-white border-[2px] border-primary text-primary text-[16px]/[56px] font-bold rounded-[4px]"
                     >
                         COMPRAR JÁ
                     </Button>

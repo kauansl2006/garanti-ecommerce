@@ -24,8 +24,8 @@ export const Categories = () => {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious variant="secondary" className="cursor-pointer size-[48px] hover:bg-secondary hidden md:inline-flex" />
-                <CarouselNext variant="secondary" className="cursor-pointer size-[48px] hover:bg-secondary hidden md:inline-flex" />
+                <CarouselPrevious variant="default" className="cursor-pointer size-[48px] hover:bg-primary hidden md:inline-flex" />
+                <CarouselNext variant="default" className="cursor-pointer size-[48px] hover:bg-primary hidden md:inline-flex" />
             </Carousel>
         </section>
     )

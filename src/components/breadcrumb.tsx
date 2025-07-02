@@ -22,7 +22,7 @@ export const Breadcrumb = ({
                     <div key={index} className="flex items-center justify-center gap-x-[8px]">
                         <Link href={breadcrumb.href} className={clsx(
                             breadcrumb.active ?
-                                "text-b-sm leading-b-sm font-medium text-blue-500" :
+                                "text-b-sm leading-b-sm font-medium text-primary" :
                                 "text-b-sm leading-b-sm font-medium text-neutral-600 flex items-center justify-center gap-x-[8px]"
                         )}>
                             {breadcrumb.icon ? <breadcrumb.icon className="size-[20px] stroke-[1.5px]" /> : null}

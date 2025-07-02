@@ -15,7 +15,7 @@ export const Widgets = () => {
                 <div className="flex flex-col items-center sm:items-start gap-y-[24px]">
                     <div className="flex flex-col items-center sm:items-start gap-y-[16px]">
                         <div className="flex flex-col items-center sm:items-start">
-                            <div className="text-b-sm leading-b-sm font-semibold text-blue-500">
+                            <div className="text-b-sm leading-b-sm font-semibold text-primary">
                                 - THE BEST PLACE TO PLAY
                             </div>
 
@@ -29,9 +29,12 @@ export const Widgets = () => {
                         </p>
                     </div>
 
-                    <Link href="#" className="w-[182px] lg:w-[192px] lg:h-[36px] flex items-center justify-center gap-x-[12px] px-[24px] lg:px-[32px] bg-secondary text-white text-[12px]/[46px] lg:text-[15px]/[56px] font-bold text-nowrap rounded-[4px]" >
-                        VER AGORA
-                        <ArrowRightIcon className="size-[20px] md:size-[24px] stroke-[1.5px]" />
+                    <Link
+                        href="#"
+                        className="bg-primary text-white text-b-md leading-b-md font-medium text-nowrap cursor-pointer w-[190px] h-[56px] rounded-[4px] flex items-center justify-center gap-[8px] px-[24px]"
+                    >
+                        Ver agora
+                        <ArrowRightIcon className="size-[24px] stroke-[1.5px] text-white" />
                     </Link>
                 </div>
 
@@ -67,9 +70,12 @@ export const Widgets = () => {
                             </h3>
                         </div>
 
-                        <Link href="#" className="max-w-[166px] max-h-[48px] flex items-center justify-center gap-x-[8px] px-[24px] bg-secondary text-white text-[14px]/[48px] font-bold text-nowrap rounded-[4px]" >
-                            VER AGORA
-                            <ArrowRightIcon className="size-[20px] stroke-[1.5px]" />
+                        <Link
+                            href="#"
+                            className="bg-primary text-white text-b-sm leading-b-sm font-medium text-nowrap cursor-pointer w-[156px] h-[48px] rounded-[4px] flex items-center justify-center gap-[8px] px-[24px]"
+                        >
+                            Ver agora
+                            <ArrowRightIcon className="size-[20px] stroke-[1.5px] text-white" />
                         </Link>
                     </div>
 
@@ -87,7 +93,7 @@ export const Widgets = () => {
                         />
                         <Badge
                             variant="default"
-                            className="px-[12px] py-[4px] rounded-[4px] text-b-md leading-b-md font-semibold bg-yellow-300 text-neutral-900 absolute top-[-10px] right-[-10px]"
+                            className="px-[12px] py-[4px] rounded-[4px] text-b-md leading-b-md font-semibold bg-[#EFD33D] text-foreground absolute top-[-10px] right-[-10px]"
                         >
                             22% OFF
                         </Badge>
@@ -114,14 +120,17 @@ export const Widgets = () => {
                             <h3 className="text-h-03 leading-h-03 font-semibold">
                                 Xiaomi FlipBuds Pro
                             </h3>
-                            <div className="text-b-lg leading-b-lg font-semibold text-blue-500">
+                            <div className="text-b-lg leading-b-lg font-semibold text-primary">
                                 $299 USD
                             </div>
                         </div>
 
-                        <Link href="#" className="max-w-[166px] max-h-[48px] flex items-center justify-center gap-x-[8px] px-[24px] bg-secondary text-white text-[14px]/[48px] font-bold text-nowrap rounded-[4px]" >
-                            VER AGORA
-                            <ArrowRightIcon className="size-[20px] stroke-[1.5px]" />
+                        <Link
+                            href="#"
+                            className="bg-primary text-white text-b-sm leading-b-sm font-medium text-nowrap cursor-pointer w-[156px] h-[48px] rounded-[4px] flex items-center justify-center gap-[8px] px-[24px]"
+                        >
+                            Ver agora
+                            <ArrowRightIcon className="size-[20px] stroke-[1.5px] text-white" />
                         </Link>
                     </div>
                 </div>

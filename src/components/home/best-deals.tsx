@@ -25,7 +25,7 @@ export const BestDeals = () => {
                         Oferta termina em:
                         <time
                             dateTime="2025-06-30T23:59:00-03:00"
-                            className="bg-yellow-200 text-neutral-900 px-[12px] py-[6px] rounded-[4px]"
+                            className="bg-primary text-white px-[12px] py-[6px] rounded-[4px]"
                         >
                             11d : 06h : 20m : 45s
                         </time>
@@ -34,7 +34,7 @@ export const BestDeals = () => {
 
                 <Link
                     href="#"
-                    className="text-nowrap text-b-sm leading-b-sm font-semibold flex items-center justify-start gap-x-[8px] text-blue-500"
+                    className="text-nowrap text-b-sm leading-b-sm font-semibold flex items-center justify-start gap-x-[8px] text-primary"
                 >
                     Visualizar todos os produtos
                     <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />

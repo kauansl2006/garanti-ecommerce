@@ -152,7 +152,7 @@ export default function Page() {
                                 </p>   
                                 <div className="w-full flex gap-[12px]">
                                     <Button                                         
-                                        variant="secondary" 
+                                        variant="default" 
                                         size="default" 
                                         className="cursor-pointer flex gap-[8px] w-[212px] h-[48px] px-[24px] text-white text-[14px]/[48px] font-bold rounded-[4px]"
                                     >
@@ -162,7 +162,7 @@ export default function Page() {
                                     <Button
                                         variant="ghost"
                                         size="icon"
-                                        className="cursor-pointer size-[48px] rounded-[4px] bg-white hover:bg-secondary text-secondary hover:text-white p-[12px]"
+                                        className="cursor-pointer size-[48px] rounded-[4px] bg-white hover:bg-primary text-primary hover:text-white p-[12px]"
                                     >
                                         <HeartIcon className="size-[24px] stroke-[1.5px]" />
                                     </Button>
