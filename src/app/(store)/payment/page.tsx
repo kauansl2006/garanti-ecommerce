@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { CheckCircleIcon, HomeIcon } from "lucide-react";
 
@@ -353,12 +354,13 @@ export default function Payment() {
                             </div>
                         </CardContent>
                         <CardFooter className="w-full">
-                            <Button
-                                className="cursor-pointer flex gap-[12px] w-full h-[56px] px-[32px] text-white text-[16px]/[56px] font-bold rounded-[4px]"
+                            <Link
+                                href="/payment-success"
+                                className="bg-primary cursor-pointer flex items-center justify-center gap-[12px] w-full h-[56px] px-[32px] text-white text-[16px]/[56px] font-bold rounded-[4px]"
                             >
                                 Confirmar Compra
                                 <CheckCircleIcon className="size-[24px] stroke-[1.5px] text-white" />
-                            </Button>
+                            </Link>
                         </CardFooter>
                     </Card>
                 </div>

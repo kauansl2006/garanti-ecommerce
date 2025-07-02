@@ -17,6 +17,7 @@ import { products } from "@/lib/placeholder-data";
 import { Breadcrumb } from "@/components";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 export default function ShoppingCart() {
     return (
@@ -143,12 +144,13 @@ export default function ShoppingCart() {
             </div>
         </CardContent>
         <CardFooter className="w-full">
-            <Button                                         
-                className="cursor-pointer flex gap-[12px] w-full h-[56px] px-[32px] text-white text-[16px]/[56px] font-bold rounded-[4px]"
+            <Link 
+                href="/payment"                                        
+                className="bg-primary cursor-pointer flex items-center justify-center gap-[12px] w-full h-[56px] px-[32px] text-white text-[16px]/[56px] font-bold rounded-[4px]"
             >
-                Fazer o check-out
+                Realizar Pagamento
                 <ArrowRightIcon className="size-[24px] stroke-[1.5px] text-white" />
-            </Button>
+            </Link>
         </CardFooter>
     </Card>
 
