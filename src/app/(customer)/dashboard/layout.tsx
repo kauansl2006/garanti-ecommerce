@@ -62,7 +62,7 @@ export default function DashboardLayout({
             />
 
             <section className="flex gap-[72px] px-[5.625%] xl:px-[15.625%] pt-[70px] pb-[72px] md:pt-[40px] md:pb-[72px]">
-                <Card className="max-w-[264px] w-full shadow-none border-[1px] border-neutral-300 rounded-[4px] p-[0px]">
+                <Card className="max-w-[264px] w-full h-max shadow-none border-[1px] border-neutral-300 rounded-[4px] p-[0px]">
                     <CardContent className="w-full flex flex-col gap-[8px] items-center justify-center p-[0px]">
                         {sidebarLinks.map((link, index) => (
                             <Link 
