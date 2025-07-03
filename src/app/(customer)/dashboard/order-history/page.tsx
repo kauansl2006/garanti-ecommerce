@@ -124,7 +124,7 @@ export default function OrderHistory() {
                                 </TableCell>
                                 <TableCell>
                                     <Link
-                                        href={`/dashboard/order-history/${order.id}`}
+                                        href={`/dashboard/order-details/${order.id}`}
                                         className="flex items-center justify-start gap-[8px] text-primary"
                                     >
                                         Ver detalhes
