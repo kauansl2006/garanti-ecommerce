@@ -144,12 +144,12 @@ export const Header = () => {
                                             className="px-[24px] w-full h-[44px] rounded-[0px] flex items-center justify-between text-b-sm leading-b-sm font-medium">
                                             {category.title}
                                         </DropdownMenuSubTrigger>
-                                        <DropdownMenuSubContent className="hidden lg:block ml-[10px] p-[20px] rounded-[0px]">
-                                            <div className="flex gap-[16px]">
+                                        <DropdownMenuSubContent className="hidden lg:block ml-[10px] w-full p-[20px] rounded-[0px]">
+                                            <div className="grid grid-cols-[repeat(2,auto)] 2xl:grid-cols-[repeat(3,auto)] gap-[16px]">
                                                 <div className="flex flex-col">
-                                                    {products.map((product) => (
+                                                    {products.slice(0,9).map((product) => (
                                                         <DropdownMenuItem className="px-[24px] h-[44px] rounded-[0px] flex items-center justify-between " key={product.id}>
-                                                            <Link className="w-[164px] text-nowrap overflow-hidden text-ellipsis" href={`/product-details/${product.id}`}>
+                                                            <Link className="max-w-[164px] w-full text-nowrap overflow-hidden text-ellipsis" href={`/product-details/${product.id}`}>
                                                                 {product.title}
                                                             </Link>
                                                         </DropdownMenuItem>
@@ -164,7 +164,7 @@ export const Header = () => {
                                                         <SmallProductCard key={product.id} product={product} />
                                                     ))}
                                                 </div>
-                                                <div className="max-w-[312px] w-full p-[32px] bg-[#F7E99E] flex flex-col items-center justify-center gap-[10px] rounded-[4px]">
+                                                <div className="hidden max-w-[312px] w-full p-[15px] 2xl:p-[32px] bg-[#F7E99E] 2xl:flex flex-col items-center justify-center gap-[10px] rounded-[4px]">
                                                     <div className="size-[96px] relative">
                                                         <Image
                                                             src="/xiomi-mi-11.png"
@@ -173,10 +173,10 @@ export const Header = () => {
                                                         />
                                                     </div>
                                                     <div className="text-center flex items-center justify-center flex-col gap-[8px]">
-                                                        <h2 className="text-h-02 leading-h-02 font-semibold">
+                                                        <h2 className="text-h-03 leading-h-03 md:text-h-02 md:leading-h-02 font-semibold">
                                                             21% Desconto
                                                         </h2>
-                                                        <p className="text-b-md leading-b-md font-normal text-neutral-700">
+                                                        <p className="text-b-sm leading-b-sm font-normal text-neutral-700">
                                                             Fuja do barulho. É hora de ouvir a magia com os fones de ouvido Xiaomi.
                                                         </p>
                                                     </div>
