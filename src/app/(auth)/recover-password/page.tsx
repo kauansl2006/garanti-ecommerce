@@ -30,7 +30,7 @@ export default function RecoverPassword() {
                         label: "Home",
                     },
                     {
-                        href: "#",
+                        href: "/dashboard",
                         label: "Conta do Usuário",
                     },
                     {

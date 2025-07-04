@@ -31,7 +31,7 @@ export default function SignUp() {
                         label: "Home",
                     },
                     {
-                        href: "#",
+                        href: "/dashboard",
                         label: "Conta do Usuário",
                     },
                     {

@@ -15,43 +15,28 @@ import clsx from "clsx";
 
 const navLinks = [
     {
-        id: 1,
         href: "/shop",
-        icon: (
-            <ShoppingBasketIcon className="size-[24px] stroke-[1.5]" />
-        ),
+        icon: ShoppingBasketIcon,
         title: "Comprar",
     },
     {
-        id: 2,
         href: "/track-order",
-        icon: (
-            <MapPinIcon className="size-[24px] stroke-[1.5]" />
-        ),
+        icon: MapPinIcon,
         title: "Rastrear Pedido",
     },
     {
-        id: 3,
         href: "/compare",
-        icon: (
-            <RefreshCcwIcon className="size-[24px] stroke-[1.5]" />
-        ),
+        icon: RefreshCcwIcon,
         title: "Comparar",
     },
     {
-        id: 4,
         href: "/suport",
-        icon: (
-            <HeadsetIcon className="size-[24px] stroke-[1.5]" />
-        ),
+        icon: HeadsetIcon,
         title: "Suporte",
     },
     {
-        id: 5,
         href: "/help",
-        icon: (
-            <CircleAlertIcon className="size-[24px] stroke-[1.5]" />
-        ),
+        icon: CircleAlertIcon,
         title: "Ajuda",
     },
 ];
@@ -62,8 +47,8 @@ export const NavLinks = () => {
 
     return (
         <>
-            {navLinks.map((link) => (
-            <li key={link.id} >
+            {navLinks.map((link, index) => (
+            <li key={index} >
                 <Link
                     className={clsx(
                         "w-[100%] p-[8px] rounded-[4px] flex text-nowrap items-center justify-center gap-x-[8px] text-b-sm leading-b-sm font-medium text-neutral-300 hover:bg-neutral-800",
@@ -73,7 +58,7 @@ export const NavLinks = () => {
                     )}
                     href={link.href}
                 >
-                    {link.icon}
+                    <link.icon className="size-[24px] stroke-[1.5px]"/>
                     {link.title}
                 </Link>
             </li>

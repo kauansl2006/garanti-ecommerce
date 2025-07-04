@@ -4,114 +4,75 @@ import Link from "next/link";
 
 import {
     CircleAlertIcon,
+    ClockIcon,
+    CreditCardIcon,
     HeadsetIcon,
     HeartIcon,
+    LayoutDashboardIcon,
+    LogOutIcon,
     MapPinIcon,
+    NotepadTextIcon,
     RefreshCcwIcon,
+    SettingsIcon,
     ShoppingBagIcon,
     ShoppingBasketIcon,
+    ShoppingCartIcon,
     UserCircle2Icon,
 } from "lucide-react";
+import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
 const sidebarLinks = [
     {
-        id: 1,
         title: "Acesso Rápido",
         links: [
-            {
-                id: 1,
-                href: "#",
-                icon: (
-                    <ShoppingBasketIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Comprar",
-            },
-            {
-                id: 2,
-                href: "#",
-                icon: (
-                    <HeartIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Favoritos",
-            },
-            {
-                id: 3,
-                href: "#",
-                icon: (
-                    <ShoppingBagIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Meus Produtos",
-            },
-            {
-                id: 4,
-                href: "#",
-                icon: (
-                    <UserCircle2Icon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Minha Conta",
-            },
+            { href: "/wishlist", icon: HeartIcon, title: "Favoritos" },
+            { href: "/shopping-cart", icon: ShoppingCartIcon, title: "Carrinho de Compras" },
+            { href: "/shop", icon: ShoppingBasketIcon, title: "Comprar" },
+            { href: "/track-order", icon: MapPinIcon, title: "Rastrear Pedido" },
+            { href: "/compare", icon: RefreshCcwIcon, title: "Comparar" },
+            { href: "/suport", icon: HeadsetIcon, title: "Suporte" },
+            { href: "/help", icon: CircleAlertIcon, title: "Ajuda" },
         ],
     },
     {
-        id: 2,
-        title: "Central de Ajuda",
+        title: "Minha Conta",
         links: [
-            {
-                id: 5,
-                href: "#",
-                icon: (
-                    <MapPinIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Rastrear Pedido",
-            },
-            {
-                id: 6,
-                href: "#",
-                icon: (
-                    <RefreshCcwIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Comparar",
-            },
-            {
-                id: 7,
-                href: "#",
-                icon: (
-                    <HeadsetIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Suporte",
-            },
-            {
-                id: 8,
-                href: "#",
-                icon: (
-                    <CircleAlertIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
-                ),
-                title: "Ajuda",
-            },
+            { icon: LayoutDashboardIcon, href: "/dashboard", title: "Dashboard" },
+            { icon: NotepadTextIcon, href: "/dashboard/order-history", title: "Histórico de Pedido" },
+            { icon: CreditCardIcon, href: "/dashboard/cards-and-address", title: "Cartões e Endereço" },
+            { icon: ClockIcon, href: "/dashboard/browsing-history", title: "Histórico de Pesquisa" },
+            { icon: SettingsIcon, href: "/dashboard/settings", title: "Configurações" },
         ],
     }
 ];
 
 export const Sidebar = () => {
+    const pathname = usePathname();
     return (
         <section className="w-[290px] h-[100vh] p-[20px] md:hidden flex flex-col items-start justify-start gap-y-[24px] bg-neutral-100 absolute top-[60px] right-[0px] z-100 border-l-[1px] border-neutral-300">
-            {sidebarLinks.map((sidebarLink) => (
-                <div key={sidebarLink.id} className="w-[100%] flex flex-col items-start justify-start gap-y-[12px]">
+            {sidebarLinks.map((sidebarLink, index) => (
+                <div key={index} className="w-[100%] flex flex-col items-start justify-start gap-y-[12px]">
                 <h5 className="text-b-sm leading-b-sm font-semibold">
-                    Acesso Rápido
+                    {sidebarLink.title}
                 </h5>
 
                 <ul className="w-[100%] flex flex-col items-start justify-start">
-                    {sidebarLink.links.map((link) => (
+                    {sidebarLink.links.map((link, index) => (
                         <li
-                            className="w-[100%] p-[8px] rounded-[4px] hover:bg-neutral-200"
-                            key={link.id}
+                            key={index}
+                            className={clsx(
+                                "w-[100%] p-[8px] rounded-[4px] hover:bg-neutral-200",
+                                {
+                                    "bg-primary hover:bg-primary font-semibold text-white" : pathname === link.href
+                                }
+                            )}
                         >
                             <Link
-                                className="w-[100%] flex items-start justify-start gap-x-[18px] text-b-md leading-b-md font-normal"
+                                className="w-[100%] flex items-start justify-start gap-x-[18px] text-b-md leading-b-md"
                                 href={link.href}
                             >
-                                {link.icon}
+                                <link.icon className="size-[24px] stroke-[1.5px]" />
                                 {link.title}
                             </Link>
                         </li>

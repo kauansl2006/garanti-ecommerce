@@ -10,10 +10,10 @@ const footerLinks = [
         id: 1,
         title: "MINHA CONTA",
         links: [
-            { id: 1, title: "Dashboard", href: "#" },
-            { id: 2, title: "Histórico de Pedidos", href: "#" },
-            { id: 3, title: "Lista de Desejos", href: "#" },
-            { id: 4, title: "Carrinho de Compras", href: "#" },
+            { id: 1, title: "Dashboard", href: "/dashboard" },
+            { id: 2, title: "Histórico de Pedidos", href: "/dashboard/order-history" },
+            { id: 3, title: "Lista de Desejos", href: "/dashboard/wishlist" },
+            { id: 4, title: "Carrinho de Compras", href: "/dashboard/shopping-cart" },
         ],
     },
     {
@@ -21,7 +21,7 @@ const footerLinks = [
         title: "AJUDA",
         links: [
             { id: 1, title: "Contato", href: "#" },
-            { id: 2, title: "Perguntas Frequentes", href: "#" },
+            { id: 2, title: "Perguntas Frequentes", href: "/help" },
             { id: 3, title: "Termos e Condições", href: "#" },
             { id: 4, title: "Política de Privacidade", href: "#" },
         ],
@@ -31,9 +31,9 @@ const footerLinks = [
         title: "QUICKLINKS",
         links: [
             { id: 1, title: "Sobre nós", href: "#" },
-            { id: 2, title: "Produtos", href: "#" },
-            { id: 3, title: "Comparar", href: "#" },
-            { id: 4, title: "Rastrear Pedidos", href: "#" },
+            { id: 2, title: "Produtos", href: "/shop" },
+            { id: 3, title: "Comparar", href: "/compare" },
+            { id: 4, title: "Rastrear Pedidos", href: "/track-order" },
         ],
     },
 ];
@@ -98,12 +98,13 @@ export const Footer = () => {
         <footer className="w-[100%] flex flex-col items-center justify-center px-[12px] xl:px-[15.625%] bg-neutral-900">
             <section className="w-[100%] flex flex-wrap items-start justify-between gap-[25px] py-[60px]">
                 <div className="w-[336px] flex flex-col xl:items-start xl:justify-start gap-y-[20px]">
-                    <Logo
-                        src="/dark-logo.svg"
-                        width={150}
-                        height={50}
-                        className="md:w-[180px] md:h-[70px]"
-                    />
+                    <Link href="/" className="w-[150px] h-[50px] md:w-[180px] md:h-[70px] relative">
+                        <Image
+                            src="/dark-logo.svg"
+                            fill={true}
+                            alt="Logo da Garanti"
+                        />
+                    </Link>
 
                     <p className="text-b-sm leading-b-sm font-medium text-neutral-500">
                         Garanti é o template ideal para lojas brasileiras que
