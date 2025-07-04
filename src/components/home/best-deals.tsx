@@ -33,7 +33,7 @@ export const BestDeals = () => {
                 </div>
 
                 <Link
-                    href="#"
+                    href="/shop"
                     className="text-nowrap text-b-sm leading-b-sm font-semibold flex items-center justify-start gap-x-[8px] text-primary"
                 >
                     Visualizar todos os produtos

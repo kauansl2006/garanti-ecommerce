@@ -50,7 +50,7 @@ export default function DashboardLayout({
                         label: "Home"
                     },
                     {
-                        href: "#",
+                        href: "/dashboard",
                         label: "Conta do Usúario"
                     },
                     {

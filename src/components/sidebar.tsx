@@ -20,7 +20,7 @@ const sidebarLinks = [
         links: [
             {
                 id: 1,
-                href: "#",
+                href: "/shop",
                 icon: (
                     <ShoppingBasketIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
                 ),
@@ -28,7 +28,7 @@ const sidebarLinks = [
             },
             {
                 id: 2,
-                href: "#",
+                href: "/wishlist",
                 icon: (
                     <HeartIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
                 ),
@@ -36,7 +36,7 @@ const sidebarLinks = [
             },
             {
                 id: 3,
-                href: "#",
+                href: "/shopping-cart",
                 icon: (
                     <ShoppingBagIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
                 ),
@@ -44,7 +44,7 @@ const sidebarLinks = [
             },
             {
                 id: 4,
-                href: "#",
+                href: "/dashboard/settings",
                 icon: (
                     <UserCircle2Icon className="size-[24px] stroke-[1.5] text-neutral-500" />
                 ),
@@ -58,7 +58,7 @@ const sidebarLinks = [
         links: [
             {
                 id: 5,
-                href: "#",
+                href: "/track-order",
                 icon: (
                     <MapPinIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
                 ),
@@ -66,7 +66,7 @@ const sidebarLinks = [
             },
             {
                 id: 6,
-                href: "#",
+                href: "/compare",
                 icon: (
                     <RefreshCcwIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
                 ),
@@ -74,7 +74,7 @@ const sidebarLinks = [
             },
             {
                 id: 7,
-                href: "#",
+                href: "/suport",
                 icon: (
                     <HeadsetIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
                 ),
@@ -82,7 +82,7 @@ const sidebarLinks = [
             },
             {
                 id: 8,
-                href: "#",
+                href: "/help",
                 icon: (
                     <CircleAlertIcon className="size-[24px] stroke-[1.5] text-neutral-500" />
                 ),

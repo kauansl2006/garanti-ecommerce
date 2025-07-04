@@ -29,7 +29,7 @@ export default function PaymentSuccess() {
                         Voltar ao início
                     </Link>
                     <Link
-                        href="#"
+                        href="/dashboard/order-history"
                         className="bg-primary text-white text-b-sm leading-b-sm sm:text-b-md sm:leading-b-md font-medium text-nowrap cursor-pointer h-[48px] rounded-[4px] flex items-center justify-center gap-[4px] sm:gap-[8px] px-[18px] sm:px-[24px]"
                     >
                         Ver pedido

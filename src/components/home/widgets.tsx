@@ -30,7 +30,7 @@ export const Widgets = () => {
                     </div>
 
                     <Link
-                        href="#"
+                        href="/shop"
                         className="bg-primary text-white text-b-md leading-b-md font-medium text-nowrap cursor-pointer w-[190px] h-[56px] rounded-[4px] flex items-center justify-center gap-[8px] px-[24px]"
                     >
                         Ver agora
@@ -71,7 +71,7 @@ export const Widgets = () => {
                         </div>
 
                         <Link
-                            href="#"
+                            href="/shop"
                             className="bg-primary text-white text-b-sm leading-b-sm font-medium text-nowrap cursor-pointer w-[156px] h-[48px] rounded-[4px] flex items-center justify-center gap-[8px] px-[24px]"
                         >
                             Ver agora
@@ -126,7 +126,7 @@ export const Widgets = () => {
                         </div>
 
                         <Link
-                            href="#"
+                            href="/shop"
                             className="bg-primary text-white text-b-sm leading-b-sm font-medium text-nowrap cursor-pointer w-[156px] h-[48px] rounded-[4px] flex items-center justify-center gap-[8px] px-[24px]"
                         >
                             Ver agora

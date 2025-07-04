@@ -33,7 +33,7 @@ export const Banners = () => {
                         </p>
                     </div>
 
-                    <Link href="#" className="h-[48px] flex items-center justify-center gap-x-[8px] px-[24px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap" >
+                    <Link href="/shop" className="h-[48px] flex items-center justify-center gap-x-[8px] px-[24px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap" >
                         VER AGORA
                         <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
                     </Link>
@@ -69,7 +69,7 @@ export const Banners = () => {
                         </p>
                     </div>
 
-                    <Link href="#" className="h-[48px] flex items-center justify-center gap-x-[8px] px-[24px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap" >
+                    <Link href="/shop" className="h-[48px] flex items-center justify-center gap-x-[8px] px-[24px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap" >
                         VER AGORA
                         <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
                     </Link>

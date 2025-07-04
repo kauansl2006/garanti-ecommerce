@@ -96,7 +96,7 @@ export const Header = () => {
                     </Link>
                     <Link
                         className="p-[8px] rounded-[4px] hover:bg-neutral-200 xl:hover:bg-white xl:p-[4px] xl:rounded-[0px]"
-                        href="#"
+                        href="/dashboard"
                     >
                         <UserCircle2Icon className="size-[28px] xl:size-[32px] stroke-[1.5] text-neutral-900" />
                     </Link>
@@ -139,7 +139,7 @@ export const Header = () => {
                     </Link>
                     <Link
                         className="p-[8px] rounded-[4px] hover:bg-neutral-800"
-                        href="#"
+                        href="/dashboard"
                     >
                         <UserCircle2Icon className="size-[28px] stroke-[1.5] text-white" />
                     </Link>
