@@ -1,21 +1,26 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { 
+import {
     Card,
     CardHeader,
     CardTitle,
     CardContent,
     CardFooter,
-    CardAction 
+    CardAction
 } from "@/components/ui/card";
-import { 
-    CopyIcon, 
-    EllipsisIcon, 
-    PackageIcon, 
-    PlusCircleIcon, 
-    ReceiptTextIcon, 
-    RocketIcon 
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem
+} from "@/components/ui/carousel";
+import {
+    CopyIcon,
+    EllipsisIcon,
+    PackageIcon,
+    PlusCircleIcon,
+    ReceiptTextIcon,
+    RocketIcon
 } from "lucide-react";
 import Image from "next/image";
 
@@ -37,7 +42,7 @@ export default function Dashboard() {
                 </p>
             </div>
 
-            <div className="w-full grid grid-cols-3 gap-[24px]">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-[24px]">
                 <Card className="shadow-none border-[1px] border-neutral-300 rounded-[4px]">
                     <CardHeader className="w-full border-b-[1px] border-b-neutral-300">
                         <CardTitle className="pb-[12px]">Informações da Conta</CardTitle>
@@ -148,8 +153,8 @@ export default function Dashboard() {
                     </CardFooter>
                 </Card>
 
-                <div className="flex flex-col gap-[24px]">
-                    <Card className="w-[312px] h-[88px] bg-[#A6CBFE] shadow-none rounded-[4px] flex flex-row items-center justify-center p-[16px]">
+                <div className="grid col-span-1 lg:col-span-2 2xl:col-span-1 grid-cols-1 lg:grid-cols-3 2xl:grid-cols-1 gap-[24px]">
+                    <Card className="w-full h-[88px] bg-[#A6CBFE] shadow-none rounded-[4px] flex flex-row items-center justify-center p-[16px]">
                         <div className="size-[56px] flex items-center justify-center p-[12px] rounded-[4px] bg-white">
                             <RocketIcon className="size-[32px] stroke-[1.5px] text-primary" />
                         </div>
@@ -164,7 +169,7 @@ export default function Dashboard() {
                         </div>
                     </Card>
 
-                    <Card className="w-[312px] h-[88px] bg-[#FDCBA9] shadow-none rounded-[4px] flex flex-row items-center justify-center p-[16px]">
+                    <Card className="w-full h-[88px] bg-[#FDCBA9] shadow-none rounded-[4px] flex flex-row items-center justify-center p-[16px]">
                         <div className="size-[56px] flex items-center justify-center p-[12px] rounded-[4px] bg-white">
                             <ReceiptTextIcon className="size-[32px] stroke-[1.5px] text-secondary" />
                         </div>
@@ -179,7 +184,7 @@ export default function Dashboard() {
                         </div>
                     </Card>
 
-                    <Card className="w-[312px] h-[88px] bg-[#B6F0B2] shadow-none rounded-[4px] flex flex-row items-center justify-center p-[16px]">
+                    <Card className="w-full h-[88px] bg-[#B6F0B2] shadow-none rounded-[4px] flex flex-row items-center justify-center p-[16px]">
                         <div className="size-[56px] flex items-center justify-center p-[12px] rounded-[4px] bg-white">
                             <PackageIcon className="size-[32px] stroke-[1.5px] text-success" />
                         </div>
@@ -211,59 +216,62 @@ export default function Dashboard() {
                     </Button>
                 </CardHeader>
                 <CardContent>
-                    <div className="flex gap-[24px]">
-                        {paymentCards.map((card, index) => (
-                            <Card key={index} className={`shadow-none w-[350px] bg-gradient-to-br ${
-                                card.type === "mastercard" ? 
-                                "bg-gradient-to-br from-green-500 to-green-700" :
-                                "from-cyan-600 to-cyan-900"
-                            } rounded-[4px]`}>
-                                <CardHeader>
-                                    <CardTitle className="text-white">
-                                        R$ {card.price.toFixed(2)}
-                                    </CardTitle>
-                                    <CardAction>
-                                        <EllipsisIcon className="size-[24px] text-white" />
-                                    </CardAction>
-                                </CardHeader>
-                                <CardContent>
-                                    <div className="flex flex-col gap-[8px]">
-                                        <p className="text-l-05 leading-l-05 font-semibold text-white">
-                                            NÚMERO DO CARTÃO
-                                        </p>
-                                        
-                                        <div className="flex items-center gap-[6px]">
-                                            <p className="text-b-xl leading-b-xl font-normal text-white">
-                                                {card.value}
-                                            </p>
-                                                <Button
-                                                    variant="ghost"
-                                                    size="icon"
-                                                    className="cursor-pointer rounded-full hover:bg-[#ffffff33]"
-                                                >
-                                                    <CopyIcon className="size-[20px] text-white" />
-                                                </Button>
-                                        </div>
-                                    </div>
-                                </CardContent>
-                                <CardFooter>
-                                    <div className="w-full flex items-center justify-between">
-                                        <div className="size-[40px] relative">
-                                            <Image
-                                                src={card.icon}
-                                                alt={`Logo da ${card.type}`}
-                                                fill={true}
-                                            />
-                                        </div>
+                    <Carousel className="w-full">
+                        <CarouselContent>
+                            {paymentCards.map((card, index) => (
+                                <CarouselItem className="basis-full lg:basis-1/2 2xl:basis-1/3" key={index}>
+                                    <Card className={`shadow-none w-full bg-gradient-to-br ${card.type === "mastercard" ?
+                                            "bg-gradient-to-br from-green-500 to-green-700" :
+                                            "from-cyan-600 to-cyan-900"
+                                        } rounded-[4px]`}>
+                                        <CardHeader>
+                                            <CardTitle className="text-white">
+                                                R$ {card.price.toFixed(2)}
+                                            </CardTitle>
+                                            <CardAction>
+                                                <EllipsisIcon className="size-[24px] text-white" />
+                                            </CardAction>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <div className="flex flex-col gap-[8px]">
+                                                <p className="text-l-05 leading-l-05 font-semibold text-white">
+                                                    NÚMERO DO CARTÃO
+                                                </p>
 
-                                        <p className="text-b-sm leading-b-sm font-medium text-white">
-                                            John Doe
-                                        </p>
-                                    </div>
-                                </CardFooter>
-                            </Card>
-                        ))}
-                    </div>
+                                                <div className="flex items-center gap-[6px]">
+                                                    <p className="text-b-xl leading-b-xl font-normal text-white">
+                                                        {card.value}
+                                                    </p>
+                                                    <Button
+                                                        variant="ghost"
+                                                        size="icon"
+                                                        className="cursor-pointer rounded-full hover:bg-[#ffffff33]"
+                                                    >
+                                                        <CopyIcon className="size-[20px] text-white" />
+                                                    </Button>
+                                                </div>
+                                            </div>
+                                        </CardContent>
+                                        <CardFooter>
+                                            <div className="w-full flex items-center justify-between">
+                                                <div className="size-[40px] relative">
+                                                    <Image
+                                                        src={card.icon}
+                                                        alt={`Logo da ${card.type}`}
+                                                        fill={true}
+                                                    />
+                                                </div>
+
+                                                <p className="text-b-sm leading-b-sm font-medium text-white">
+                                                    John Doe
+                                                </p>
+                                            </div>
+                                        </CardFooter>
+                                    </Card>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                    </Carousel>
                 </CardContent>
             </Card>
         </section>

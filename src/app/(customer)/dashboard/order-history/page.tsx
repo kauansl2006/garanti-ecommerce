@@ -85,56 +85,59 @@ const orders = [
 
 export default function OrderHistory() {
     return (
+    <section className="w-max-[984px] w-full flex items-center justify-center">
         <Card className="w-full border-[1px] border-neutral-300 rounded-[4px]  shadow-none">
             <CardHeader className="flex items-center justify-start">
                 <CardTitle>Histórico de Pedido</CardTitle>
             </CardHeader>
             <CardContent>
-                <Table className="w-full">
-                    <TableHeader>
-                        <TableRow className="h-[44px]">
-                            <TableHead className="w-[200px]">Id do Pedido</TableHead>
-                            <TableHead className="w-[200px]">Status</TableHead>
-                            <TableHead className="w-[200px]">Data</TableHead>
-                            <TableHead className="w-[250px]">Total</TableHead>
-                            <TableHead className="w-[200px]">Ações</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        {orders.map((order) => (
-                            <TableRow className="h-[44px]" key={order.id}>
-                                <TableCell>
-                                    #{order.id}
-                                </TableCell>
-                                <TableCell>
-                                    <p className={clsx(
-                                        "text-b-sm leading-b-sm font-semibold",
-                                        {
-                                            "text-secondary": order.status === "Em andamento",
-                                            "text-success": order.status === "Concluído",
-                                            "text-danger": order.status === "Cancelado",
-                                        }
-                                    )}>
-                                        {order.status}
-                                    </p>
-                                </TableCell>
-                                <TableCell>{order.date}</TableCell>
-                                <TableCell>
-                                    {order.total}
-                                </TableCell>
-                                <TableCell>
-                                    <Link
-                                        href={`/dashboard/order-details/${order.id}`}
-                                        className="flex items-center justify-start gap-[8px] text-primary"
-                                    >
-                                        Ver detalhes
-                                        <ArrowRightIcon className="size-[16px]" />
-                                    </Link>
-                                </TableCell>
+                <div className="h-[550px] overflow-scroll">
+                    <Table>
+                        <TableHeader>
+                            <TableRow className="h-[44px]">
+                                <TableHead className="w-[200px]">Id do Pedido</TableHead>
+                                <TableHead className="w-[200px]">Status</TableHead>
+                                <TableHead className="w-[200px]">Data</TableHead>
+                                <TableHead className="w-[250px]">Total</TableHead>
+                                <TableHead className="w-[200px]">Ações</TableHead>
                             </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
+                        </TableHeader>
+                        <TableBody>
+                            {orders.map((order) => (
+                                <TableRow className="h-[44px]" key={order.id}>
+                                    <TableCell>
+                                        #{order.id}
+                                    </TableCell>
+                                    <TableCell>
+                                        <p className={clsx(
+                                            "text-b-sm leading-b-sm font-semibold",
+                                            {
+                                                "text-secondary": order.status === "Em andamento",
+                                                "text-success": order.status === "Concluído",
+                                                "text-danger": order.status === "Cancelado",
+                                            }
+                                        )}>
+                                            {order.status}
+                                        </p>
+                                    </TableCell>
+                                    <TableCell>{order.date}</TableCell>
+                                    <TableCell>
+                                        {order.total}
+                                    </TableCell>
+                                    <TableCell>
+                                        <Link
+                                            href={`/dashboard/order-details/${order.id}`}
+                                            className="flex items-center justify-start gap-[8px] text-primary"
+                                        >
+                                            Ver detalhes
+                                            <ArrowRightIcon className="size-[16px]" />
+                                        </Link>
+                                    </TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </div>
             </CardContent>
             <CardFooter>
                 <Pagination>
@@ -166,5 +169,6 @@ export default function OrderHistory() {
                 </Pagination>
             </CardFooter>
         </Card>
+    </section>
     )
 }

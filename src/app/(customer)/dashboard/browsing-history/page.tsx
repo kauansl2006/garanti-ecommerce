@@ -11,18 +11,18 @@ export default function BrowsingHistory() {
                 Histórico de Pesquisa
             </h1>
 
-            <div className="flex gap-[12px]">
+            <div className="flex flex-col md:flex-row gap-[12px]">
                 <div className="flex items-center relative">
                     <SearchIcon className="size-[20px] stroke-[1.5px] text-neutral-900 absolute left-[10px]" />
                     <Input
                         type="search"
                         placeholder="Pesquise por produtos aqui..."
-                        className="h-[44px] w-[424px] rounded-[4px] pl-[40px]"
+                        className="h-[44px] w-full md:w-[424px] rounded-[4px] pl-[40px]"
                     />
                 </div>
                 <Input
                     type="date"
-                    className="h-[44px] w-[312px] rounded-[4px]"
+                    className="h-[44px] w-full md:w-[312px] rounded-[4px]"
                 />
             </div>
 
@@ -34,7 +34,7 @@ export default function BrowsingHistory() {
                 </CardHeader>
 
                 <CardContent >
-                    <div className="grid grid-cols-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 2xl:grid-cols-4">
                         {products.map((product) => (
                             <ProductCard key={product.id} size="md" product={product} />
                         ))}

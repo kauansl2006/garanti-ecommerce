@@ -11,7 +11,7 @@ export default function TrackOrder() {
         <section className="w-full flex flex-col gap-[32px]">
             <div className="max-w-[760px] w-full flex flex-col gap-[24px]">
                 <div className="flex flex-col gap-[16px]">
-                    <h1 className="text-h-02 leading-h-02 md:text-h-01 md:leading-h-01 font-semibold">
+                    <h1 className="text-h-03 leading-h-03 md:text-h-01 md:leading-h-01 font-semibold">
                         Rastrear Pedido
                     </h1>
 

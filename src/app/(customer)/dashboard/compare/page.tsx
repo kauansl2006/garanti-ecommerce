@@ -109,7 +109,7 @@ const products = [
 
 export default function Compare() {
     return (
-            <section className="flex items-center justify-center">
+            <section className="w-max-[984px] w-full flex items-center justify-center">
                 <div className="w-full overflow-x-scroll bg-white border-[1px] border-neutral-300 rounded-[4px]">
 
 <table>
