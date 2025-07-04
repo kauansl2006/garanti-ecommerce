@@ -7,7 +7,6 @@ import {
     ChevronDownIcon,
     HeartIcon,
     MenuIcon,
-    ShoppingBagIcon,
     ShoppingCartIcon,
     UserCircle2Icon,
 } from "lucide-react";
@@ -72,12 +71,13 @@ export const Header = () => {
                 </div>
             </section>
             <section className="w-[100%] h-[60px] md:h-auto px-[12px] xl:px-[15.625%] py-[18px] flex items-center justify-between border-b-[1px] border-neutral-300">
-                <Logo
-                    src="/light-logo.svg"
-                    width={150}
-                    height={50}
-                    className="md:w-[180px] md:h-[70px]"
-                />
+                <Link href="/" className="w-[150px] h-[50px] md:w-[180px] md:h-[70px] relative">
+                    <Image
+                        src="/light-logo.svg"
+                        fill={true}
+                        alt="Logo da Garanti"
+                    />
+                </Link>
 
                 <Searchbar />
 

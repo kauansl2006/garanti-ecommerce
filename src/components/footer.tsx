@@ -98,12 +98,13 @@ export const Footer = () => {
         <footer className="w-[100%] flex flex-col items-center justify-center px-[12px] xl:px-[15.625%] bg-neutral-900">
             <section className="w-[100%] flex flex-wrap items-start justify-between gap-[25px] py-[60px]">
                 <div className="w-[336px] flex flex-col xl:items-start xl:justify-start gap-y-[20px]">
-                    <Logo
-                        src="/dark-logo.svg"
-                        width={150}
-                        height={50}
-                        className="md:w-[180px] md:h-[70px]"
-                    />
+                    <Link href="/" className="w-[150px] h-[50px] md:w-[180px] md:h-[70px] relative">
+                        <Image
+                            src="/dark-logo.svg"
+                            fill={true}
+                            alt="Logo da Garanti"
+                        />
+                    </Link>
 
                     <p className="text-b-sm leading-b-sm font-medium text-neutral-500">
                         Garanti é o template ideal para lojas brasileiras que
