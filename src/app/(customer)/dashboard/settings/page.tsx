@@ -14,7 +14,7 @@ export default function Settings() {
                     <CardTitle className="pb-[12px]">Configurações de Conta</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <div className="w-full flex gap-[24px]">
+                    <div className="w-full flex items-center md:items-start flex-col md:flex-row gap-[24px]">
                         <div className="size-[176px] relative">
                             <Image
                                 src="/avatar.svg"
@@ -23,9 +23,9 @@ export default function Settings() {
                             />
                         </div>
 
-                        <div className="flex flex-col gap-[24px]">
-                            <div className=" grid grid-cols-2 gap-[16px]">
-                                <div className="flex flex-col gap-[8px]">
+                        <div className="w-full flex flex-col gap-[24px]">
+                            <div className="w-full grid grid-cols-2 gap-[16px]">
+                                <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
                                     <Label htmlFor="display-name">
                                         Nome de Exibição
                                     </Label>
@@ -38,7 +38,7 @@ export default function Settings() {
                                         className="h-[44px] rounded-[4px]"
                                     />
                                 </div>
-                                <div className="flex flex-col gap-[8px]">
+                                <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
                                     <Label htmlFor="username">
                                         Username
                                     </Label>
@@ -51,7 +51,7 @@ export default function Settings() {
                                         className="h-[44px] rounded-[4px]"
                                     />
                                 </div>
-                                <div className="flex flex-col gap-[8px]">
+                                <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
                                     <Label htmlFor="full-name">
                                         Nome Completo
                                     </Label>
@@ -65,7 +65,7 @@ export default function Settings() {
                                     />
                                 </div>
 
-                                <div className="flex flex-col gap-[8px]">
+                                <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
                                     <Label htmlFor="email">
                                         Email
                                     </Label>
@@ -78,7 +78,7 @@ export default function Settings() {
                                         className="h-[44px] rounded-[4px]"
                                     />
                                 </div>
-                                <div className="flex flex-col gap-[8px]">
+                                <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
                                     <Label htmlFor="phone-1">
                                         Telefone
                                     </Label>
@@ -91,7 +91,7 @@ export default function Settings() {
                                         className="h-[44px] rounded-[4px]"
                                     />
                                 </div>
-                                <div className="flex flex-col gap-[8px]">
+                                <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
                                     <Label htmlFor="phone-2">
                                         Telefone 2
                                     </Label>
@@ -105,7 +105,7 @@ export default function Settings() {
                                     />
                                 </div>
 
-                                <div className="col-span-2 grid grid-cols-3 gap-[16px]">
+                                <div className="col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-[16px]">
                                     <div className="flex flex-col gap-[8px]">
                                         <Label htmlFor="city">
                                             Cidade
@@ -158,14 +158,14 @@ export default function Settings() {
                 </CardContent>
             </Card>
 
-            <Card className="bg-white rounded-[4px] border-[1px] border-neutral-300 shadow-none">
+            <Card className="bg-white  col-span-2 md:col-span-1 rounded-[4px] border-[1px] border-neutral-300 shadow-none">
                 <CardHeader className="border-b-[1px] border-b-neutral-300">
                     <CardTitle className="pb-[12px]">Endereço de Cobrança</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <div className="flex flex-col gap-[24px]">
                         <div className="grid grid-cols-2 gap-[16px]">
-                            <div className="flex flex-col gap-[8px]">
+                            <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
                                 <Label htmlFor="first-name">Primeiro Nome</Label>
                                 <Input
                                     id="first-name"
@@ -175,7 +175,7 @@ export default function Settings() {
                                     className="h-[44px] rounded-[4px]"
                                 />
                             </div>
-                            <div className="flex flex-col gap-[8px]">
+                            <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
                                 <Label htmlFor="last-name">Último Nome</Label>
                                 <Input
                                     id="last-name"
@@ -247,7 +247,7 @@ export default function Settings() {
                                     className="h-[44px] rounded-[4px]"
                                 />
                             </div>
-                            <div className="flex flex-col gap-[8px]">
+                            <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
                                 <Label htmlFor="email">
                                     Email
                                 </Label>
@@ -259,9 +259,9 @@ export default function Settings() {
                                     className="h-[44px] rounded-[4px]"
                                 />
                             </div>
-                            <div className="flex flex-col gap-[8px]">
+                            <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
                                 <Label htmlFor="phone">
-                                    Número de Telefone
+                                    Telefone
                                 </Label>
                                 <Input
                                     id="phone"
@@ -279,14 +279,14 @@ export default function Settings() {
                     </div>
                 </CardContent>
             </Card>
-            <Card className="bg-white rounded-[4px] border-[1px] border-neutral-300 shadow-none">
+            <Card className="bg-white col-span-2 md:col-span-1 rounded-[4px] border-[1px] border-neutral-300 shadow-none">
                 <CardHeader className="border-b-[1px] border-b-neutral-300">
                     <CardTitle className="pb-[12px]">Endereço de Envio</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <div className="flex flex-col gap-[24px]">
                         <div className="grid grid-cols-2 gap-[16px]">
-                            <div className="flex flex-col gap-[8px]">
+                            <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
                                 <Label htmlFor="first-name">Primeiro Nome</Label>
                                 <Input
                                     id="first-name"
@@ -296,7 +296,7 @@ export default function Settings() {
                                     className="h-[44px] rounded-[4px]"
                                 />
                             </div>
-                            <div className="flex flex-col gap-[8px]">
+                            <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
                                 <Label htmlFor="last-name">Último Nome</Label>
                                 <Input
                                     id="last-name"
@@ -368,7 +368,7 @@ export default function Settings() {
                                     className="h-[44px] rounded-[4px]"
                                 />
                             </div>
-                            <div className="flex flex-col gap-[8px]">
+                            <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
                                 <Label htmlFor="email">
                                     Email
                                 </Label>
@@ -380,9 +380,9 @@ export default function Settings() {
                                     className="h-[44px] rounded-[4px]"
                                 />
                             </div>
-                            <div className="flex flex-col gap-[8px]">
+                            <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
                                 <Label htmlFor="phone">
-                                    Número de Telefone
+                                    Telefone
                                 </Label>
                                 <Input
                                     id="phone"
