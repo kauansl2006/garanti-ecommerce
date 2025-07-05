@@ -14,7 +14,7 @@ import {
   } from "@/components/ui/table"
 import { ArrowRightIcon, HomeIcon, XCircleIcon } from "lucide-react"
 import { products } from "@/lib/placeholder-data";
-import { Breadcrumb } from "@/components";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";

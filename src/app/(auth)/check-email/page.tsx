@@ -1,4 +1,4 @@
-import { Breadcrumb } from "@/components";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { HomeIcon } from "lucide-react";
 import {
     Card,

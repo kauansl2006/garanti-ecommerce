@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 
-import { Breadcrumb, Searchbar } from "@/components";
+import { Breadcrumb } from "@/components/breadcrumb";
+import { Searchbar } from "@/components/searchbar";
 
 import {
     HomeIcon,

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import { Breadcrumb } from "@/components";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowRightIcon, CircleAlertIcon, HomeIcon } from "lucide-react";

@@ -27,7 +27,7 @@ import {
     HorizontalFilterBar 
 } from "@/components/filter-bars";
 import { Breadcrumb } from "@/components/breadcrumb";
-import { ProductCard } from "@/components/products/product-card";
+import { ProductCard } from "@/components/product-card";
 import { Searchbar } from "@/components/searchbar";
 
 export default function Page() {

@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 
-import { Breadcrumb } from "@/components";
-import { Rating } from "@/components/products";
+import { Breadcrumb } from "@/components/breadcrumb";
+import { Rating } from "@/components/rating";
 import { HeartIcon, HomeIcon, ShoppingCartIcon, XCircleIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 

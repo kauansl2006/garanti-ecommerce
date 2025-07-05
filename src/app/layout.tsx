@@ -3,7 +3,8 @@ import { Metadata } from "next";
 
 import "./globals.css";
 
-import { Header, Footer } from "@/components";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const montserrat = Montserrat({
     weight: ["300", "400", "500", "600", "700"],

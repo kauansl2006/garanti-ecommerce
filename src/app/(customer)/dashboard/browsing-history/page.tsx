@@ -1,4 +1,4 @@
-import { ProductCard } from "@/components/products";
+import { ProductCard } from "@/components/product-card";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { products } from "@/lib/placeholder-data";

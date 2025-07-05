@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { CheckCircleIcon, HomeIcon } from "lucide-react";
 
-import { Breadcrumb } from "@/components";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label"

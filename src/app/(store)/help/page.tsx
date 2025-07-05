@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { Breadcrumb } from "@/components";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";

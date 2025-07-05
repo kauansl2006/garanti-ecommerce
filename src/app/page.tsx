@@ -11,8 +11,10 @@ import {
     CarouselPrevious
 } from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
-import { CategoryCard } from "@/components/products/category-card";
-import { ProductCard, SmallProductCard } from "@/components/products";
+import { CategoryCard } from "@/components/category-card";
+import { ProductCard } from "@/components/product-card";
+import { SmallProductCard } from "@/components/small-product-card";
+
 import { products, categories, categoryProducts } from "@/lib/placeholder-data";
 
 import {

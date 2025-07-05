@@ -2,9 +2,11 @@ import { notFound } from "next/navigation";
 
 import { HomeIcon } from "lucide-react";
 
-import { Breadcrumb, CategoryProducts } from "@/components";
-import { ProductDetails, ProductTabs } from "@/components/product-details"
 import { products } from "@/lib/placeholder-data";
+import { Breadcrumb } from "@/components/breadcrumb";
+import { CategoryProducts } from "@/components/category-products";
+import { ProductDetails } from "@/components/details";
+import { ProductTabs } from "@/components/product-tabs";
 
 export default async function Page({
     params,
