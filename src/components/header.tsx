@@ -28,7 +28,7 @@ import {
     DropdownMenuSubTrigger
 } from "@/components/ui/dropdown-menu";
 import { NavLinks } from "@/components/nav-links";
-import { SmallProductCard } from "@/components/products/small-product-card";
+import { SmallProductCard } from "@/components/small-product-card";
 import { Searchbar } from "@/components/searchbar";
 
 export const Header = () => {

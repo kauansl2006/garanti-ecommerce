@@ -2,8 +2,8 @@ import { Progress } from "@/components/ui/progress"
 import { Separator } from "@/components/ui/separator";
 
 import { ratings, customers } from "@/lib/placeholder-data";
-import { FeedbackCard } from "@/components/product-details/feedback-card";
-import { Rating} from "@/components/products/rating";
+import { FeedbackCard } from "@/components/feedback-card";
+import { Rating} from "@/components/rating";
 
 export const ProductReviews = () => {
     return (

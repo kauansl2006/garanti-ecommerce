@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { Rating } from "@/components/products/rating";
+import { Rating } from "@/components/rating";
 
 export const FeedbackCard = ({ customer }: { customer: any}) => {
     return (
