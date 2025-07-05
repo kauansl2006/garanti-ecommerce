@@ -28,8 +28,8 @@ import {
 } from "@/components/ui/pagination";
 
 import { Searchbar } from "@/components/searchbar";
-import { VerticalFilterBar, HorizontalFilterBar } from "@/components/shop";
-import { ProductCard} from "@/components/products"
+import { VerticalFilterBar, HorizontalFilterBar } from "@/components/shop/filter-bars";
+import { ProductCard } from "@/components/products/product-card"
 
 import { products } from "@/lib/placeholder-data";
 

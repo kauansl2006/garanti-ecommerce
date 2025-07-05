@@ -1,6 +1,6 @@
 import { categoryProducts } from "@/lib/placeholder-data";
 
-import { SmallProductCard } from "@/components/products";
+import { SmallProductCard } from "@/components/products/small-product-card";
 
 export const CategoryProducts = () => {
     return (

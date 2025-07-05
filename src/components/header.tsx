@@ -10,31 +10,26 @@ import {
     HeartIcon,
     MenuIcon,
     ShoppingCartIcon,
+    Sidebar,
     UserCircle2Icon,
 } from "lucide-react";
 
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
-
-import {
-    Searchbar,
-    NavLinks,
-    Sidebar
-} from "@/components";
 import { categories, products } from "@/lib/placeholder-data";
 import {
     DropdownMenu,
     DropdownMenuTrigger,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuPortal,
-    DropdownMenuSeparator,
     DropdownMenuSub,
     DropdownMenuSubContent,
     DropdownMenuSubTrigger
 } from "@/components/ui/dropdown-menu";
-import { SmallProductCard } from "./products";
+import { NavLinks } from "@/components/nav-links";
+import { SmallProductCard } from "@/components/products/small-product-card";
+import { Searchbar } from "@/components/searchbar";
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);

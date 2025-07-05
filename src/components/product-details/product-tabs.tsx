@@ -1,11 +1,9 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { ProductDescription } from "@/components/product-details/description";
+import { ProductAdditionalInformation } from "@/components/product-details/information";
+import { ProductReviews } from "@/components/product-details/reviews";
+import { ProductSpecification } from "@/components/product-details/specification";
 
-import { 
-    ProductAdditionalInformation,
-    ProductDescription,
-    ProductReviews,
-    ProductSpecification 
-}  from "@/components/product-details";
 
 export const tabs = [
     { label: "DESCRIÇÃO", value: "description", content: ProductDescription },

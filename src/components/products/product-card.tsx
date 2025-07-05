@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 import { Product } from "@/lib/definitions";
-import { Rating } from "@/components/products";
+import { Rating } from "@/components/products/rating";
 
 export const ProductCard = ({
     product,

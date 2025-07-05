@@ -30,7 +30,7 @@ import { Separator } from "@/components/ui/separator";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 
-import { Rating } from "@/components/products";
+import { Rating } from "@/components/products/rating";
 
 export const ProductDetails = ({ product }: { product: any }) => {
     return (

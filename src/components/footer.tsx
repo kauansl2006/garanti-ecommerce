@@ -3,8 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Logo } from "@/components";
-
 const footerLinks = [
     {
         id: 1,
