@@ -5,7 +5,7 @@ import { HomeIcon } from "lucide-react";
 import { products } from "@/lib/placeholder-data";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { CategoryProducts } from "@/components/category-products";
-import { ProductDetails as Details } from "@/components/details";
+import { ProductDetails as Details } from "@/components/product-details";
 import { ProductTabs } from "@/components/product-tabs";
 
 export default async function ProductDetails({
