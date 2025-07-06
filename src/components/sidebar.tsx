@@ -9,15 +9,12 @@ import {
     HeadsetIcon,
     HeartIcon,
     LayoutDashboardIcon,
-    LogOutIcon,
     MapPinIcon,
     NotepadTextIcon,
     RefreshCcwIcon,
     SettingsIcon,
-    ShoppingBagIcon,
     ShoppingBasketIcon,
     ShoppingCartIcon,
-    UserCircle2Icon,
 } from "lucide-react";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";

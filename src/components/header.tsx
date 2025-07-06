@@ -10,7 +10,6 @@ import {
     MenuIcon,
     SearchIcon,
     ShoppingCartIcon,
-    Sidebar,
     UserCircle2Icon,
 } from "lucide-react";
 
@@ -30,6 +29,7 @@ import {
 import { NavLinks } from "@/components/nav-links";
 import { SmallProductCard } from "@/components/small-product-card";
 import { Input } from "@/components/ui/input";
+import { Sidebar } from "@/components/sidebar";
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
