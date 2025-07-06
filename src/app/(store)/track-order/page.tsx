@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowRightIcon, CircleAlertIcon, HomeIcon } from "lucide-react";
 
-export default function Page() {
+export default function TrackOrder() {
     return (
         <main className="w-screen flex flex-col">
             <Breadcrumb breadcrumbs={[

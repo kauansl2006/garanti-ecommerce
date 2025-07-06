@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRightIcon, XIcon, HomeIcon } from "lucide-react";
+import { XIcon, HomeIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function PaymentFailure() {

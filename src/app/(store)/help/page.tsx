@@ -37,7 +37,7 @@ const questions = [
     },
 ];
 
-export default function Page() {
+export default function Help() {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     const handleOpen = (index: number) => {

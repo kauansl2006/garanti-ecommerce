@@ -106,7 +106,7 @@ const popularTopics = [
 
 
 
-export default function Page() {
+export default function Suport() {
     return (
         <main className="w-screen">
             <Breadcrumb breadcrumbs={[

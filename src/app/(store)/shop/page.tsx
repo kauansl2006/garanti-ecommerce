@@ -32,7 +32,7 @@ import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-export default function Page() {
+export default function Shop() {
     return (
         <main className="w-screen flex flex-col items-center justify-center">
             <Breadcrumb breadcrumbs={[

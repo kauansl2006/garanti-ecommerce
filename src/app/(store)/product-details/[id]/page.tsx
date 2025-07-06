@@ -5,10 +5,10 @@ import { HomeIcon } from "lucide-react";
 import { products } from "@/lib/placeholder-data";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { CategoryProducts } from "@/components/category-products";
-import { ProductDetails } from "@/components/details";
+import { ProductDetails as Details } from "@/components/details";
 import { ProductTabs } from "@/components/product-tabs";
 
-export default async function Page({
+export default async function ProductDetails({
     params,
 }: {
     params: Promise<{ id: string }>
@@ -39,7 +39,7 @@ export default async function Page({
                     active: true
                 }
             ]}/>
-            <ProductDetails product={product} />
+            <Details product={product} />
             <ProductTabs />
             <CategoryProducts />
         </main>

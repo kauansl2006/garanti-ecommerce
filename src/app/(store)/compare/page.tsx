@@ -107,7 +107,7 @@ const products = [
     }
 ];
 
-export default function Page() {
+export default function Compare() {
     return (
         <main className="w-screen">
             <Breadcrumb breadcrumbs={[

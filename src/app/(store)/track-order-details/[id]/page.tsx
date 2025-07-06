@@ -68,7 +68,7 @@ const activities = [
     },
 ]
 
-export default async function Page({
+export default async function TrackOrderDetails({
     params,
 }: {
     params: Promise<{ id: string }>
