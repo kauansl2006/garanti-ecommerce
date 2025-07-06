@@ -1,9 +1,12 @@
+"use client";
+
+import Link from "next/link";
+
 import { 
     ArrowLeftIcon,
     ArrowRightIcon,
     ChevronDownIcon,
     HomeIcon,
-    Link,
     SearchIcon,
     XIcon 
 } from "lucide-react";
@@ -31,11 +34,6 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: "Comprar"
-}
 
 export default function Shop() {
     return (
