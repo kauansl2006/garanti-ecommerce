@@ -2,9 +2,6 @@
 
 import Link from "next/link";
 
-import { Breadcrumb } from "@/components/breadcrumb";
-import { Searchbar } from "@/components/searchbar";
-
 import {
     HomeIcon,
     TruckIcon,
@@ -17,8 +14,13 @@ import {
     StoreIcon,
     MessageCircleMoreIcon,
     PhoneIcon,
+    SearchIcon,
 } from "lucide-react";
+
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 const helpLinks = [
     {
@@ -119,8 +121,8 @@ export default function Page() {
                     active: true,
                 },
             ]} />
-             <section className="w-full px-[5.625%] xl:px-[15.625%] pt-[102px] pb-[72px] md:py-[72px] flex flex-col items-center justify-center gap-[40px]">
-               <div className="flex flex-col items-center justify-center gap-[16px] max-w-[850px] w-full">
+            <section className="w-full px-[5.625%] xl:px-[15.625%] pt-[102px] pb-[72px] md:py-[72px] flex flex-col items-center justify-center gap-[40px]">
+                <div className="flex flex-col items-center justify-center gap-[16px] max-w-[850px] w-full">
                     <h1 className="text-h-03 leading-h-03 md:text-h-01 md:leading-h-01 font-semibold text-center">
                         Como podemos ajudar você?
                     </h1>
@@ -128,9 +130,23 @@ export default function Page() {
                     <p className="text-b-sm leading-b-sm md:text-b-md md:leading-b-md text-neutral-500 text-center">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti neque ab aliquam numquam nam eos nostrum, commodi sit excepturi magni
                     </p>
-               </div>
+                </div>
 
-                <Searchbar />
+                <div className="hidden md:flex lg:flex max-w-[440px] xl:max-w-[540px] w-[100%] items-center justify-center relative">
+                    <SearchIcon className="size-[18px] stroke-[1.5] text-neutral-900 absolute left-[10px]" />
+                    <Input
+                        type="text"
+                        placeholder="Procure por produtos aqui..."
+                        className="rounded-l-[4px] rounded-r-none pl-[40px] h-[38px] xl:h-[42px]"
+                    />
+                    <Button
+                        variant="default"
+                        size="default"
+                        className="cursor-pointer rounded-l-none rounded-r-[4px] h-[38px] xl:h-[42px]"
+                    >
+                        Pesquisar
+                    </Button>
+                </div>
 
                 <Separator orientation="horizontal" className="bg-neutral-300" />
             </section>
@@ -171,7 +187,7 @@ export default function Page() {
             </section>
             <section className="w-full px-[5.625%] xl:px-[15.625%] py-[35.10px] md:py-[72px] flex flex-col items-center justify-center gap-[40px]">
                 <h1 className="text-h-03 leading-h-03 md:text-h-01 md:leading-h-01 font-semibold text-center">
-                    Não encontrou a resposta? <br/>
+                    Não encontrou a resposta? <br />
                     Contate-nos.
                 </h1>
 

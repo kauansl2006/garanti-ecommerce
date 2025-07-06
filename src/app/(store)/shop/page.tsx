@@ -4,6 +4,7 @@ import {
     ChevronDownIcon,
     HomeIcon,
     Link,
+    SearchIcon,
     XIcon 
 } from "lucide-react";
 
@@ -28,7 +29,8 @@ import {
 } from "@/components/filter-bars";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { ProductCard } from "@/components/product-card";
-import { Searchbar } from "@/components/searchbar";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export default function Page() {
     return (
@@ -53,7 +55,23 @@ export default function Page() {
                 <div className="max-w-[984px] w-full flex flex-col items-center justify-between gap-y-[18px]">
                     <div className="max-w-[984px] w-full flex flex-col items-center justify-between gap-y-[18px] bg-white border-[1px] border-neutral-300 rounded-[4px] p-[20px]">
                         <div className="w-full flex items-center justify-between">
-                            <Searchbar />
+                            
+                        <div className="hidden md:flex lg:flex max-w-[440px] xl:max-w-[540px] w-[100%] items-center justify-center relative">
+                            <SearchIcon className="size-[18px] stroke-[1.5] text-neutral-900 absolute left-[10px]" />
+                            <Input
+                                type="text"
+                                placeholder="Procure por produtos aqui..."
+                                className="rounded-l-[4px] rounded-r-none pl-[40px] h-[38px] xl:h-[42px]"
+                            />
+                            <Button
+                                variant="default"
+                                size="default"
+                                className="cursor-pointer rounded-l-none rounded-r-[4px] h-[38px] xl:h-[42px]"
+                            >
+                                Pesquisar
+                            </Button>
+                        </div>
+
                             <div className="flex items-center justify-center gap-[18px]">
                                 <p className="text-b-sm leading-b-sm font-normal text-nowrap">
                                     Ordenar por

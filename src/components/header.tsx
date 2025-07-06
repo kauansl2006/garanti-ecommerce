@@ -6,9 +6,9 @@ import Link from "next/link";
 import {
     ArrowRightIcon,
     ChevronDownIcon,
-    ChevronRightIcon,
     HeartIcon,
     MenuIcon,
+    SearchIcon,
     ShoppingCartIcon,
     Sidebar,
     UserCircle2Icon,
@@ -29,7 +29,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { NavLinks } from "@/components/nav-links";
 import { SmallProductCard } from "@/components/small-product-card";
-import { Searchbar } from "@/components/searchbar";
+import { Input } from "@/components/ui/input";
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -88,7 +88,21 @@ export const Header = () => {
                     />
                 </Link>
 
-                <Searchbar />
+                <div className="hidden md:flex lg:flex max-w-[440px] xl:max-w-[540px] w-[100%] items-center justify-center relative">
+                    <SearchIcon className="size-[18px] stroke-[1.5] text-neutral-900 absolute left-[10px]" />
+                    <Input
+                        type="text"
+                        placeholder="Procure por produtos aqui..."
+                        className="rounded-l-[4px] rounded-r-none pl-[40px] h-[38px] xl:h-[42px]"
+                    />
+                    <Button
+                        variant="default"
+                        size="default"
+                        className="cursor-pointer rounded-l-none rounded-r-[4px] h-[38px] xl:h-[42px]"
+                    >
+                        Pesquisar
+                    </Button>
+                </div>
 
                 <div className="hidden md:flex lg:hidden xl:flex items-center justify-center gap-[8px]">
                     <Link
