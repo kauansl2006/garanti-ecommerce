@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
     Table,
     TableBody,
@@ -11,8 +11,8 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@/components/ui/table"
-import { ShoppingCartIcon, XCircleIcon } from "lucide-react"
+} from "@/components/ui/table";
+import { ShoppingCartIcon, XCircleIcon } from "lucide-react";
 import { products } from "@/lib/placeholder-data";
 
 export default function Wishlist() {
@@ -25,7 +25,9 @@ export default function Wishlist() {
                 <Table className="w-full">
                     <TableHeader>
                         <TableRow>
-                            <TableHead className="w-[380px]">Produtos</TableHead>
+                            <TableHead className="w-[380px]">
+                                Produtos
+                            </TableHead>
                             <TableHead className="w-[200px]">Preço</TableHead>
                             <TableHead className="w-[200px]">Status</TableHead>
                             <TableHead className="w-[200px]">Ações</TableHead>
@@ -45,29 +47,38 @@ export default function Wishlist() {
                                         </div>
 
                                         <p className="w-[250px] text-wrap text-b-sm leading-b-sm font-normal text-neutral-700 line-clamp-2 text-ellipsis">
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias fugiat ab quo consequuntur, ratione odit.
+                                            Lorem, ipsum dolor sit amet
+                                            consectetur adipisicing elit. Alias
+                                            fugiat ab quo consequuntur, ratione
+                                            odit.
                                         </p>
                                     </div>
                                 </TableCell>
-                                <TableCell>R$ {product.price.toFixed(2)}</TableCell>
-                                <TableCell>{
-                                    product.isAvailable ?
+                                <TableCell>
+                                    R$ {product.price.toFixed(2)}
+                                </TableCell>
+                                <TableCell>
+                                    {product.isAvailable ? (
                                         <p className="text-b-sm leading-b-sm font-semibold text-success">
                                             Em Estoque
-                                        </p> :
+                                        </p>
+                                    ) : (
                                         <p className="text-b-sm leading-b-sm font-semibold text-danger">
                                             Fora de Estoque
                                         </p>
-                                }</TableCell>
+                                    )}
+                                </TableCell>
                                 <TableCell>
                                     <div className="flex items-center justify-start gap-[24px]">
-                                        <Button
-                                            className="cursor-pointer flex gap-[8px] w-[150px] h-[44px] text-white text-[14px]/[48px] font-bold rounded-[4px]"
-                                        >
+                                        <Button className="cursor-pointer flex gap-[8px] w-[150px] h-[44px] text-white text-[14px]/[48px] font-bold rounded-[4px]">
                                             ADQUIRIR
                                             <ShoppingCartIcon className="size-[20px] stroke-[1.5px] text-white" />
                                         </Button>
-                                        <Button variant="ghost" size="icon" className="cursor-pointer rounded-full">
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="cursor-pointer rounded-full"
+                                        >
                                             <XCircleIcon className="size-[24px] text-neutral-400" />
                                         </Button>
                                     </div>
@@ -78,5 +89,5 @@ export default function Wishlist() {
                 </Table>
             </CardContent>
         </Card>
-    )
+    );
 }

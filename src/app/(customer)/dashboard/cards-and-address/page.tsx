@@ -3,13 +3,34 @@
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardContent, CardAction, CardFooter } from "@/components/ui/card";
+import {
+    Card,
+    CardHeader,
+    CardTitle,
+    CardContent,
+    CardAction,
+    CardFooter,
+} from "@/components/ui/card";
 import { PlusCircleIcon, EllipsisIcon, CopyIcon } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+} from "@/components/ui/carousel";
 
 const paymentCards = [
-    { price: 95400, value: "**** **** **** 3814", type: "visa", icon: "/visa-icon.svg" },
-    { price: 72354, value: "**** **** **** 2783", type: "mastercard", icon: "/mastercard-icon.svg" },
+    {
+        price: 95400,
+        value: "**** **** **** 3814",
+        type: "visa",
+        icon: "/visa-icon.svg",
+    },
+    {
+        price: 72354,
+        value: "**** **** **** 2783",
+        type: "mastercard",
+        icon: "/mastercard-icon.svg",
+    },
 ];
 
 export default function CardsAndAddress() {
@@ -33,11 +54,17 @@ export default function CardsAndAddress() {
                     <Carousel className="w-full">
                         <CarouselContent>
                             {paymentCards.map((card, index) => (
-                                <CarouselItem className="basis-full lg:basis-1/2 2xl:basis-1/3" key={index}>
-                                    <Card className={`shadow-none w-full bg-gradient-to-br ${card.type === "mastercard" ?
-                                            "bg-gradient-to-br from-green-500 to-green-700" :
-                                            "from-cyan-600 to-cyan-900"
-                                        } rounded-[4px]`}>
+                                <CarouselItem
+                                    className="basis-full lg:basis-1/2 2xl:basis-1/3"
+                                    key={index}
+                                >
+                                    <Card
+                                        className={`shadow-none w-full bg-gradient-to-br ${
+                                            card.type === "mastercard"
+                                                ? "bg-gradient-to-br from-green-500 to-green-700"
+                                                : "from-cyan-600 to-cyan-900"
+                                        } rounded-[4px]`}
+                                    >
                                         <CardHeader>
                                             <CardTitle className="text-white">
                                                 R$ {card.price.toFixed(2)}
@@ -92,7 +119,9 @@ export default function CardsAndAddress() {
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-[24px]">
                 <Card className="shadow-none border-[1px] border-neutral-300 rounded-[4px]">
                     <CardHeader className="w-full border-b-[1px] border-b-neutral-300">
-                        <CardTitle className="pb-[12px]">Endereço de Cobrança</CardTitle>
+                        <CardTitle className="pb-[12px]">
+                            Endereço de Cobrança
+                        </CardTitle>
                     </CardHeader>
                     <CardContent>
                         <div className="flex flex-col gap-[20px]">
@@ -107,7 +136,9 @@ export default function CardsAndAddress() {
                                 </div>
 
                                 <p className="text-b-sm leading-b-sm text-neutral-600 line-clamp-3 overflow-hidden text-ellipsis">
-                                    East Tejturi Bazar, Word No. 04, Road No. 13/x, House no. 1320/C, Flat No. 5D, Dhaka - 1200, Bangladesh
+                                    East Tejturi Bazar, Word No. 04, Road No.
+                                    13/x, House no. 1320/C, Flat No. 5D, Dhaka -
+                                    1200, Bangladesh
                                 </p>
 
                                 <div className="flex gap-2">
@@ -130,9 +161,7 @@ export default function CardsAndAddress() {
                         </div>
                     </CardContent>
                     <CardFooter>
-                        <Button
-                            className="cursor-pointer border-2 border-primary bg-white text-primary hover:bg-primary hover:text-white text-[14px]/[48px] font-bold flex items-center justify-center px-[24px] w-[155px] h-[48px] rounded-[4px]"
-                        >
+                        <Button className="cursor-pointer border-2 border-primary bg-white text-primary hover:bg-primary hover:text-white text-[14px]/[48px] font-bold flex items-center justify-center px-[24px] w-[155px] h-[48px] rounded-[4px]">
                             Editar Endereço
                         </Button>
                     </CardFooter>
@@ -140,7 +169,9 @@ export default function CardsAndAddress() {
 
                 <Card className="shadow-none border-[1px] border-neutral-300 rounded-[4px]">
                     <CardHeader className="w-full border-b-[1px] border-b-neutral-300">
-                        <CardTitle className="pb-[12px]">Endereço de Envio</CardTitle>
+                        <CardTitle className="pb-[12px]">
+                            Endereço de Envio
+                        </CardTitle>
                     </CardHeader>
                     <CardContent>
                         <div className="flex flex-col gap-[20px]">
@@ -155,7 +186,9 @@ export default function CardsAndAddress() {
                                 </div>
 
                                 <p className="text-b-sm leading-b-sm text-neutral-600 line-clamp-3 overflow-hidden text-ellipsis">
-                                    East Tejturi Bazar, Word No. 04, Road No. 13/x, House no. 1320/C, Flat No. 5D, Dhaka - 1200, Bangladesh
+                                    East Tejturi Bazar, Word No. 04, Road No.
+                                    13/x, House no. 1320/C, Flat No. 5D, Dhaka -
+                                    1200, Bangladesh
                                 </p>
 
                                 <div className="flex gap-2">
@@ -178,15 +211,12 @@ export default function CardsAndAddress() {
                         </div>
                     </CardContent>
                     <CardFooter>
-                        <Button
-                            className="cursor-pointer border-2 border-primary bg-white text-primary hover:bg-primary hover:text-white text-[14px]/[48px] font-bold flex items-center justify-center px-[24px] w-[155px] h-[48px] rounded-[4px]"
-                        >
+                        <Button className="cursor-pointer border-2 border-primary bg-white text-primary hover:bg-primary hover:text-white text-[14px]/[48px] font-bold flex items-center justify-center px-[24px] w-[155px] h-[48px] rounded-[4px]">
                             Editar Endereço
                         </Button>
                     </CardFooter>
                 </Card>
-
             </div>
         </section>
-    )
+    );
 }

@@ -4,9 +4,28 @@ import Link from "next/link";
 
 import clsx from "clsx";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
-import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationEllipsis } from "@/components/ui/pagination";
+import {
+    Card,
+    CardHeader,
+    CardTitle,
+    CardContent,
+    CardFooter,
+} from "@/components/ui/card";
+import {
+    Table,
+    TableHeader,
+    TableRow,
+    TableHead,
+    TableBody,
+    TableCell,
+} from "@/components/ui/table";
+import {
+    Pagination,
+    PaginationContent,
+    PaginationItem,
+    PaginationLink,
+    PaginationEllipsis,
+} from "@/components/ui/pagination";
 
 const orders = [
     {
@@ -85,90 +104,115 @@ const orders = [
 
 export default function OrderHistory() {
     return (
-    <section className="w-max-[984px] w-full flex items-center justify-center">
-        <Card className="w-full border-[1px] border-neutral-300 rounded-[4px]  shadow-none">
-            <CardHeader className="flex items-center justify-start">
-                <CardTitle>Histórico de Pedido</CardTitle>
-            </CardHeader>
-            <CardContent>
-                <div className="h-[550px] overflow-scroll">
-                    <Table>
-                        <TableHeader>
-                            <TableRow className="h-[44px]">
-                                <TableHead className="w-[200px]">Id do Pedido</TableHead>
-                                <TableHead className="w-[200px]">Status</TableHead>
-                                <TableHead className="w-[200px]">Data</TableHead>
-                                <TableHead className="w-[250px]">Total</TableHead>
-                                <TableHead className="w-[200px]">Ações</TableHead>
-                            </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                            {orders.map((order) => (
-                                <TableRow className="h-[44px]" key={order.id}>
-                                    <TableCell>
-                                        #{order.id}
-                                    </TableCell>
-                                    <TableCell>
-                                        <p className={clsx(
-                                            "text-b-sm leading-b-sm font-semibold",
-                                            {
-                                                "text-secondary": order.status === "Em andamento",
-                                                "text-success": order.status === "Concluído",
-                                                "text-danger": order.status === "Cancelado",
-                                            }
-                                        )}>
-                                            {order.status}
-                                        </p>
-                                    </TableCell>
-                                    <TableCell>{order.date}</TableCell>
-                                    <TableCell>
-                                        {order.total}
-                                    </TableCell>
-                                    <TableCell>
-                                        <Link
-                                            href={`/dashboard/order-details/${order.id}`}
-                                            className="flex items-center justify-start gap-[8px] text-primary"
-                                        >
-                                            Ver detalhes
-                                            <ArrowRightIcon className="size-[16px]" />
-                                        </Link>
-                                    </TableCell>
+        <section className="w-max-[984px] w-full flex items-center justify-center">
+            <Card className="w-full border-[1px] border-neutral-300 rounded-[4px]  shadow-none">
+                <CardHeader className="flex items-center justify-start">
+                    <CardTitle>Histórico de Pedido</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <div className="h-[550px] overflow-scroll">
+                        <Table>
+                            <TableHeader>
+                                <TableRow className="h-[44px]">
+                                    <TableHead className="w-[200px]">
+                                        Id do Pedido
+                                    </TableHead>
+                                    <TableHead className="w-[200px]">
+                                        Status
+                                    </TableHead>
+                                    <TableHead className="w-[200px]">
+                                        Data
+                                    </TableHead>
+                                    <TableHead className="w-[250px]">
+                                        Total
+                                    </TableHead>
+                                    <TableHead className="w-[200px]">
+                                        Ações
+                                    </TableHead>
                                 </TableRow>
-                            ))}
-                        </TableBody>
-                    </Table>
-                </div>
-            </CardContent>
-            <CardFooter>
-                <Pagination>
-                    <PaginationContent className="gap-x-[8px]">
-                        <PaginationItem className="size-[40px] mr-[12px] text-primary bg-white border-[1px] border-primary hover:bg-primary hover:text-white p-[8px] rounded-full flex items-center justify-center">
-                            <Link href="#">
-                                <ArrowLeftIcon className="size-[24px] stroke-[1.5px]" />
-                            </Link>
-                        </PaginationItem>
-                        <PaginationItem>
-                            <PaginationLink href="#" className="size-[40px] bg-primary text-white p-[8px] rounded-full flex items-center justify-center hover:bg-primary hover:text-white">01</PaginationLink>
-                        </PaginationItem>
-                        {Array.from({ length: 3 }, (_, index) => (
-                            <PaginationItem key={index}>
-                                <PaginationLink href="#" className="size-[40px] text-primary bg-white border-[1px] border-primary hover:bg-primary hover:text-white p-[8px] rounded-full flex items-center justify-center">
-                                    {`0${index + 2}`}
+                            </TableHeader>
+                            <TableBody>
+                                {orders.map((order) => (
+                                    <TableRow
+                                        className="h-[44px]"
+                                        key={order.id}
+                                    >
+                                        <TableCell>#{order.id}</TableCell>
+                                        <TableCell>
+                                            <p
+                                                className={clsx(
+                                                    "text-b-sm leading-b-sm font-semibold",
+                                                    {
+                                                        "text-secondary":
+                                                            order.status ===
+                                                            "Em andamento",
+                                                        "text-success":
+                                                            order.status ===
+                                                            "Concluído",
+                                                        "text-danger":
+                                                            order.status ===
+                                                            "Cancelado",
+                                                    },
+                                                )}
+                                            >
+                                                {order.status}
+                                            </p>
+                                        </TableCell>
+                                        <TableCell>{order.date}</TableCell>
+                                        <TableCell>{order.total}</TableCell>
+                                        <TableCell>
+                                            <Link
+                                                href={`/dashboard/order-details/${order.id}`}
+                                                className="flex items-center justify-start gap-[8px] text-primary"
+                                            >
+                                                Ver detalhes
+                                                <ArrowRightIcon className="size-[16px]" />
+                                            </Link>
+                                        </TableCell>
+                                    </TableRow>
+                                ))}
+                            </TableBody>
+                        </Table>
+                    </div>
+                </CardContent>
+                <CardFooter>
+                    <Pagination>
+                        <PaginationContent className="gap-x-[8px]">
+                            <PaginationItem className="size-[40px] mr-[12px] text-primary bg-white border-[1px] border-primary hover:bg-primary hover:text-white p-[8px] rounded-full flex items-center justify-center">
+                                <Link href="#">
+                                    <ArrowLeftIcon className="size-[24px] stroke-[1.5px]" />
+                                </Link>
+                            </PaginationItem>
+                            <PaginationItem>
+                                <PaginationLink
+                                    href="#"
+                                    className="size-[40px] bg-primary text-white p-[8px] rounded-full flex items-center justify-center hover:bg-primary hover:text-white"
+                                >
+                                    01
                                 </PaginationLink>
                             </PaginationItem>
-                        ))}
-                        <PaginationItem>
-                            <PaginationEllipsis />
-                        </PaginationItem>
-                        <PaginationItem className="size-[40px] text-primary ml-[12px] bg-white border-[1px] border-primary hover:bg-primary hover:text-white p-[8px] rounded-full flex items-center justify-center">
-                            <Link href="#">
-                                <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
-                            </Link>
-                        </PaginationItem>
-                    </PaginationContent>
-                </Pagination>
-            </CardFooter>
-        </Card>
-    </section>
-    )
+                            {Array.from({ length: 3 }, (_, index) => (
+                                <PaginationItem key={index}>
+                                    <PaginationLink
+                                        href="#"
+                                        className="size-[40px] text-primary bg-white border-[1px] border-primary hover:bg-primary hover:text-white p-[8px] rounded-full flex items-center justify-center"
+                                    >
+                                        {`0${index + 2}`}
+                                    </PaginationLink>
+                                </PaginationItem>
+                            ))}
+                            <PaginationItem>
+                                <PaginationEllipsis />
+                            </PaginationItem>
+                            <PaginationItem className="size-[40px] text-primary ml-[12px] bg-white border-[1px] border-primary hover:bg-primary hover:text-white p-[8px] rounded-full flex items-center justify-center">
+                                <Link href="#">
+                                    <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
+                                </Link>
+                            </PaginationItem>
+                        </PaginationContent>
+                    </Pagination>
+                </CardFooter>
+            </Card>
+        </section>
+    );
 }

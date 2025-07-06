@@ -16,18 +16,31 @@ export default function TrackOrder() {
                     </h1>
 
                     <p className="text-b-sm md:text-b-md leading-b-sm md:leading-b-md font-normal text-neutral-600">
-                        Para rastrear seu pedido, insira o ID do seu pedido no campo de entrada abaixo e pressione o botão “Rastrear pedido”. Ele foi fornecido a você no seu recibo e no e-mail de confirmação que você deveria ter recebido.
+                        Para rastrear seu pedido, insira o ID do seu pedido no
+                        campo de entrada abaixo e pressione o botão “Rastrear
+                        pedido”. Ele foi fornecido a você no seu recibo e no
+                        e-mail de confirmação que você deveria ter recebido.
                     </p>
                 </div>
 
                 <div className="flex gap-[24px]">
                     <div className="flex flex-col gap-[16px]">
                         <Label htmlFor="order">ID do Pedido</Label>
-                        <Input className="w-full text-b-sm leading-b-sm md:text-b-md md:leading-b-md lg:w-[424px] h-[44px] rounded-[4px] border-[1px] border-neutral-300" type="text" id="order" placeholder="ID do Pedido..." />
+                        <Input
+                            className="w-full text-b-sm leading-b-sm md:text-b-md md:leading-b-md lg:w-[424px] h-[44px] rounded-[4px] border-[1px] border-neutral-300"
+                            type="text"
+                            id="order"
+                            placeholder="ID do Pedido..."
+                        />
                     </div>
                     <div className="flex flex-col gap-[16px]">
                         <Label htmlFor="email">E-mail de cobrança</Label>
-                        <Input className="w-full text-b-sm leading-b-sm md:text-b-md md:leading-b-md lg:w-[424px] h-[44px] rounded-[4px] border-[1px] border-neutral-300" type="text" id="email" placeholder="Endereço de email..." />
+                        <Input
+                            className="w-full text-b-sm leading-b-sm md:text-b-md md:leading-b-md lg:w-[424px] h-[44px] rounded-[4px] border-[1px] border-neutral-300"
+                            type="text"
+                            id="email"
+                            placeholder="Endereço de email..."
+                        />
                     </div>
                 </div>
 
@@ -39,12 +52,11 @@ export default function TrackOrder() {
 
             <Link
                 href={`/dashboard/order-details/78974303`}
-                 className="bg-primary text-white text-b-md leading-b-md font-medium text-nowrap cursor-pointer w-[225px] h-[56px] rounded-[4px] flex items-center justify-center gap-[8px] px-[24px]"
+                className="bg-primary text-white text-b-md leading-b-md font-medium text-nowrap cursor-pointer w-[225px] h-[56px] rounded-[4px] flex items-center justify-center gap-[8px] px-[24px]"
             >
                 Rastrear Pedido
                 <ArrowRightIcon className="size-[16px]" />
             </Link>
-
         </section>
-    )
+    );
 }

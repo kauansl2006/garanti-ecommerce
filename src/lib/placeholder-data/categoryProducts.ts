@@ -39,7 +39,7 @@ export const categoryProducts: CategoryProducts[] = [
                 isActive: true,
                 isHot: false,
             },
-        ]
+        ],
     },
     {
         id: 2,
@@ -76,7 +76,7 @@ export const categoryProducts: CategoryProducts[] = [
                 isActive: true,
                 isHot: false,
             },
-        ]
+        ],
     },
     {
         id: 3,
@@ -113,7 +113,7 @@ export const categoryProducts: CategoryProducts[] = [
                 isActive: true,
                 isHot: false,
             },
-        ]
+        ],
     },
     {
         id: 4,
@@ -150,6 +150,6 @@ export const categoryProducts: CategoryProducts[] = [
                 isActive: true,
                 isHot: false,
             },
-        ]
+        ],
     },
-]
+];

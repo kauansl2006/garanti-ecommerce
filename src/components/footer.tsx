@@ -3,17 +3,23 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Logo } from "@/components";
-
 const footerLinks = [
     {
         id: 1,
         title: "MINHA CONTA",
         links: [
             { id: 1, title: "Dashboard", href: "/dashboard" },
-            { id: 2, title: "Histórico de Pedidos", href: "/dashboard/order-history" },
+            {
+                id: 2,
+                title: "Histórico de Pedidos",
+                href: "/dashboard/order-history",
+            },
             { id: 3, title: "Lista de Desejos", href: "/dashboard/wishlist" },
-            { id: 4, title: "Carrinho de Compras", href: "/dashboard/shopping-cart" },
+            {
+                id: 4,
+                title: "Carrinho de Compras",
+                href: "/dashboard/shopping-cart",
+            },
         ],
     },
     {
@@ -98,7 +104,10 @@ export const Footer = () => {
         <footer className="w-[100%] flex flex-col items-center justify-center px-[12px] xl:px-[15.625%] bg-neutral-900">
             <section className="w-[100%] flex flex-wrap items-start justify-between gap-[25px] py-[60px]">
                 <div className="w-[336px] flex flex-col xl:items-start xl:justify-start gap-y-[20px]">
-                    <Link href="/" className="w-[150px] h-[50px] md:w-[180px] md:h-[70px] relative">
+                    <Link
+                        href="/"
+                        className="w-[150px] h-[50px] md:w-[180px] md:h-[70px] relative"
+                    >
                         <Image
                             src="/dark-logo.svg"
                             fill={true}
@@ -175,4 +184,4 @@ export const Footer = () => {
             </section>
         </footer>
     );
-}
+};

@@ -5,14 +5,19 @@ import Link from "next/link";
 
 import { CheckCircleIcon, HomeIcon } from "lucide-react";
 
-import { Breadcrumb } from "@/components";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Breadcrumb } from "@/components/breadcrumb";
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { products } from "@/lib/placeholder-data";
 
@@ -20,27 +25,24 @@ const paymentOptions = [
     {
         image: "/payment-options/pix.svg",
         label: "Pix",
-        value: "option-one"
-
+        value: "option-one",
     },
     {
         image: "/payment-options/paypal.svg",
         label: "Paypal",
-        value: "option-two"
-
+        value: "option-two",
     },
     {
         image: "/payment-options/stripe.svg",
         label: "Stripe",
-        value: "option-three"
-
+        value: "option-three",
     },
     {
         image: "/payment-options/visa.svg",
         label: "Cartão Crédito/Débito",
-        value: "option-four"
+        value: "option-four",
     },
-]
+];
 
 export default function Payment() {
     return (
@@ -60,7 +62,7 @@ export default function Payment() {
                         href: "/payment",
                         label: "Pagamento",
                         active: true,
-                    }
+                    },
                 ]}
             />
             <section className="flex flex-col lg:flex-row items-end lg:items-start gap-[24px] justify-between px-[5.625%] xl:px-[15.625%] pt-[102px] pb-[72px] md:py-[72px]">
@@ -73,7 +75,9 @@ export default function Payment() {
                             <div className="grid grid-cols-4 gap-[16px]">
                                 <div className="col-span-4 xl:col-span-2 grid grid-cols-2 items-end justify-center gap-[16px]">
                                     <div className="flex flex-col gap-[8px]">
-                                        <Label htmlFor="first-name">Nome do Usuário</Label>
+                                        <Label htmlFor="first-name">
+                                            Nome do Usuário
+                                        </Label>
                                         <Input
                                             id="first-name"
                                             type="text"
@@ -118,9 +122,7 @@ export default function Payment() {
                                 </div>
                                 <div className="col-span-4 grid grid-cols-1 xl:grid-cols-3 gap-[16px]">
                                     <div className="flex flex-col gap-[8px]">
-                                        <Label htmlFor="city">
-                                            Cidade
-                                        </Label>
+                                        <Label htmlFor="city">Cidade</Label>
                                         <Input
                                             id="city"
                                             type="text"
@@ -155,9 +157,7 @@ export default function Payment() {
                                     </div>
                                 </div>
                                 <div className="col-span-2 flex flex-col gap-[8px]">
-                                    <Label htmlFor="email">
-                                        Email
-                                    </Label>
+                                    <Label htmlFor="email">Email</Label>
                                     <Input
                                         id="email"
                                         type="email"
@@ -181,8 +181,14 @@ export default function Payment() {
                             </div>
 
                             <div className="flex items-center justify-start gap-2">
-                                <Checkbox id="other-address" className="rounded-[0px]" />
-                                <Label htmlFor="other-address" className="text-b-sm leading-b-sm">
+                                <Checkbox
+                                    id="other-address"
+                                    className="rounded-[0px]"
+                                />
+                                <Label
+                                    htmlFor="other-address"
+                                    className="text-b-sm leading-b-sm"
+                                >
                                     Enviar para endereço diferente
                                 </Label>
                             </div>
@@ -191,13 +197,18 @@ export default function Payment() {
 
                     <Card className="bg-white rounded-[4px] border-[1px] border-neutral-300 shadow-none">
                         <CardHeader className="w-full border-b-[1px] border-b-neutral-300">
-                            <CardTitle className="pb-[12px]">Opções de Pagamento</CardTitle>
+                            <CardTitle className="pb-[12px]">
+                                Opções de Pagamento
+                            </CardTitle>
                         </CardHeader>
                         <CardContent className="w-full flex flex-col p-[0px] gap-[24px]">
                             <RadioGroup defaultValue="option-one">
                                 <div className="grid grid-cols-2 xl:grid-cols-4 gap-[3px] p-[24px]">
                                     {paymentOptions.map((option, index) => (
-                                        <div key={index} className="flex items-center justify-center gap-[3px]">
+                                        <div
+                                            key={index}
+                                            className="flex items-center justify-center gap-[3px]"
+                                        >
                                             <div className="w-full flex flex-col items-center justify-center gap-[16px]">
                                                 <div className="size-[64px] relative">
                                                     <Image
@@ -211,15 +222,23 @@ export default function Payment() {
                                                     {option.label}
                                                 </p>
 
-                                                <RadioGroupItem value={option.value} />
+                                                <RadioGroupItem
+                                                    value={option.value}
+                                                />
                                             </div>
                                             {option.value !== "option-four" && (
-                                                <Separator orientation="vertical" className="bg-neutral-300 hidden xl:block" />
+                                                <Separator
+                                                    orientation="vertical"
+                                                    className="bg-neutral-300 hidden xl:block"
+                                                />
                                             )}
                                         </div>
                                     ))}
                                 </div>
-                                <Separator orientation="horizontal" className="bg-neutral-300" />
+                                <Separator
+                                    orientation="horizontal"
+                                    className="bg-neutral-300"
+                                />
                             </RadioGroup>
 
                             <div className="px-6 grid grid-cols-2 gap-[16px]">
@@ -258,9 +277,7 @@ export default function Payment() {
                                     />
                                 </div>
                                 <div className="col-span-1 flex flex-col gap-[8px]">
-                                    <Label htmlFor="cvc">
-                                        CVC
-                                    </Label>
+                                    <Label htmlFor="cvc">CVC</Label>
                                     <Input
                                         id="cvc"
                                         type="text"
@@ -282,8 +299,14 @@ export default function Payment() {
                             <div className="flex flex-col gap-[16px] pb-[24px]">
                                 <ScrollArea className="h-[350px] w-full rounded-md border p-4">
                                     {products.map((product) => (
-                                        <div key={product.id} className="flex flex-col pb-[8px]">
-                                            <div className="grid grid-cols-3 gap-[12px] items-center justify-center" key={product.id}>
+                                        <div
+                                            key={product.id}
+                                            className="flex flex-col pb-[8px]"
+                                        >
+                                            <div
+                                                className="grid grid-cols-3 gap-[12px] items-center justify-center"
+                                                key={product.id}
+                                            >
                                                 <div className="size-[72px] relative">
                                                     <Image
                                                         src={product.thumbnail}
@@ -292,19 +315,32 @@ export default function Payment() {
                                                     />
                                                 </div>
                                                 <p className="text-b-sm leading-b-sm font-normal">
-                                                    {product.availableQuantity} Unidades
+                                                    {product.availableQuantity}{" "}
+                                                    Unidades
                                                 </p>
                                                 <p className="text-nowrap text-b-sm leading-b-sm font-normal">
-                                                    Valor total: R$ {Number(product.price.toFixed(2)) * product.availableQuantity}
+                                                    Valor total: R${" "}
+                                                    {Number(
+                                                        product.price.toFixed(
+                                                            2,
+                                                        ),
+                                                    ) *
+                                                        product.availableQuantity}
                                                 </p>
                                             </div>
-                                            <Separator orientation="horizontal" className="bg-neutral-300" />
+                                            <Separator
+                                                orientation="horizontal"
+                                                className="bg-neutral-300"
+                                            />
                                         </div>
                                     ))}
                                     <ScrollBar orientation="horizontal" />
                                 </ScrollArea>
 
-                                <Separator orientation="horizontal" className="bg-neutral-300" />
+                                <Separator
+                                    orientation="horizontal"
+                                    className="bg-neutral-300"
+                                />
 
                                 <div className="flex flex-col gap-[12px] pb-[4px]">
                                     <div className="flex items-center justify-between">
@@ -341,7 +377,10 @@ export default function Payment() {
                                     </div>
                                 </div>
 
-                                <Separator orientation="horizontal" className="bg-neutral-300" />
+                                <Separator
+                                    orientation="horizontal"
+                                    className="bg-neutral-300"
+                                />
 
                                 <div className="flex items-center justify-between">
                                     <p className="text-b-md leading-b-md font-normal">
@@ -366,5 +405,5 @@ export default function Payment() {
                 </div>
             </section>
         </main>
-    )
+    );
 }

@@ -7,12 +7,12 @@ import {
     CardTitle,
     CardContent,
     CardFooter,
-    CardAction
+    CardAction,
 } from "@/components/ui/card";
 import {
     Carousel,
     CarouselContent,
-    CarouselItem
+    CarouselItem,
 } from "@/components/ui/carousel";
 import {
     CopyIcon,
@@ -20,14 +20,24 @@ import {
     PackageIcon,
     PlusCircleIcon,
     ReceiptTextIcon,
-    RocketIcon
+    RocketIcon,
 } from "lucide-react";
 import Image from "next/image";
 
 const paymentCards = [
-    { price: 95400, value: "**** **** **** 3814", type: "visa", icon: "/visa-icon.svg" },
-    { price: 72354, value: "**** **** **** 2783", type: "mastercard", icon: "/mastercard-icon.svg" },
-]
+    {
+        price: 95400,
+        value: "**** **** **** 3814",
+        type: "visa",
+        icon: "/visa-icon.svg",
+    },
+    {
+        price: 72354,
+        value: "**** **** **** 2783",
+        type: "mastercard",
+        icon: "/mastercard-icon.svg",
+    },
+];
 
 export default function Dashboard() {
     return (
@@ -37,15 +47,23 @@ export default function Dashboard() {
                     Olá John!
                 </p>
                 <p className="text-b-sm leading-b-sm font-normal text-neutral-700">
-                    No painel da sua conta, você pode facilmente verificar e visualizar seus <span className="text-primary">pedidos recentes</span>, gerenciar seus <span className="text-primary">endereços de entrega</span> e <span className="text-primary">
-                        cobrança</span> e <span className="text-primary">editar sua senha</span> e <span className="text-primary">detalhes da conta.</span>
+                    No painel da sua conta, você pode facilmente verificar e
+                    visualizar seus{" "}
+                    <span className="text-primary">pedidos recentes</span>,
+                    gerenciar seus{" "}
+                    <span className="text-primary">endereços de entrega</span> e{" "}
+                    <span className="text-primary">cobrança</span> e{" "}
+                    <span className="text-primary">editar sua senha</span> e{" "}
+                    <span className="text-primary">detalhes da conta.</span>
                 </p>
             </div>
 
             <div className="w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-[24px]">
                 <Card className="shadow-none border-[1px] border-neutral-300 rounded-[4px]">
                     <CardHeader className="w-full border-b-[1px] border-b-neutral-300">
-                        <CardTitle className="pb-[12px]">Informações da Conta</CardTitle>
+                        <CardTitle className="pb-[12px]">
+                            Informações da Conta
+                        </CardTitle>
                     </CardHeader>
                     <CardContent>
                         <div className="flex flex-col gap-[20px]">
@@ -97,9 +115,7 @@ export default function Dashboard() {
                         </div>
                     </CardContent>
                     <CardFooter>
-                        <Button
-                            className="cursor-pointer border-2 border-primary bg-white text-primary hover:bg-primary hover:text-white text-[14px]/[48px] font-bold flex items-center justify-center px-[24px] w-[155px] h-[48px] rounded-[4px]"
-                        >
+                        <Button className="cursor-pointer border-2 border-primary bg-white text-primary hover:bg-primary hover:text-white text-[14px]/[48px] font-bold flex items-center justify-center px-[24px] w-[155px] h-[48px] rounded-[4px]">
                             Editar Conta
                         </Button>
                     </CardFooter>
@@ -107,7 +123,9 @@ export default function Dashboard() {
 
                 <Card className="shadow-none border-[1px] border-neutral-300 rounded-[4px]">
                     <CardHeader className="w-full border-b-[1px] border-b-neutral-300">
-                        <CardTitle className="pb-[12px]">Informações de Envio</CardTitle>
+                        <CardTitle className="pb-[12px]">
+                            Informações de Envio
+                        </CardTitle>
                     </CardHeader>
                     <CardContent>
                         <div className="flex flex-col gap-[20px]">
@@ -122,7 +140,9 @@ export default function Dashboard() {
                                 </div>
 
                                 <p className="text-b-sm leading-b-sm text-neutral-600 line-clamp-3 overflow-hidden text-ellipsis">
-                                    East Tejturi Bazar, Word No. 04, Road No. 13/x, House no. 1320/C, Flat No. 5D, Dhaka - 1200, Bangladesh
+                                    East Tejturi Bazar, Word No. 04, Road No.
+                                    13/x, House no. 1320/C, Flat No. 5D, Dhaka -
+                                    1200, Bangladesh
                                 </p>
 
                                 <div className="flex gap-2">
@@ -145,9 +165,7 @@ export default function Dashboard() {
                         </div>
                     </CardContent>
                     <CardFooter>
-                        <Button
-                            className="cursor-pointer border-2 border-primary bg-white text-primary hover:bg-primary hover:text-white text-[14px]/[48px] font-bold flex items-center justify-center px-[24px] w-[155px] h-[48px] rounded-[4px]"
-                        >
+                        <Button className="cursor-pointer border-2 border-primary bg-white text-primary hover:bg-primary hover:text-white text-[14px]/[48px] font-bold flex items-center justify-center px-[24px] w-[155px] h-[48px] rounded-[4px]">
                             Editar Endereço
                         </Button>
                     </CardFooter>
@@ -219,11 +237,17 @@ export default function Dashboard() {
                     <Carousel className="w-full">
                         <CarouselContent>
                             {paymentCards.map((card, index) => (
-                                <CarouselItem className="basis-full lg:basis-1/2 2xl:basis-1/3" key={index}>
-                                    <Card className={`shadow-none w-full bg-gradient-to-br ${card.type === "mastercard" ?
-                                            "bg-gradient-to-br from-green-500 to-green-700" :
-                                            "from-cyan-600 to-cyan-900"
-                                        } rounded-[4px]`}>
+                                <CarouselItem
+                                    className="basis-full lg:basis-1/2 2xl:basis-1/3"
+                                    key={index}
+                                >
+                                    <Card
+                                        className={`shadow-none w-full bg-gradient-to-br ${
+                                            card.type === "mastercard"
+                                                ? "bg-gradient-to-br from-green-500 to-green-700"
+                                                : "from-cyan-600 to-cyan-900"
+                                        } rounded-[4px]`}
+                                    >
                                         <CardHeader>
                                             <CardTitle className="text-white">
                                                 R$ {card.price.toFixed(2)}
@@ -275,5 +299,5 @@ export default function Dashboard() {
                 </CardContent>
             </Card>
         </section>
-    )
+    );
 }

@@ -61,4 +61,4 @@ export const categories: Category[] = [
         imagePath: "/categories/roupas-e-acessorios.png",
         href: "#",
     },
-]
+];
