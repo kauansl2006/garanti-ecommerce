@@ -29,7 +29,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 
 export const ProductDetails = ({ product }: { product: any }) => {
     return (
-        <section className="px-[5.625%] lg:px-[15.625%] pt-[102px] md:pt-[32px] pb-[72px] grid grid-cols-1 lg:grid-cols-2 gap-[56px]">
+        <section className="px-[5.625%] xl:px-[15.625%] pt-[102px] md:pt-[32px] pb-[72px] grid grid-cols-1 lg:grid-cols-2 gap-[56px]">
             <div className="flex flex-col gap-[24px]">
                 <Card className="w-full shadow-none border-[1px] border-neutral-300 rounded-[4px]">
                     <CardContent className="flex items-center justify-center" >
@@ -46,7 +46,7 @@ export const ProductDetails = ({ product }: { product: any }) => {
                 <Carousel className="w-full">
                     <CarouselContent>
                         {product.photos.map((photo: any, index: any) => (
-                            <CarouselItem key={index} className="basis-1/3 sm:basis-1/5 md:basis-1/6 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5">
+                            <CarouselItem key={index} className="basis-1/3 sm:basis-1/5 md:basis-1/6 lg:basis-1/4 2xl:basis-1/5">
                                 <Card className="w-max shadow-none border-[1px] border-neutral-300 p-[0px] rounded-[4px]">
                                     <CardContent className="flex items-center justify-center p-[0px]">
                                         <div className="size-[96px] relative">
@@ -209,7 +209,7 @@ export const ProductDetails = ({ product }: { product: any }) => {
                         </Button>
                     </div>
 
-                    <button className="max-w-[310px] w-full h-[56px] rounded-[4px] text-[16px]/[56px] font-semibold flex items-center justify-center gap-[8px] px-[32px] bg-primary text-white">
+                    <button className="lg:max-w-[310px] w-full h-[56px] rounded-[4px] text-[16px]/[56px] font-semibold flex items-center justify-center gap-[8px] px-[32px] bg-primary text-white">
                         Adicionar
                         <ShoppingCartIcon className="size-[24px]" />
                     </button>

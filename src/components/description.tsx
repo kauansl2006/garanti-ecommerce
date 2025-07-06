@@ -24,7 +24,7 @@ export const shippingInformation: any[] = [
 
 export const ProductDescription = () => {
     return (
-        <section className="w-full grid grid-cols-[repeat(4,auto)] gap-[24px]">
+        <section className="w-full grid grid-cols-[repeat(1,auto)] 2xl:grid-cols-[repeat(4,auto)] gap-[24px]">
             <div className="flex flex-col gap-[12px]">
                 <p className="text-b-md leading-b-md font-semibold">
                     DESCRIÇÃO
@@ -46,7 +46,7 @@ export const ProductDescription = () => {
                 ))}
             </div>
 
-            <Separator orientation="vertical" />
+            <Separator orientation="vertical" className="hidden 2xl:block" />
 
             <div className="flex flex-col gap-[12px]">
                 <p className="text-b-md leading-b-md font-semibold">

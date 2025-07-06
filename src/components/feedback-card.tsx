@@ -6,7 +6,7 @@ import { Rating } from "@/components/rating";
 
 export const FeedbackCard = ({ customer }: { customer: any}) => {
     return (
-        <div className="w-[720px] flex flex-col gap-[12px]">
+        <div className="max-w-[720px] w-full flex flex-col gap-[12px]">
             <div className="flex gap-[12px]">
                 <div className="size-[48px] rounded-full relative">
                     <Image
@@ -18,10 +18,10 @@ export const FeedbackCard = ({ customer }: { customer: any}) => {
 
                 <div className="flex flex-col gap-[6px]">
                     <div className="flex items-center gap-[6px]">
-                        <p className="font-medium text-foreground">
+                        <p className="text-b-sm leading-b-sm sm:text-b-md sm:leading-b-md font-medium text-foreground">
                             {customer.name}
                         </p>
-                        <p className="text-b-sm leading-b-sm font-normal text-neutral-600">
+                        <p className="text-b-ty leading-b-ty sm:text-b-sm sm:leading-b-sm font-normal text-neutral-600">
                             • Agora mesmo
                         </p>
                     </div>

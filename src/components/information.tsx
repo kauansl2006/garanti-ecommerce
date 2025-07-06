@@ -2,8 +2,8 @@ import { overview, productDetails } from "@/lib/placeholder-data";
 
 export const ProductAdditionalInformation = () => {
     return (
-        <section className="w-full grid grid-cols-[repeat(2,1fr)] gap-[24px]">
-            <div className="w-full flex flex-col gap-[12px] border-r-[1px] border-r-neutral-300">
+        <section className="w-full grid grid-cols-[repeat(1,auto)] 2xl:grid-cols-[repeat(2,1fr)] gap-[24px]">
+            <div className="w-full flex flex-col gap-[12px] 2xl:border-r-[1px] border-r-neutral-300">
                 <p className="text-b-md leading-b-md font-semibold">
                     VISÃO GERAL
                 </p>
@@ -22,7 +22,7 @@ export const ProductAdditionalInformation = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-[repeat(2,auto)] gap-[24px]">
+            <div className="grid grid-cols-[repeat(1,auto)] md:grid-cols-[repeat(2,auto)] gap-[24px]">
                 {productDetails.map((detail, index) => (
                     <div key={index} className="w-full flex flex-col gap-[8px]">
                         <p className="text-b-md leading-b-md font-semibold">

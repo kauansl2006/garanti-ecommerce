@@ -4,7 +4,7 @@ import { specifications } from "@/lib/placeholder-data";
 
 export const ProductSpecification = () => {
     return (
-        <section className="w-full grid grid-cols-[repeat(2,1fr)] gap-[24px]">
+        <section className="w-full grid grid-cols-[repeat(1,1fr)] md:grid-cols-[repeat(2,1fr)] gap-[24px]">
             {specifications.map((specification, index) => (
                 <div key={index} className="w-full flex flex-col gap-[12px] border-r-neutral-300">
                     <p className="text-b-md leading-b-md font-semibold">
