@@ -26,21 +26,23 @@ export default function BrowsingHistory() {
                 />
             </div>
 
-            <Card className="shadow-none rounded-[4px] p-[0px] border-[1px] border-neutral-300" >
+            <Card className="shadow-none rounded-[4px] p-[0px] border-[1px] border-neutral-300">
                 <CardHeader className="flex items-center h-[56px] justify-start border-b-[1px] border-b-neutral-300">
-                    <CardTitle>
-                        17 de JUNHO de 2025
-                    </CardTitle>
+                    <CardTitle>17 de JUNHO de 2025</CardTitle>
                 </CardHeader>
 
-                <CardContent >
+                <CardContent>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 2xl:grid-cols-4">
                         {products.map((product) => (
-                            <ProductCard key={product.id} size="md" product={product} />
+                            <ProductCard
+                                key={product.id}
+                                size="md"
+                                product={product}
+                            />
                         ))}
                     </div>
                 </CardContent>
             </Card>
         </section>
-    )
+    );
 }

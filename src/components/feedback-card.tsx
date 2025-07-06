@@ -4,7 +4,11 @@ import Image from "next/image";
 
 import { Rating } from "@/components/rating";
 
-export const FeedbackCard = ({ customer }: { customer: any}) => {
+export const FeedbackCard = ({
+    customer,
+}: {
+    customer: { photo: string; name: string };
+}) => {
     return (
         <div className="max-w-[720px] w-full flex flex-col gap-[12px]">
             <div className="flex gap-[12px]">
@@ -26,13 +30,15 @@ export const FeedbackCard = ({ customer }: { customer: any}) => {
                         </p>
                     </div>
 
-                    <Rating score={64} size="18px"/>
+                    <Rating score={64} size="18px" />
                 </div>
             </div>
 
             <p className="text-b-sm leading-b-sm text-normal text-neutral-700">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper ut lectus nec tincidunt. Nunc mattis dignissim arcu, sit amet consequat sem auctor a.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum ullamcorper ut lectus nec tincidunt. Nunc mattis
+                dignissim arcu, sit amet consequat sem auctor a.
             </p>
         </div>
-    )
-}
+    );
+};

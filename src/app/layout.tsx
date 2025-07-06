@@ -15,7 +15,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
     title: {
         default: "Garanti",
-        template: "%s | Garanti"
+        template: "%s | Garanti",
     },
     description:
         "Template de e-commerce ideal para negócios que atuam no Brasil.",

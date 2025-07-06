@@ -12,5 +12,5 @@ export const popularBrands: PopularBrand[] = [
     { id: 9, title: "Samsung" },
     { id: 10, title: "HP" },
     { id: 11, title: "Xiaomi" },
-    { id: 12, title: "Panasonic" }
+    { id: 12, title: "Panasonic" },
 ];

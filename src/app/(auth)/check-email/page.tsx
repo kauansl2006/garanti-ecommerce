@@ -7,7 +7,7 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -29,8 +29,8 @@ export default function CheckEmail() {
                     {
                         href: "/check-email",
                         label: "Verificar Email",
-                        active: true
-                    }
+                        active: true,
+                    },
                 ]}
             />
 
@@ -39,16 +39,22 @@ export default function CheckEmail() {
                     <CardHeader className="text-center">
                         <CardTitle>Verifique seu Endereço de Email</CardTitle>
                         <CardDescription>
-                        Digite o endereço de e-mail ou número de celular associado à sua conta Garanti.
+                            Digite o endereço de e-mail ou número de celular
+                            associado à sua conta Garanti.
                         </CardDescription>
                     </CardHeader>
                     <CardContent>
                         <form>
                             <div className="flex flex-col gap-6">
                                 <div className="grid gap-2">
-                                <div className="flex items-center">
-                                        <Label htmlFor="email">Endereço de Email</Label>
-                                        <Button variant="link" className="cursor-pointer ml-auto inline-block text-b-sm leading-b-sm">
+                                    <div className="flex items-center">
+                                        <Label htmlFor="email">
+                                            Endereço de Email
+                                        </Label>
+                                        <Button
+                                            variant="link"
+                                            className="cursor-pointer ml-auto inline-block text-b-sm leading-b-sm"
+                                        >
                                             Reenviar Código
                                         </Button>
                                     </div>
@@ -64,12 +70,15 @@ export default function CheckEmail() {
                         </form>
                     </CardContent>
                     <CardFooter>
-                        <Button type="submit" className="w-full h-[48px] rounded-[4px] cursor-pointer">
+                        <Button
+                            type="submit"
+                            className="w-full h-[48px] rounded-[4px] cursor-pointer"
+                        >
                             Verificar Email
                         </Button>
                     </CardFooter>
                 </Card>
             </section>
         </main>
-    )
+    );
 }

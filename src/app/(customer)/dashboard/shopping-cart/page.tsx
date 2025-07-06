@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
     Table,
     TableBody,
@@ -11,8 +11,8 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@/components/ui/table"
-import { XCircleIcon } from "lucide-react"
+} from "@/components/ui/table";
+import { XCircleIcon } from "lucide-react";
 import { products } from "@/lib/placeholder-data";
 
 export default function ShoppingCart() {
@@ -25,10 +25,16 @@ export default function ShoppingCart() {
                 <Table className="w-full relative">
                     <TableHeader>
                         <TableRow>
-                            <TableHead className="w-[380px]">Produtos</TableHead>
+                            <TableHead className="w-[380px]">
+                                Produtos
+                            </TableHead>
                             <TableHead className="w-[180px]">Preço</TableHead>
-                            <TableHead className="w-[180px]">Quantidade</TableHead>
-                            <TableHead className="w-[180px]">Subtotal</TableHead>
+                            <TableHead className="w-[180px]">
+                                Quantidade
+                            </TableHead>
+                            <TableHead className="w-[180px]">
+                                Subtotal
+                            </TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -36,7 +42,11 @@ export default function ShoppingCart() {
                             <TableRow key={product.id}>
                                 <TableCell>
                                     <div className="flex items-center justify-start gap-[24px]">
-                                        <Button variant="ghost" size="icon" className="cursor-pointer rounded-full">
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="cursor-pointer rounded-full"
+                                        >
                                             <XCircleIcon className="size-[24px] text-neutral-400" />
                                         </Button>
 
@@ -53,14 +63,18 @@ export default function ShoppingCart() {
                                         </p>
                                     </div>
                                 </TableCell>
-                                <TableCell>R$ {product.price.toFixed(2)}</TableCell>
+                                <TableCell>
+                                    R$ {product.price.toFixed(2)}
+                                </TableCell>
                                 <TableCell>
                                     <p className="text-b-sm leading-b-sm font-normal">
                                         {product.availableQuantity} Unidades
                                     </p>
                                 </TableCell>
                                 <TableCell>
-                                    R$ {Number(product.price.toFixed(2)) * product.availableQuantity}
+                                    R${" "}
+                                    {Number(product.price.toFixed(2)) *
+                                        product.availableQuantity}
                                 </TableCell>
                             </TableRow>
                         ))}
@@ -68,5 +82,5 @@ export default function ShoppingCart() {
                 </Table>
             </CardContent>
         </Card>
-    )
+    );
 }

@@ -5,11 +5,7 @@ import Link from "next/link";
 
 import { Product } from "@/lib/definitions";
 
-export const SmallProductCard = ({
-    product,
-}: {
-    product: Product
-}) => {
+export const SmallProductCard = ({ product }: { product: Product }) => {
     return (
         <div className="md:w-max-[312px] h-max-[104px] w-full h-full p-[12px] bg-white rounded-[4px] border-[1px] border-neutral-300 flex items-center justify-between gap-x-[12px]">
             <div className="max-w-[80px] max-h-[80px] w-full h-full">
@@ -37,5 +33,5 @@ export const SmallProductCard = ({
                 </h3>
             </div>
         </div>
-    )
-}
+    );
+};

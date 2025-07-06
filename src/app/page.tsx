@@ -8,7 +8,7 @@ import {
     CarouselContent,
     CarouselItem,
     CarouselNext,
-    CarouselPrevious
+    CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
 import { CategoryCard } from "@/components/category-card";
@@ -51,13 +51,14 @@ const features = [
 export default function Home() {
     const maxScore = Math.max(...products.map((product) => product.score ?? 0));
     const topProduct = products.find((product) => product.score === maxScore);
-    const otherProducts = products.filter((product) => product.id !== topProduct?.id);
+    const otherProducts = products.filter(
+        (product) => product.id !== topProduct?.id,
+    );
 
     return (
         <main className="w-screen flex flex-col items-center justify-center">
             <section className="w-full h-full flex items-center justify-between gap-x-[24px] mt-[60px] md:mt-[0px] py-[24px] px-[5.625%] xl:px-[15.625%]">
                 <div className="2xl:w-[872px] 2xl:h-[520px] w-full h-full flex flex-col-reverse md:flex-row items-center justify-center gap-[36px] bg-neutral-300 rounded-[4px] p-[20px] md:p-[50px]">
-
                     <div className="flex flex-col items-center sm:items-start gap-y-[24px]">
                         <div className="flex flex-col items-center sm:items-start gap-y-[16px]">
                             <div className="flex flex-col items-center sm:items-start">
@@ -71,7 +72,8 @@ export default function Home() {
                             </div>
 
                             <p className="text-b-sm leading-b-sm md:text-b-md md:leading-b-md xl:text-b-lg xl:leading-b-lg font-normal text-neutral-700">
-                                Save up to 50% on select Xbox games. Get 3 months of PC Game Pass for 12 USD.
+                                Save up to 50% on select Xbox games. Get 3
+                                months of PC Game Pass for 12 USD.
                             </p>
                         </div>
 
@@ -93,7 +95,7 @@ export default function Home() {
                             style={{
                                 width: "100%",
                                 height: "100%",
-                                objectFit: "contain"
+                                objectFit: "contain",
                             }}
                         />
                         <div className="bg-success text-white text-center text-[18px]/[100px] md:text-[22px]/[100px] font-semibold rounded-full px-[20px] md:px-[24px] size-[96px] md:size-[100px] absolute top-0 right-0">
@@ -104,7 +106,6 @@ export default function Home() {
 
                 <div className="2xl:max-w-[424px] w-full h-full hidden 2xl:flex flex-col items-center justify-center gap-y-[24px]">
                     <div className="max-w-[424px] max-h-[248px] w-full h-full flex items-center justify-between  bg-neutral-900 rounded-[4px] p-[35px]">
-
                         <div className="flex flex-col items-start gap-y-[18px]">
                             <div className="flex flex-col items-start gap-y-[8px]">
                                 <div className="text-l-sm leading-l-sm font-semibold text-warning">
@@ -134,7 +135,7 @@ export default function Home() {
                                 style={{
                                     width: "100%",
                                     height: "100%",
-                                    objectFit: "contain"
+                                    objectFit: "contain",
                                 }}
                             />
                             <Badge
@@ -156,7 +157,7 @@ export default function Home() {
                                 style={{
                                     width: "100%",
                                     height: "100%",
-                                    objectFit: "contain"
+                                    objectFit: "contain",
                                 }}
                             />
                         </div>
@@ -186,8 +187,10 @@ export default function Home() {
             <section className="w-full flex flex-col items-center justify-center px-[5.625%] xl:px-[15.625%]">
                 <div className="w-full grid 2xl:grid-cols-[repeat(4,1fr)] sm:grid-cols-[repeat(2,1fr)]  grid-cols-[repeat(1,1fr)] gap-x-[28px] p-[16px] bg-white border-[1px] border-neutral-300 rounded-[6px]">
                     {features.map((feature, index) => (
-
-                        <div key={index} className="2xl:max-w-[280px] 2xl:w-full flex items-start justify-start p-[16px] gap-x-[16px]">
+                        <div
+                            key={index}
+                            className="2xl:max-w-[280px] 2xl:w-full flex items-start justify-start p-[16px] gap-x-[16px]"
+                        >
                             <feature.icon className="size-[40px] stroke-[1px]" />
 
                             <div className="w-full flex flex-col items-start justify-start gap-y-[4px]">
@@ -199,7 +202,6 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
-
                     ))}
                 </div>
             </section>
@@ -233,18 +235,24 @@ export default function Home() {
 
                 <div className="w-full grid grid-cols-[repeat(1,1fr)] sm:grid-cols-[repeat(2,1fr)] md:grid-cols-[repeat(3,1fr)] lg:grid-cols-[repeat(4,1fr)] 2xl:grid-cols-[repeat(5,1fr)] items-center justify-center">
                     {topProduct && (
-                        <div key={topProduct.id} className="md:hidden xl:block row-span-2 xl:max-w-[328px] w-full h-full" >
+                        <div
+                            key={topProduct.id}
+                            className="md:hidden xl:block row-span-2 xl:max-w-[328px] w-full h-full"
+                        >
                             <ProductCard product={topProduct} size="lg" />
                         </div>
                     )}
 
                     {otherProducts.map((product) => (
-                        <div key={product.id} className="md:max-w-[248px] w-full h-full" >
+                        <div
+                            key={product.id}
+                            className="md:max-w-[248px] w-full h-full"
+                        >
                             <ProductCard product={product} size="md" />
                         </div>
                     ))}
                 </div>
-            </section >
+            </section>
 
             <section className="w-full flex flex-col items-center justify-center gap-y-[24px] md:gap-y-[40px] px-[5.625%] md:px-[10.625%] xl:px-[15.625%]">
                 <h1 className="text-center text-nowrap md:text-wrap text-h-03 leading-h-03 xl:text-h-01 xl:leading-h-01 font-semibold">
@@ -253,19 +261,27 @@ export default function Home() {
                 <Carousel className="w-full">
                     <CarouselContent>
                         {categories.map((category) => (
-                            <CarouselItem className="basis-full xl:basis-1/6 max-w-[205px] max-h-[236px]" key={category.id}>
+                            <CarouselItem
+                                className="basis-full xl:basis-1/6 max-w-[205px] max-h-[236px]"
+                                key={category.id}
+                            >
                                 <CategoryCard category={category} />
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious variant="default" className="cursor-pointer size-[48px] hover:bg-primary hidden md:inline-flex" />
-                    <CarouselNext variant="default" className="cursor-pointer size-[48px] hover:bg-primary hidden md:inline-flex" />
+                    <CarouselPrevious
+                        variant="default"
+                        className="cursor-pointer size-[48px] hover:bg-primary hidden md:inline-flex"
+                    />
+                    <CarouselNext
+                        variant="default"
+                        className="cursor-pointer size-[48px] hover:bg-primary hidden md:inline-flex"
+                    />
                 </Carousel>
             </section>
 
             <section className="w-full flex items-start justify-between gap-[24px] px-[5.625%] xl:px-[15.625%] py-[42px] xl:py-[72px]">
                 <div className="hidden 2xl:block max-w-[312px] w-full h-full">
-
                     <div className="w-full h-full flex flex-col items-center justify-center rounded-[4px] bg-[#F3DE6D]">
                         <div className="w-full h-full flex flex-col items-center justify-center gap-[16px] px-[20px] py-[30px]">
                             <div className="w-full h-full flex flex-col items-center justify-center gap-[12px]">
@@ -296,7 +312,10 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <Link href="#" className="w-[191px] h-[56px] flex items-center justify-center gap-x-[12px] px-[32px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap" >
+                        <Link
+                            href="#"
+                            className="w-[191px] h-[56px] flex items-center justify-center gap-x-[12px] px-[32px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap"
+                        >
                             VER AGORA
                             <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
                         </Link>
@@ -309,7 +328,6 @@ export default function Home() {
                             />
                         </div>
                     </div>
-
                 </div>
 
                 <div className="w-full flex flex-col items-center justify-center gap-y-[24px]">
@@ -351,11 +369,11 @@ export default function Home() {
 
                     <div className="w-full grid grid-cols-[repeat(1,1fr)] sm:grid-cols-[repeat(2,1fr)] md:grid-cols-[repeat(3,1fr)] lg:grid-cols-[repeat(4,1fr)] items-center justify-center">
                         {products.slice(0, 8).map((product) => (
-                            <div key={product.id} className="md:max-w-[248px] w-full h-full" >
-                                <ProductCard
-                                    product={product}
-                                    size="md"
-                                />
+                            <div
+                                key={product.id}
+                                className="md:max-w-[248px] w-full h-full"
+                            >
+                                <ProductCard product={product} size="md" />
                             </div>
                         ))}
                     </div>
@@ -363,7 +381,6 @@ export default function Home() {
             </section>
 
             <section className="w-full 2xl:h-[336px] px-[5.625%] xl:px-[15.625%] flex flex-col 2xl:flex-row gap-[24px]">
-
                 <div className="2xl:max-w-[648px] w-full h-full p-[44px] hidden sm:flex items-center bg-neutral-300 rounded-[4px] gap-x-[40px] relative">
                     <div className="w-[280px] flex flex-col items-start gap-y-[20px] z-10">
                         <div className="flex flex-col items-start gap-y-[12px]">
@@ -382,11 +399,15 @@ export default function Home() {
                             </div>
 
                             <p className="text-b-md leading-b-md text-normal text-neutral-700">
-                                Jam-packed with innovation, HomePod mini delivers unexpectedly.
+                                Jam-packed with innovation, HomePod mini
+                                delivers unexpectedly.
                             </p>
                         </div>
 
-                        <Link href="/shop" className="h-[48px] flex items-center justify-center gap-x-[8px] px-[24px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap" >
+                        <Link
+                            href="/shop"
+                            className="h-[48px] flex items-center justify-center gap-x-[8px] px-[24px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap"
+                        >
                             VER AGORA
                             <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
                         </Link>
@@ -418,11 +439,15 @@ export default function Home() {
                             </div>
 
                             <p className="text-b-md leading-b-md text-normal text-neutral-400 line-clamp-2">
-                                *Data provided by internal laboratories. Industry measurment.
+                                *Data provided by internal laboratories.
+                                Industry measurment.
                             </p>
                         </div>
 
-                        <Link href="/shop" className="h-[48px] flex items-center justify-center gap-x-[8px] px-[24px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap" >
+                        <Link
+                            href="/shop"
+                            className="h-[48px] flex items-center justify-center gap-x-[8px] px-[24px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap"
+                        >
                             VER AGORA
                             <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
                         </Link>
@@ -482,10 +507,7 @@ export default function Home() {
                                 key={product.id}
                                 className="md:max-w-[248px] w-full h-full"
                             >
-                                <ProductCard
-                                    product={product}
-                                    size="md"
-                                />
+                                <ProductCard product={product} size="md" />
                             </div>
                         ))}
                     </div>
@@ -506,7 +528,8 @@ export default function Home() {
                                     Xiaomi True Wireless Earbuds
                                 </h2>
                                 <p className="text-b-md leading-b-md text-center line-clamp-2 font-normal text-neutral-700">
-                                    Escape the noise, It’s time to hear the magic with Xiaomi Earbuds.
+                                    Escape the noise, It’s time to hear the
+                                    magic with Xiaomi Earbuds.
                                 </p>
                             </div>
 
@@ -523,7 +546,10 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <Link href="#" className="w-full h-[48px] flex items-center justify-center gap-x-[12px] px-[32px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap" >
+                        <Link
+                            href="#"
+                            className="w-full h-[48px] flex items-center justify-center gap-x-[12px] px-[32px] rounded-[4px] bg-primary text-white text-[15px]/[56px] font-bold text-nowrap"
+                        >
                             VER AGORA
                             <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
                         </Link>
@@ -542,10 +568,19 @@ export default function Home() {
                                 37% DISCOUNT
                             </h2>
 
-                            <p className="text-b-md leading-b-md font-normal text-white text-center">only for <strong className="text-warning">SmartPhone</strong> product.</p>
+                            <p className="text-b-md leading-b-md font-normal text-white text-center">
+                                only for{" "}
+                                <strong className="text-warning">
+                                    SmartPhone
+                                </strong>{" "}
+                                product.
+                            </p>
                         </div>
 
-                        <Link href="#" className="w-full h-[48px] flex items-center justify-center gap-x-[12px] px-[32px] rounded-[4px] bg-[#2DA5F3] text-white text-[15px]/[56px] font-bold text-nowrap" >
+                        <Link
+                            href="#"
+                            className="w-full h-[48px] flex items-center justify-center gap-x-[12px] px-[32px] rounded-[4px] bg-[#2DA5F3] text-white text-[15px]/[56px] font-bold text-nowrap"
+                        >
                             VER AGORA
                             <ArrowRightIcon className="size-[24px] stroke-[1.5px]" />
                         </Link>
@@ -555,13 +590,19 @@ export default function Home() {
 
             <section className="w-full grid grid-cols-[repeat(1,1fr)] sm:grid-cols-[repeat(2,1fr)] 2xl:grid-cols-[repeat(4,1fr)] gap-y-[24px] items-start gap-x-[24px] px-[5.625%] xl:px-[15.625%] py-[42px] md:py-[72px]">
                 {categoryProducts.map((category) => (
-                    <div key={category.id} className="w-full flex flex-col items-start justify-start gap-y-[16px]">
+                    <div
+                        key={category.id}
+                        className="w-full flex flex-col items-start justify-start gap-y-[16px]"
+                    >
                         <h5 className="text-b-md leading-b-md font-semibold">
                             {category.title}
                         </h5>
 
                         {category.products.map((product) => (
-                            <SmallProductCard key={product.id} product={product} />
+                            <SmallProductCard
+                                key={product.id}
+                                product={product}
+                            />
                         ))}
                     </div>
                 ))}

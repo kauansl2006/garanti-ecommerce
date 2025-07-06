@@ -3,7 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { EyeIcon, HeartIcon, ShoppingBagIcon, ShoppingCartIcon } from "lucide-react";
+import {
+    EyeIcon,
+    HeartIcon,
+    ShoppingBagIcon,
+    ShoppingCartIcon,
+} from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -91,7 +96,7 @@ export const ProductCard = ({
                     <div className="flex start items-start justify-start gap-x-[6px]">
                         <Rating score={product.score} />
                         <span className="text-b-sm leading-b-sm font-normal text-neutral-500">
-                        {`(${product.score})`}
+                            {`(${product.score})`}
                         </span>
                     </div>
                 )}
@@ -120,9 +125,7 @@ export const ProductCard = ({
                             >
                                 <HeartIcon className="size-[28px] stroke-[1.5]" />
                             </Button>
-                            <Button                                         
-                                className="cursor-pointer flex gap-[8px] w-[190px] h-[48px] px-[24px] text-white text-[14px]/[48px] font-bold rounded-[4px]"
-                            >
+                            <Button className="cursor-pointer flex gap-[8px] w-[190px] h-[48px] px-[24px] text-white text-[14px]/[48px] font-bold rounded-[4px]">
                                 ADQUIRIR
                                 <ShoppingCartIcon className="size-[20px] stroke-[1.5px] text-white" />
                             </Button>
@@ -139,7 +142,4 @@ export const ProductCard = ({
             </div>
         </div>
     );
-}
-
-
-
+};

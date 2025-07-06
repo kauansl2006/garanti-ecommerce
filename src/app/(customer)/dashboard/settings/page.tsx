@@ -11,7 +11,9 @@ export default function Settings() {
         <section className="w-full grid grid-cols-2 gap-[24px]">
             <Card className="col-span-2 shadow-none border-[1px] border-neutral-300 rounded-[4px]">
                 <CardHeader className="border-b-[1px] border-b-neutral-300">
-                    <CardTitle className="pb-[12px]">Configurações de Conta</CardTitle>
+                    <CardTitle className="pb-[12px]">
+                        Configurações de Conta
+                    </CardTitle>
                 </CardHeader>
                 <CardContent>
                     <div className="w-full flex items-center md:items-start flex-col md:flex-row gap-[24px]">
@@ -39,9 +41,7 @@ export default function Settings() {
                                     />
                                 </div>
                                 <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
-                                    <Label htmlFor="username">
-                                        Username
-                                    </Label>
+                                    <Label htmlFor="username">Username</Label>
 
                                     <Input
                                         type="text"
@@ -66,9 +66,7 @@ export default function Settings() {
                                 </div>
 
                                 <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
-                                    <Label htmlFor="email">
-                                        Email
-                                    </Label>
+                                    <Label htmlFor="email">Email</Label>
 
                                     <Input
                                         type="email"
@@ -79,9 +77,7 @@ export default function Settings() {
                                     />
                                 </div>
                                 <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
-                                    <Label htmlFor="phone-1">
-                                        Telefone
-                                    </Label>
+                                    <Label htmlFor="phone-1">Telefone</Label>
 
                                     <Input
                                         type="text"
@@ -92,9 +88,7 @@ export default function Settings() {
                                     />
                                 </div>
                                 <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
-                                    <Label htmlFor="phone-2">
-                                        Telefone 2
-                                    </Label>
+                                    <Label htmlFor="phone-2">Telefone 2</Label>
 
                                     <Input
                                         type="text"
@@ -107,9 +101,7 @@ export default function Settings() {
 
                                 <div className="col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-[16px]">
                                     <div className="flex flex-col gap-[8px]">
-                                        <Label htmlFor="city">
-                                            Cidade
-                                        </Label>
+                                        <Label htmlFor="city">Cidade</Label>
 
                                         <Input
                                             type="text"
@@ -121,9 +113,7 @@ export default function Settings() {
                                     </div>
 
                                     <div className="flex flex-col gap-[8px]">
-                                        <Label htmlFor="state">
-                                            Estado
-                                        </Label>
+                                        <Label htmlFor="state">Estado</Label>
 
                                         <Input
                                             type="text"
@@ -160,13 +150,17 @@ export default function Settings() {
 
             <Card className="bg-white  col-span-2 md:col-span-1 rounded-[4px] border-[1px] border-neutral-300 shadow-none">
                 <CardHeader className="border-b-[1px] border-b-neutral-300">
-                    <CardTitle className="pb-[12px]">Endereço de Cobrança</CardTitle>
+                    <CardTitle className="pb-[12px]">
+                        Endereço de Cobrança
+                    </CardTitle>
                 </CardHeader>
                 <CardContent>
                     <div className="flex flex-col gap-[24px]">
                         <div className="grid grid-cols-2 gap-[16px]">
                             <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
-                                <Label htmlFor="first-name">Primeiro Nome</Label>
+                                <Label htmlFor="first-name">
+                                    Primeiro Nome
+                                </Label>
                                 <Input
                                     id="first-name"
                                     type="text"
@@ -200,9 +194,7 @@ export default function Settings() {
                                 />
                             </div>
                             <div className="col-span-2 flex flex-col gap-[8px]">
-                                <Label htmlFor="address">
-                                    Endereço
-                                </Label>
+                                <Label htmlFor="address">Endereço</Label>
                                 <Input
                                     id="address"
                                     type="text"
@@ -212,9 +204,7 @@ export default function Settings() {
                                 />
                             </div>
                             <div className="col-span-2 flex flex-col gap-[8px]">
-                                <Label htmlFor="city">
-                                    Cidade
-                                </Label>
+                                <Label htmlFor="city">Cidade</Label>
                                 <Input
                                     id="city"
                                     type="text"
@@ -224,9 +214,7 @@ export default function Settings() {
                                 />
                             </div>
                             <div className="col-span-2 flex flex-col gap-[8px]">
-                                <Label htmlFor="state">
-                                    Região/Estado
-                                </Label>
+                                <Label htmlFor="state">Região/Estado</Label>
                                 <Input
                                     id="state"
                                     type="text"
@@ -236,9 +224,7 @@ export default function Settings() {
                                 />
                             </div>
                             <div className="col-span-2 flex flex-col gap-[8px]">
-                                <Label htmlFor="zip-code">
-                                    Código Postal
-                                </Label>
+                                <Label htmlFor="zip-code">Código Postal</Label>
                                 <Input
                                     id="zip-code"
                                     type="text"
@@ -248,9 +234,7 @@ export default function Settings() {
                                 />
                             </div>
                             <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
-                                <Label htmlFor="email">
-                                    Email
-                                </Label>
+                                <Label htmlFor="email">Email</Label>
                                 <Input
                                     id="email"
                                     type="email"
@@ -260,9 +244,7 @@ export default function Settings() {
                                 />
                             </div>
                             <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
-                                <Label htmlFor="phone">
-                                    Telefone
-                                </Label>
+                                <Label htmlFor="phone">Telefone</Label>
                                 <Input
                                     id="phone"
                                     type="text"
@@ -281,13 +263,17 @@ export default function Settings() {
             </Card>
             <Card className="bg-white col-span-2 md:col-span-1 rounded-[4px] border-[1px] border-neutral-300 shadow-none">
                 <CardHeader className="border-b-[1px] border-b-neutral-300">
-                    <CardTitle className="pb-[12px]">Endereço de Envio</CardTitle>
+                    <CardTitle className="pb-[12px]">
+                        Endereço de Envio
+                    </CardTitle>
                 </CardHeader>
                 <CardContent>
                     <div className="flex flex-col gap-[24px]">
                         <div className="grid grid-cols-2 gap-[16px]">
                             <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
-                                <Label htmlFor="first-name">Primeiro Nome</Label>
+                                <Label htmlFor="first-name">
+                                    Primeiro Nome
+                                </Label>
                                 <Input
                                     id="first-name"
                                     type="text"
@@ -321,9 +307,7 @@ export default function Settings() {
                                 />
                             </div>
                             <div className="col-span-2 flex flex-col gap-[8px]">
-                                <Label htmlFor="address">
-                                    Endereço
-                                </Label>
+                                <Label htmlFor="address">Endereço</Label>
                                 <Input
                                     id="address"
                                     type="text"
@@ -333,9 +317,7 @@ export default function Settings() {
                                 />
                             </div>
                             <div className="col-span-2 flex flex-col gap-[8px]">
-                                <Label htmlFor="city">
-                                    Cidade
-                                </Label>
+                                <Label htmlFor="city">Cidade</Label>
                                 <Input
                                     id="city"
                                     type="text"
@@ -345,9 +327,7 @@ export default function Settings() {
                                 />
                             </div>
                             <div className="col-span-2 flex flex-col gap-[8px]">
-                                <Label htmlFor="state">
-                                    Região/Estado
-                                </Label>
+                                <Label htmlFor="state">Região/Estado</Label>
                                 <Input
                                     id="state"
                                     type="text"
@@ -357,9 +337,7 @@ export default function Settings() {
                                 />
                             </div>
                             <div className="col-span-2 flex flex-col gap-[8px]">
-                                <Label htmlFor="zip-code">
-                                    Código Postal
-                                </Label>
+                                <Label htmlFor="zip-code">Código Postal</Label>
                                 <Input
                                     id="zip-code"
                                     type="text"
@@ -369,9 +347,7 @@ export default function Settings() {
                                 />
                             </div>
                             <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
-                                <Label htmlFor="email">
-                                    Email
-                                </Label>
+                                <Label htmlFor="email">Email</Label>
                                 <Input
                                     id="email"
                                     type="email"
@@ -381,9 +357,7 @@ export default function Settings() {
                                 />
                             </div>
                             <div className="col-span-2 sm:col-span-1 w-full flex flex-col gap-[8px]">
-                                <Label htmlFor="phone">
-                                    Telefone
-                                </Label>
+                                <Label htmlFor="phone">Telefone</Label>
                                 <Input
                                     id="phone"
                                     type="text"
@@ -409,30 +383,34 @@ export default function Settings() {
                     <div className="flex flex-col gap-[24px]">
                         <div className="flex flex-col gap-[24px]">
                             <div className="flex flex-col gap-[8px]">
-                                <Label htmlFor="current-password">Senha Atual</Label>
+                                <Label htmlFor="current-password">
+                                    Senha Atual
+                                </Label>
                                 <Input
-                                    id="current-password" 
-                                    type="password" 
-                                    required 
+                                    id="current-password"
+                                    type="password"
+                                    required
                                     className="h-[44px] rounded-[4px]"
                                 />
                             </div>
                             <div className="flex flex-col gap-[8px]">
                                 <Label htmlFor="new-password">Nova Senha</Label>
                                 <Input
-                                    id="new-password" 
-                                    type="password" 
+                                    id="new-password"
+                                    type="password"
                                     placeholder="8+ caracteres"
-                                    required 
+                                    required
                                     className="h-[44px] rounded-[4px]"
                                 />
                             </div>
                             <div className="flex flex-col gap-[8px]">
-                                <Label htmlFor="confirm-password">Confirmar Senha</Label>
+                                <Label htmlFor="confirm-password">
+                                    Confirmar Senha
+                                </Label>
                                 <Input
-                                    id="confirm-password" 
-                                    type="password" 
-                                    required 
+                                    id="confirm-password"
+                                    type="password"
+                                    required
                                     className="h-[44px] rounded-[4px]"
                                 />
                             </div>
@@ -445,5 +423,5 @@ export default function Settings() {
                 </CardContent>
             </Card>
         </section>
-    )
+    );
 }

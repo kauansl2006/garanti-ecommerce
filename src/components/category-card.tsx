@@ -23,10 +23,13 @@ export const CategoryCard = ({ category }: { category: Category }) => {
             </div>
 
             <div className="flex items-center justify-center">
-                <Link href={category.href} className="text-b-md leading-b-md font-medium text-center hover:underline">
+                <Link
+                    href={category.href}
+                    className="text-b-md leading-b-md font-medium text-center hover:underline"
+                >
                     {category.title}
                 </Link>
             </div>
         </div>
-    )
-}
+    );
+};

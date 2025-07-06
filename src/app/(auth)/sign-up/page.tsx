@@ -13,7 +13,7 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -37,8 +37,8 @@ export default function SignUp() {
                     {
                         href: "/sign-up",
                         label: "Inscrever-se",
-                        active: true
-                    }
+                        active: true,
+                    },
                 ]}
             />
 
@@ -62,7 +62,9 @@ export default function SignUp() {
                         <form className="flex flex-col gap-6">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div className="grid gap-2">
-                                    <Label htmlFor="username">Nome do Usuário</Label>
+                                    <Label htmlFor="username">
+                                        Nome do Usuário
+                                    </Label>
                                     <Input
                                         className="h-[44px] rounded-[4px]"
                                         id="username"
@@ -72,7 +74,9 @@ export default function SignUp() {
                                     />
                                 </div>
                                 <div className="grid gap-2">
-                                    <Label htmlFor="email">Endereço de Email</Label>
+                                    <Label htmlFor="email">
+                                        Endereço de Email
+                                    </Label>
                                     <Input
                                         className="h-[44px] rounded-[4px]"
                                         id="email"
@@ -85,48 +89,71 @@ export default function SignUp() {
                                     <Label htmlFor="password">Senha</Label>
                                     <Input
                                         className="h-[44px] rounded-[4px]"
-                                        id="password" 
-                                        type="password" 
+                                        id="password"
+                                        type="password"
                                         placeholder="Digite senha..."
-                                        required 
+                                        required
                                     />
                                 </div>
                                 <div className="grid gap-2">
-                                    <Label htmlFor="confirm-password">Confirmar Senha</Label>
+                                    <Label htmlFor="confirm-password">
+                                        Confirmar Senha
+                                    </Label>
                                     <Input
                                         className="h-[44px] rounded-[4px]"
-                                        id="confirm-password" 
-                                        type="password" 
+                                        id="confirm-password"
+                                        type="password"
                                         placeholder="Digite senha novamente..."
-                                        required 
+                                        required
                                     />
                                 </div>
                             </div>
                             <div className="flex items-center justify-start gap-2">
-                                <Checkbox id="terms" className="rounded-[0px]" />
-                                <Label htmlFor="terms" className="text-b-sm leading-b-sm">
-                                    Você concorda com os Termos de Condições e a Política de Privacidade
+                                <Checkbox
+                                    id="terms"
+                                    className="rounded-[0px]"
+                                />
+                                <Label
+                                    htmlFor="terms"
+                                    className="text-b-sm leading-b-sm"
+                                >
+                                    Você concorda com os Termos de Condições e a
+                                    Política de Privacidade
                                 </Label>
                             </div>
                         </form>
                     </CardContent>
                     <CardFooter className="flex-col gap-[24px]">
-                        <Button type="submit" className="w-full h-[48px] rounded-[4px] cursor-pointer">
+                        <Button
+                            type="submit"
+                            className="w-full h-[48px] rounded-[4px] cursor-pointer"
+                        >
                             Entrar
                         </Button>
                         <div className="w-full flex items-center justify-center relative">
-                            <Separator orientation="horizontal" className="bg-neutral-400" />
+                            <Separator
+                                orientation="horizontal"
+                                className="bg-neutral-400"
+                            />
                             <p className="text-b-sm leading-b-sm p-[10px] bg-white text-neutral-500 absolute">
                                 ou
                             </p>
                         </div>
-                        <Button variant="outline" className="w-full h-[48px] rounded-[4px] cursor-pointer">
-                            <Image src="/google.svg" alt="Ícone do Google" width={20} height={20} />
+                        <Button
+                            variant="outline"
+                            className="w-full h-[48px] rounded-[4px] cursor-pointer"
+                        >
+                            <Image
+                                src="/google.svg"
+                                alt="Ícone do Google"
+                                width={20}
+                                height={20}
+                            />
                             Entrar com Google
                         </Button>
                     </CardFooter>
                 </Card>
             </section>
         </main>
-    )
+    );
 }

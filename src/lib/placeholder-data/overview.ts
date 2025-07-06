@@ -8,5 +8,5 @@ export const overview: Overview[] = [
     { label: "Exibição", value: "Tela Liquid Retina XDR" },
     { label: "Teclado", value: "Magic Keyboard with Touch ID" },
     { label: "Entrada de interface humana:", value: "Teclado" },
-    { label: "Fabricante da CPU:", value: "Apple" }
+    { label: "Fabricante da CPU:", value: "Apple" },
 ];

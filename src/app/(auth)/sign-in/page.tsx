@@ -13,7 +13,7 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -36,8 +36,8 @@ export default function SignIn() {
                     {
                         href: "/sign-in",
                         label: "Entrar",
-                        active: true
-                    }
+                        active: true,
+                    },
                 ]}
             />
 
@@ -61,7 +61,9 @@ export default function SignIn() {
                         <form>
                             <div className="flex flex-col gap-6">
                                 <div className="grid gap-2">
-                                    <Label htmlFor="email">Endereço de Email</Label>
+                                    <Label htmlFor="email">
+                                        Endereço de Email
+                                    </Label>
                                     <Input
                                         className="h-[44px] rounded-[4px]"
                                         id="email"
@@ -77,36 +79,50 @@ export default function SignIn() {
                                             href="/recover-password"
                                             className="ml-auto inline-block text-b-sm leading-b-sm underline-offset-4 hover:underline"
                                         >
-                                            Esqueceu sua senha? 
+                                            Esqueceu sua senha?
                                         </Link>
                                     </div>
                                     <Input
                                         className="h-[44px] rounded-[4px]"
-                                        id="password" 
-                                        type="password" 
-                                        required 
+                                        id="password"
+                                        type="password"
+                                        required
                                     />
                                 </div>
                             </div>
                         </form>
                     </CardContent>
                     <CardFooter className="flex-col gap-[24px]">
-                        <Button type="submit" className="w-full h-[48px] rounded-[4px] cursor-pointer">
+                        <Button
+                            type="submit"
+                            className="w-full h-[48px] rounded-[4px] cursor-pointer"
+                        >
                             Entrar
                         </Button>
                         <div className="w-full flex items-center justify-center relative">
-                            <Separator orientation="horizontal" className="bg-neutral-400" />
+                            <Separator
+                                orientation="horizontal"
+                                className="bg-neutral-400"
+                            />
                             <p className="text-b-sm leading-b-sm p-[10px] bg-white text-neutral-500 absolute">
                                 ou
                             </p>
                         </div>
-                        <Button variant="outline" className="w-full h-[48px] rounded-[4px] cursor-pointer">
-                            <Image src="/google.svg" alt="Ícone do Google" width={20} height={20} />
+                        <Button
+                            variant="outline"
+                            className="w-full h-[48px] rounded-[4px] cursor-pointer"
+                        >
+                            <Image
+                                src="/google.svg"
+                                alt="Ícone do Google"
+                                width={20}
+                                height={20}
+                            />
                             Entrar com Google
                         </Button>
                     </CardFooter>
                 </Card>
             </section>
         </main>
-    )
+    );
 }

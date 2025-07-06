@@ -33,26 +33,33 @@ export const ProductAdditionalInformation = () => {
                                 {detail.value}
                             </p>
                         )}
-                        {detail.values?.map((value, index) => value.label ? (
-                            <div key={index} className="w-full flex gap-[24px]">
-                                <p className="text-b-sm leading-b-sm font-normal">
-                                    {value.label}
-                                </p>
-                                <p className="text-b-sm leading-b-sm font-normal text-neutral-600">
-                                    {value.value}
-                                </p>
-                            </div>
-                        ) : (
-                            <ul key={index} className="w-full flex flex-col gap-[12px]">
-                                <li className="list-disc text-b-sm leading-b-sm font-normal text-neutral-600">
-                                    {value.value}
-                                </li>
-                            </ul>
-                        ))}
+                        {detail.values?.map((value, index) =>
+                            value.label ? (
+                                <div
+                                    key={index}
+                                    className="w-full flex gap-[24px]"
+                                >
+                                    <p className="text-b-sm leading-b-sm font-normal">
+                                        {value.label}
+                                    </p>
+                                    <p className="text-b-sm leading-b-sm font-normal text-neutral-600">
+                                        {value.value}
+                                    </p>
+                                </div>
+                            ) : (
+                                <ul
+                                    key={index}
+                                    className="w-full flex flex-col gap-[12px]"
+                                >
+                                    <li className="list-disc text-b-sm leading-b-sm font-normal text-neutral-600">
+                                        {value.value}
+                                    </li>
+                                </ul>
+                            ),
+                        )}
                     </div>
-                )
-                )}
+                ))}
             </div>
         </section>
-    )
-}
+    );
+};

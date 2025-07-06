@@ -14,7 +14,10 @@ export default function NotFound() {
                             404 - Não Encontrado
                         </h1>
                         <p className="text-b-sm leading-b-sm text-neutral-700 font-medium text-center">
-                            A página que você está procurando não foi encontrada. Ela pode ter sido removida, renomeada ou nunca existido. Verifique o endereço digitado ou volte para a página inicial.
+                            A página que você está procurando não foi
+                            encontrada. Ela pode ter sido removida, renomeada ou
+                            nunca existido. Verifique o endereço digitado ou
+                            volte para a página inicial.
                         </p>
                     </div>
 
@@ -28,5 +31,5 @@ export default function NotFound() {
                 </div>
             </section>
         </main>
-    )
+    );
 }

@@ -11,7 +11,7 @@ import { ProductTabs } from "@/components/product-tabs";
 export default async function ProductDetails({
     params,
 }: {
-    params: Promise<{ id: string }>
+    params: Promise<{ id: string }>;
 }) {
     const { id } = await params;
 
@@ -23,25 +23,27 @@ export default async function ProductDetails({
 
     return (
         <main className="w-screen flex flex-col items-center justify-center">
-            <Breadcrumb breadcrumbs={[
-                { 
-                    icon: HomeIcon,
-                    label: "Home",
-                    href: "/"
-                },
-                { 
-                    label: "Comprar",
-                    href: "/shop",
-                },
-                {
-                    label: product.title,
-                    href: `/product-details/${id}`,
-                    active: true
-                }
-            ]}/>
+            <Breadcrumb
+                breadcrumbs={[
+                    {
+                        icon: HomeIcon,
+                        label: "Home",
+                        href: "/",
+                    },
+                    {
+                        label: "Comprar",
+                        href: "/shop",
+                    },
+                    {
+                        label: product.title,
+                        href: `/product-details/${id}`,
+                        active: true,
+                    },
+                ]}
+            />
             <Details product={product} />
             <ProductTabs />
             <CategoryProducts />
         </main>
-    )
+    );
 }
